@@ -1,0 +1,17 @@
+date,country,holiday_name,holiday_type,is_holiday,holiday_penalty,month,weekday
+2026-01-26,India,Republic Day,national,1,1.0,1,Monday
+2026-02-15,India,Maha Shivaratri,festival,1,0.8,2,Sunday
+2026-03-04,India,Holi,festival,1,0.8,3,Wednesday
+2026-03-21,India,Eid al-Fitr,festival,1,0.8,3,Saturday
+2026-04-03,India,Good Friday,religious,1,0.6,4,Friday
+2026-04-14,India,Ambedkar Jayanti,national,1,1.0,4,Tuesday
+2026-05-27,India,Eid al-Adha,festival,1,0.8,5,Wednesday
+2026-06-26,India,Muharram,festival,1,0.8,6,Friday
+2026-08-15,India,Independence Day,national,1,1.0,8,Saturday
+2026-08-28,India,Janmashtami,festival,1,0.8,8,Friday
+2026-09-04,India,Ganesh Chaturthi,festival,1,0.8,9,Friday
+2026-10-02,India,Gandhi Jayanti,national,1,1.0,10,Friday
+2026-10-20,India,Dussehra,festival,1,0.8,10,Tuesday
+2026-11-08,India,Diwali,festival,1,0.8,11,Sunday
+2026-11-24,India,Guru Nanak Jayanti,festival,1,0.8,11,Tuesday
+2026-12-25,India,Christmas Day,religious,1,0.6,12,Friday
