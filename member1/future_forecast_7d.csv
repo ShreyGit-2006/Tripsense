@@ -1,0 +1,15 @@
+hotel,date,pred_demand,pred_occupancy_pct
+City Hotel,2017-09-01,216.7,96.6
+City Hotel,2017-09-02,215.3,95.9
+City Hotel,2017-09-03,210.2,93.7
+City Hotel,2017-09-04,216.3,96.4
+City Hotel,2017-09-05,217.6,97.0
+City Hotel,2017-09-06,216.4,96.4
+City Hotel,2017-09-07,220.1,98.1
+Resort Hotel,2017-09-01,183.6,99.8
+Resort Hotel,2017-09-02,180.8,98.3
+Resort Hotel,2017-09-03,180.3,98.0
+Resort Hotel,2017-09-04,181.2,98.5
+Resort Hotel,2017-09-05,181.5,98.6
+Resort Hotel,2017-09-06,181.4,98.6
+Resort Hotel,2017-09-07,179.4,97.5
