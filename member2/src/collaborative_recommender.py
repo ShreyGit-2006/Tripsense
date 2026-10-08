@@ -6,16 +6,33 @@ class CollaborativeRecommender:
     """
     Item-based collaborative filtering recommender.
 
-    Uses:
+    Data requirements:
         reviewer_name -> user
         place_id      -> item
-        rating        -> preference
+        rating        -> user preference
     """
 
     def __init__(self, interactions_df):
         self.interactions = interactions_df.copy()
 
-        # Create user-item rating matrix
+        required_columns = [
+            "reviewer_name",
+            "place_id",
+            "rating",
+        ]
+
+        missing = [
+            col
+            for col in required_columns
+            if col not in self.interactions.columns
+        ]
+
+        if missing:
+            raise ValueError(
+                f"Missing required columns: {missing}"
+            )
+
+        # User-place rating matrix
         self.user_item_matrix = self.interactions.pivot_table(
             index="reviewer_name",
             columns="place_id",
@@ -24,14 +41,13 @@ class CollaborativeRecommender:
             fill_value=0,
         )
 
-        # Item-based similarity:
-        # transpose so rows represent places
+        # Item-based similarity
         item_matrix = self.user_item_matrix.T
 
-        self.item_similarity = cosine_similarity(item_matrix)
+        similarity_matrix = cosine_similarity(item_matrix)
 
-        self.item_similarity_df = pd.DataFrame(
-            self.item_similarity,
+        self.item_similarity = pd.DataFrame(
+            similarity_matrix,
             index=item_matrix.index,
             columns=item_matrix.index,
         )
@@ -55,29 +71,43 @@ class CollaborativeRecommender:
 
         scores = {}
 
-        # Compare places the user liked with other places
         for rated_place in rated_places:
 
             rating = user_ratings[rated_place]
 
             similar_places = (
-                self.item_similarity_df[rated_place]
+                self.item_similarity[rated_place]
                 .sort_values(ascending=False)
             )
 
-            for place, similarity in similar_places.items():
+            for place_id, similarity in similar_places.items():
 
-                # Don't recommend something already rated
-                if place in rated_places:
+                # Do not recommend places already rated
+                if place_id in rated_places:
                     continue
 
-                scores[place] = (
-                    scores.get(place, 0)
+                # Ignore zero similarity
+                if similarity <= 0:
+                    continue
+
+                scores[place_id] = (
+                    scores.get(place_id, 0)
                     + similarity * rating
                 )
 
+        if not scores:
+            return pd.DataFrame(
+                columns=[
+                    "place_id",
+                    "collaborative_score",
+                ]
+            )
+
         recommendations = (
-            pd.Series(scores, name="collaborative_score")
+            pd.Series(
+                scores,
+                name="collaborative_score"
+            )
             .sort_values(ascending=False)
             .head(top_n)
             .reset_index()
@@ -88,25 +118,18 @@ class CollaborativeRecommender:
             "collaborative_score",
         ]
 
+        # Normalize score to 0–1
+        max_score = recommendations[
+            "collaborative_score"
+        ].max()
+
+        if max_score > 0:
+            recommendations[
+                "collaborative_score"
+            ] = (
+                recommendations[
+                    "collaborative_score"
+                ] / max_score
+            )
+
         return recommendations
-
-
-if __name__ == "__main__":
-
-    reviews = pd.read_csv(
-        "../data/interactions/tripsense_reviews_dataset.csv"
-    )
-
-    recommender = CollaborativeRecommender(reviews)
-
-    # Test with the first available user
-    test_user = reviews["reviewer_name"].iloc[0]
-
-    print(f"\nRecommendations for: {test_user}")
-
-    print(
-        recommender.recommend_for_user(
-            test_user,
-            top_n=10,
-        )
-    )
