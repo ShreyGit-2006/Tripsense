@@ -11,8 +11,7 @@ class RecommendationPipeline:
     Unified interface for TripSense destination recommendations.
 
     New users receive content-based recommendations.
-    Existing users with rating history can receive hybrid
-    recommendations.
+    Existing users with rating history receive hybrid recommendations.
     """
 
     def __init__(self, places_df, interactions_df):
@@ -41,22 +40,7 @@ class RecommendationPipeline:
         content_weight=0.7,
         collaborative_weight=0.3,
     ):
-        """
-        Return ranked tourist destinations.
-
-        Parameters
-        ----------
-        interests : str
-            User's interests, such as 'temples, history, nature'.
-        user_id : str or None
-            Existing reviewer_name, if available.
-        top_n : int
-            Maximum number of destinations to return.
-        content_weight : float
-            Weight assigned to content-based scores.
-        collaborative_weight : float
-            Weight assigned to collaborative scores.
-        """
+        """Return ranked destinations with recommendation explanations."""
 
         if top_n < 1:
             raise ValueError("top_n must be at least 1.")
@@ -67,7 +51,7 @@ class RecommendationPipeline:
         if abs(content_weight + collaborative_weight - 1.0) > 0.001:
             raise ValueError("Recommendation weights must sum to 1.")
 
-        # Use hybrid recommendations only when the user has history.
+        # Determine whether the user has rating history.
         user_has_history = (
             user_id is not None
             and user_id in self.collaborative_model.user_item_matrix.index
@@ -84,23 +68,45 @@ class RecommendationPipeline:
                 content_weight=content_weight,
                 collaborative_weight=collaborative_weight,
             )
-
-            recommendations["recommendation_method"] = "hybrid"
+            method = "hybrid"
 
         else:
             recommendations = self.content_model.recommend(
                 interests=interests,
                 top_n=top_n,
             )
+            method = "content-based"
 
-            recommendations["recommendation_method"] = "content-based"
+        if recommendations.empty:
+            recommendations["recommendation_method"] = pd.Series(
+                dtype="object"
+            )
+            recommendations["recommendation_reason"] = pd.Series(
+                dtype="object"
+            )
+            return recommendations
 
-        # Add explanations when the explainer supports this interface.
-        if not recommendations.empty:
-            if hasattr(self.explainer, "add_explanations"):
-                recommendations = self.explainer.add_explanations(
-                    recommendations,
-                    interests,
-                )
+        recommendations = recommendations.copy()
+        recommendations["recommendation_method"] = method
+
+        # Generate an explanation for each destination.
+        reasons = []
+
+        for _, row in recommendations.iterrows():
+            content_score = float(row.get("content_score", 0) or 0)
+            collaborative_score = float(
+                row.get("collaborative_score", 0) or 0
+            )
+
+            reason = self.explainer.explain(
+                place_row=row,
+                interests=interests,
+                content_score=content_score,
+                collaborative_score=collaborative_score,
+            )
+
+            reasons.append(reason)
+
+        recommendations["recommendation_reason"] = reasons
 
         return recommendations.reset_index(drop=True)
