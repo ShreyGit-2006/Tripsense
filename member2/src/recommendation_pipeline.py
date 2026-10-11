@@ -31,7 +31,7 @@ class RecommendationPipeline:
             collaborative_recommender=self.collaborative_model,
         )
 
-        self.explainer = RecommendationExplainer()
+        self.explainer = RecommendationExplainer(self.places)
 
     def recommend_places(
         self,
