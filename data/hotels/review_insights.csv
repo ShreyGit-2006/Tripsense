@@ -1,0 +1,706 @@
+hotel_id,review_count,mean_star_rating,mean_vader_compound,pct_negative,pct_neutral,pct_positive,rate_cleanliness,rate_staff,rate_location,rate_food,rate_service,rate_amenities,rate_value,rate_ambiance,dominant_topic,hotel_name,district,tier,star_rating
+HTL0001,5,3.44,0.2582,0.4,0.0,0.6,0.4,0.2,0.2,0.2,0.2,0.6,0.2,0.4,amenities,Silver Alluri Guest House,Alluri Sitharama Raju,mid_range,3 Star
+HTL0002,5,3.36,0.0771,0.4,0.0,0.6,0.6,0.4,0.4,0.0,0.0,1.0,0.6,0.2,amenities,Mystic Alluri Residency,Alluri Sitharama Raju,budget,1-2 Star
+HTL0003,15,3.42,0.4022,0.2,0.0,0.8,0.2667,0.2,0.4,0.4,0.1333,0.7333,0.2,0.1333,amenities,Pearl Villa,Alluri Sitharama Raju,mid_range,3 Star
+HTL0004,5,3.18,0.4939,0.2,0.0,0.8,0.0,0.6,0.0,0.2,0.4,0.4,0.0,0.0,staff,Serene Hotel,Alluri Sitharama Raju,luxury,5 Star
+HTL0005,5,3.72,0.3275,0.4,0.0,0.6,0.4,0.4,0.2,0.2,0.0,0.6,0.4,0.2,amenities,Silver Enclave,Alluri Sitharama Raju,mid_range,3 Star
+HTL0006,5,3.44,0.258,0.4,0.0,0.6,0.4,0.4,0.2,0.4,0.4,0.6,0.4,0.4,amenities,Palm Stays,Alluri Sitharama Raju,mid_range,3 Star
+HTL0007,10,3.49,0.2987,0.2,0.2,0.6,0.3,0.5,0.4,0.0,0.0,0.6,0.7,0.2,value,Pearl Resort,Alluri Sitharama Raju,budget,1-2 Star
+HTL0008,10,3.29,0.2594,0.2,0.2,0.6,0.5,0.2,0.4,0.1,0.0,0.9,0.5,0.2,amenities,Crystal Homestay,Alluri Sitharama Raju,budget,1-2 Star
+HTL0009,15,3.3933,0.2156,0.26666666666666666,0.13333333333333333,0.6,0.4667,0.2667,0.4,0.0667,0.0,0.8,0.6667,0.2,amenities,River Alluri Palace,Alluri Sitharama Raju,budget,1-2 Star
+HTL0012,10,3.22,0.2889,0.2,0.2,0.6,0.6,0.4,0.2,0.1,0.0,0.9,0.5,0.1,amenities,Saffron Inn,Alluri Sitharama Raju,budget,1-2 Star
+HTL0013,5,3.36,0.2856,0.2,0.2,0.6,0.6,0.2,0.4,0.0,0.0,1.0,0.8,0.2,amenities,Cloud9 Alluri Villa,Alluri Sitharama Raju,budget,1-2 Star
+HTL0015,5,3.32,0.3731,0.2,0.2,0.6,0.0,0.4,0.0,0.4,0.4,0.2,0.4,0.0,staff,Pearl Alluri Resort,Alluri Sitharama Raju,luxury,5 Star
+HTL0016,15,3.32,0.1067,0.4,0.0,0.6,0.6,0.2,0.4,0.0667,0.0,0.8,0.6,0.3333,amenities,Serene Cottage,Alluri Sitharama Raju,budget,1-2 Star
+HTL0017,5,3.76,0.1991,0.4,0.0,0.6,0.6,0.4,0.4,0.2,0.0,1.0,0.4,0.2,amenities,Lotus Alluri Cottage,Alluri Sitharama Raju,budget,1-2 Star
+HTL0018,5,3.3,0.1703,0.4,0.0,0.6,0.6,0.4,0.2,0.2,0.0,1.0,0.4,0.0,amenities,Grand Alluri Palace,Alluri Sitharama Raju,budget,1-2 Star
+HTL0019,15,3.4667,0.5391,0.13333333333333333,0.0,0.8666666666666667,0.2667,0.1333,0.2667,0.4,0.3333,0.6667,0.3333,0.3333,amenities,Silver Nest,Alluri Sitharama Raju,mid_range,3 Star
+HTL0021,10,3.46,0.4152,0.3,0.0,0.7,0.2,0.3,0.2,0.5,0.5,0.7,0.4,0.3,amenities,Mystic Resort,Kurnool,mid_range,3 Star
+HTL0022,15,3.4933,0.3675,0.3333333333333333,0.0,0.6666666666666666,0.3333,0.4,0.2667,0.2667,0.2,0.5333,0.2,0.4,amenities,Cloud9 Kurnool Inn,Kurnool,mid_range,3 Star
+HTL0023,5,3.56,0.5544,0.2,0.0,0.8,0.0,0.2,0.2,0.6,0.0,0.6,0.0,0.0,food,Elite Enclave,Kurnool,premium,4 Star
+HTL0025,5,3.46,0.3301,0.2,0.2,0.6,0.8,0.2,0.2,0.2,0.0,1.0,0.4,0.4,amenities,Golden Resort,Kurnool,budget,1-2 Star
+HTL0026,5,3.26,0.4874,0.0,0.2,0.8,0.0,0.4,0.2,0.4,0.6,0.6,0.2,0.0,service,Dew Drop Kurnool Homestay,Kurnool,premium,4 Star
+HTL0027,15,3.1933,0.5188,0.2,0.0,0.8,0.3333,0.4,0.2,0.4,0.4,0.5333,0.2,0.4667,amenities,Blue Kurnool Stays,Kurnool,mid_range,3 Star
+HTL0028,5,3.3,0.3972,0.0,0.4,0.6,0.2,0.2,0.0,0.4,0.6,0.6,0.2,0.0,service,Hill Resort,Kurnool,premium,4 Star
+HTL0029,25,3.4,0.4503,0.2,0.0,0.8,0.32,0.36,0.28,0.44,0.24,0.68,0.32,0.24,amenities,Grand Guest House,Kurnool,mid_range,3 Star
+HTL0030,5,3.5,0.179,0.4,0.0,0.6,0.4,0.4,0.4,0.2,0.0,0.6,0.4,0.4,amenities,Palm Kurnool Palace,Kurnool,budget,1-2 Star
+HTL0031,10,3.53,0.4686,0.1,0.2,0.7,0.1,0.4,0.0,0.5,0.4,0.7,0.1,0.0,amenities,Palm Palace,Kurnool,premium,4 Star
+HTL0032,5,3.86,0.5219,0.2,0.0,0.8,0.2,0.2,0.0,0.6,0.4,0.2,0.2,0.6,food,Golden Kurnool Nest,Kurnool,mid_range,3 Star
+HTL0033,10,3.58,0.372,0.3,0.0,0.7,0.2,0.3,0.3,0.4,0.2,0.7,0.3,0.3,amenities,Oasis Palace,Kurnool,mid_range,3 Star
+HTL0034,5,3.6,0.1679,0.4,0.0,0.6,0.6,0.8,0.2,0.0,0.0,1.0,0.6,0.0,amenities,Oasis Kurnool Cottage,Kurnool,budget,1-2 Star
+HTL0036,5,3.62,0.2063,0.2,0.2,0.6,0.6,0.6,0.2,0.2,0.0,0.8,0.8,0.0,amenities,Mystic Enclave,Kurnool,budget,1-2 Star
+HTL0037,5,3.28,0.39,0.2,0.0,0.8,0.2,0.4,0.4,0.6,0.4,0.8,0.2,0.2,amenities,Palm Lodge,Kurnool,mid_range,3 Star
+HTL0038,15,3.48,0.1991,0.3333333333333333,0.06666666666666667,0.6,0.0,0.2,0.0,0.2667,0.4,0.3333,0.2,0.0,service,Dew Drop Suites,Kurnool,luxury,5 Star
+HTL0039,10,3.37,0.3437,0.2,0.2,0.6,0.2,0.3,0.0,0.3,0.5,0.4,0.3,0.0,service,Heritage Kurnool Homestay,Kurnool,premium,4 Star
+HTL0041,5,3.28,0.1837,0.4,0.0,0.6,0.8,0.2,0.4,0.0,0.0,1.0,0.8,0.2,amenities,Dew Drop Lodge,Kurnool,budget,1-2 Star
+HTL0044,20,3.325,0.3628,0.2,0.15,0.65,0.0,0.3,0.0,0.35,0.45,0.3,0.35,0.0,service,Pearl Villa,Kurnool,luxury,5 Star
+HTL0045,15,3.3733,0.3756,0.3333333333333333,0.0,0.6666666666666666,0.4,0.4,0.2,0.4,0.3333,0.4667,0.4,0.3333,amenities,Dew Drop Kurnool Hotel,Kurnool,mid_range,3 Star
+HTL0048,15,3.3867,0.5762,0.06666666666666667,0.0,0.9333333333333333,0.2,0.1333,0.3333,0.3333,0.4,0.8,0.2667,0.3333,amenities,Pearl Palace,Kurnool,mid_range,3 Star
+HTL0049,10,3.36,0.4529,0.1,0.2,0.7,0.2,0.4,0.0,0.3,0.5,0.6,0.1,0.0,amenities,Blue Palace,Kurnool,premium,4 Star
+HTL0050,15,3.46,0.3007,0.2,0.2,0.6,0.5333,0.4667,0.2,0.0667,0.0,0.6667,0.6667,0.2667,amenities,Palm Kurnool Inn,Kurnool,budget,1-2 Star
+HTL0051,15,3.4133,0.3347,0.26666666666666666,0.0,0.7333333333333333,0.4667,0.2667,0.3333,0.2667,0.0667,0.6667,0.2,0.1333,amenities,Grand Kurnool Homestay,Kurnool,mid_range,3 Star
+HTL0052,5,3.44,0.1974,0.4,0.0,0.6,0.2,0.2,0.4,0.4,0.4,0.6,0.6,0.4,amenities,Emerald Resort,Kurnool,mid_range,3 Star
+HTL0053,5,3.42,0.2682,0.4,0.0,0.6,0.0,0.2,0.2,0.2,0.4,0.4,0.2,0.0,service,Cloud9 Srikakulam Hotel,Srikakulam,premium,4 Star
+HTL0057,10,3.31,0.4447,0.1,0.2,0.7,0.0,0.2,0.0,0.3,0.3,0.3,0.3,0.0,food,Tranquil Srikakulam Lodge,Srikakulam,luxury,5 Star
+HTL0058,15,3.3667,0.2031,0.26666666666666666,0.13333333333333333,0.6,0.3333,0.5333,0.2667,0.0,0.0,0.8,0.7333,0.0667,amenities,Royal Srikakulam Palace,Srikakulam,budget,1-2 Star
+HTL0059,15,3.4533,0.5129,0.06666666666666667,0.06666666666666667,0.8666666666666667,0.0,0.5333,0.0,0.0667,0.2,0.3333,0.2,0.0,staff,Regal Villa,Srikakulam,luxury,5 Star
+HTL0060,5,3.5,0.413,0.2,0.2,0.6,0.6,0.6,0.0,0.0,0.0,0.6,0.8,0.0,value,Mystic Residency,Srikakulam,budget,1-2 Star
+HTL0061,5,3.46,0.5192,0.0,0.2,0.8,0.0,0.4,0.2,0.2,0.6,0.6,0.0,0.0,service,Palm Srikakulam Enclave,Srikakulam,premium,4 Star
+HTL0062,10,3.45,0.3099,0.4,0.0,0.6,0.3,0.4,0.3,0.3,0.1,0.6,0.4,0.3,amenities,Green Srikakulam Nest,Srikakulam,mid_range,3 Star
+HTL0063,10,3.39,0.2701,0.4,0.0,0.6,0.2,0.1,0.2,0.4,0.4,0.6,0.4,0.4,amenities,Oasis Villa,Srikakulam,mid_range,3 Star
+HTL0064,5,3.18,0.2211,0.4,0.0,0.6,0.4,0.4,0.4,0.4,0.2,0.6,0.4,0.0,amenities,Crystal Resort,Srikakulam,mid_range,3 Star
+HTL0065,5,3.54,0.2891,0.2,0.2,0.6,0.6,0.8,0.0,0.0,0.0,0.6,0.8,0.2,staff,Saffron Guest House,Srikakulam,budget,1-2 Star
+HTL0066,10,3.59,0.5439,0.1,0.0,0.9,0.3,0.2,0.3,0.3,0.2,0.6,0.2,0.3,amenities,Golden Stays,Srikakulam,mid_range,3 Star
+HTL0067,15,3.26,0.3835,0.2,0.13333333333333333,0.6666666666666666,0.0,0.2667,0.0,0.2667,0.2667,0.5333,0.1333,0.0,amenities,Classic Nest,Srikakulam,luxury,5 Star
+HTL0069,5,3.56,0.2538,0.4,0.0,0.6,0.2,0.4,0.4,0.6,0.4,0.6,0.2,0.2,food,Saffron Srikakulam Homestay,Srikakulam,mid_range,3 Star
+HTL0070,5,3.4,0.3408,0.2,0.2,0.6,0.8,0.2,0.2,0.0,0.0,1.0,0.8,0.2,amenities,Serene Srikakulam Residency,Srikakulam,budget,1-2 Star
+HTL0071,5,3.42,0.1991,0.4,0.0,0.6,0.4,0.0,0.2,0.2,0.0,0.6,0.6,0.2,amenities,Classic Cottage,Srikakulam,mid_range,3 Star
+HTL0073,15,3.58,0.2029,0.2,0.2,0.6,0.4667,0.5333,0.2667,0.0667,0.0,0.8667,0.6667,0.0,amenities,Classic Srikakulam Nest,Srikakulam,budget,1-2 Star
+HTL0074,10,3.15,0.2258,0.2,0.2,0.6,0.6,0.4,0.2,0.1,0.0,0.9,0.7,0.1,amenities,River Srikakulam Homestay,Srikakulam,budget,1-2 Star
+HTL0075,20,3.435,0.4441,0.15,0.25,0.6,0.2,0.25,0.1,0.4,0.2,0.4,0.15,0.0,food,Golden Stays,Srikakulam,premium,4 Star
+HTL0076,5,3.36,0.4865,0.2,0.0,0.8,0.2,0.6,0.6,0.4,0.2,0.8,0.0,0.2,amenities,Lotus Hotel,Srikakulam,mid_range,3 Star
+HTL0077,10,3.58,0.2328,0.2,0.2,0.6,0.5,0.5,0.2,0.0,0.0,0.9,0.7,0.1,amenities,Golden Srikakulam Lodge,Srikakulam,budget,1-2 Star
+HTL0078,5,3.0,0.4882,0.2,0.0,0.8,0.2,0.4,0.4,0.4,0.4,0.8,0.4,0.2,amenities,Comfort Srikakulam Nest,Srikakulam,mid_range,3 Star
+HTL0079,5,3.36,0.6112,0.0,0.0,1.0,0.2,0.2,0.0,0.4,0.2,0.6,0.2,0.6,amenities,Crystal Retreat,Srikakulam,mid_range,3 Star
+HTL0080,20,3.445,0.4691,0.15,0.05,0.8,0.05,0.35,0.15,0.4,0.4,0.4,0.2,0.0,food,Heritage Villa,Srikakulam,premium,4 Star
+HTL0081,15,3.1667,0.3763,0.26666666666666666,0.0,0.7333333333333333,0.3333,0.2,0.2667,0.3333,0.2667,0.6667,0.4,0.2667,amenities,Horizon Srikakulam Resort,Srikakulam,mid_range,3 Star
+HTL0083,10,3.45,0.2842,0.2,0.2,0.6,0.4,0.3,0.4,0.0,0.0,0.7,0.8,0.2,value,Oasis Enclave,Srikakulam,budget,1-2 Star
+HTL0084,10,3.51,0.6043,0.1,0.0,0.9,0.2,0.4,0.3,0.6,0.2,0.5,0.2,0.2,food,Mystic Srikakulam Guest House,Srikakulam,mid_range,3 Star
+HTL0085,5,3.44,0.5192,0.0,0.2,0.8,0.0,0.4,0.2,0.2,0.6,0.6,0.0,0.0,service,Dew Drop Retreat,Srikakulam,premium,4 Star
+HTL0087,10,3.56,0.1624,0.3,0.1,0.6,0.5,0.4,0.3,0.1,0.0,0.7,0.7,0.2,amenities,Regal Homestay,Srikakulam,budget,1-2 Star
+HTL0088,5,3.46,0.1993,0.4,0.0,0.6,0.4,0.2,0.6,0.0,0.0,0.6,0.6,0.4,location,Palm Nest,Srikakulam,budget,1-2 Star
+HTL0089,15,3.46,0.3044,0.26666666666666666,0.13333333333333333,0.6,0.4667,0.4667,0.3333,0.0667,0.0,0.6667,0.6667,0.2,amenities,Tranquil Hotel,Srikakulam,budget,1-2 Star
+HTL0090,15,3.28,0.3425,0.3333333333333333,0.0,0.6666666666666666,0.4,0.5333,0.4,0.3333,0.1333,0.6667,0.2667,0.1333,amenities,Elite Stays,Srikakulam,mid_range,3 Star
+HTL0091,10,3.55,0.5225,0.0,0.3,0.7,0.3,0.2,0.3,0.2,0.2,0.3,0.0,0.0,cleanliness,Golden Nest,Srikakulam,premium,4 Star
+HTL0092,10,3.53,0.2859,0.2,0.2,0.6,0.5,0.8,0.1,0.0,0.0,0.7,0.8,0.0,staff,Saffron Srikakulam Retreat,Srikakulam,budget,1-2 Star
+HTL0094,10,3.5,0.3436,0.2,0.2,0.6,0.0,0.2,0.0,0.4,0.3,0.3,0.4,0.0,food,Green Inn,Srikakulam,luxury,5 Star
+HTL0095,25,3.256,0.4316,0.12,0.12,0.76,0.12,0.36,0.12,0.28,0.52,0.4,0.2,0.0,service,Sunset Srikakulam Lodge,Srikakulam,premium,4 Star
+HTL0097,5,3.6,0.5298,0.2,0.0,0.8,0.2,0.4,0.2,0.6,0.2,0.2,0.2,0.4,food,River Parvathipuram Stays,Parvathipuram Manyam,mid_range,3 Star
+HTL0098,5,3.64,0.2695,0.2,0.2,0.6,0.6,0.4,0.2,0.0,0.0,0.8,0.8,0.2,amenities,Horizon Inn,Parvathipuram Manyam,budget,1-2 Star
+HTL0099,5,3.32,0.2212,0.2,0.2,0.6,0.2,0.6,0.4,0.0,0.0,0.4,0.8,0.2,value,Blue Parvathipuram Homestay,Parvathipuram Manyam,budget,1-2 Star
+HTL0100,5,3.32,0.4776,0.2,0.0,0.8,0.4,0.4,0.2,0.6,0.2,0.4,0.4,0.2,food,Mystic Stays,Parvathipuram Manyam,mid_range,3 Star
+HTL0101,10,3.28,0.3445,0.3,0.0,0.7,0.3,0.5,0.2,0.5,0.3,0.4,0.3,0.5,staff,Lotus Homestay,East Godavari,mid_range,3 Star
+HTL0102,10,3.69,0.4054,0.1,0.2,0.7,0.2,0.1,0.1,0.5,0.4,0.3,0.4,0.0,food,Golden Homestay,East Godavari,premium,4 Star
+HTL0104,5,3.28,0.5221,0.0,0.2,0.8,0.0,0.6,0.2,0.2,0.6,0.6,0.0,0.0,staff,Nature East Palace,East Godavari,premium,4 Star
+HTL0105,10,3.38,0.4736,0.1,0.2,0.7,0.0,0.3,0.0,0.1,0.2,0.2,0.2,0.0,staff,Horizon East Hotel,East Godavari,luxury,5 Star
+HTL0106,25,3.312,0.3851,0.12,0.12,0.76,0.0,0.44,0.0,0.2,0.24,0.28,0.32,0.0,staff,Regal East Lodge,East Godavari,luxury,5 Star
+HTL0107,5,3.38,0.3446,0.2,0.2,0.6,0.2,0.2,0.2,0.2,0.4,0.2,0.2,0.0,service,Golden Guest House,East Godavari,premium,4 Star
+HTL0108,10,3.47,0.2279,0.3,0.1,0.6,0.6,0.4,0.3,0.0,0.0,0.9,0.7,0.3,amenities,Cloud9 East Cottage,East Godavari,budget,1-2 Star
+HTL0110,20,3.55,0.2183,0.3,0.1,0.6,0.55,0.55,0.15,0.1,0.0,0.85,0.6,0.1,amenities,Lotus Resort,East Godavari,budget,1-2 Star
+HTL0111,10,3.45,0.5112,0.2,0.0,0.8,0.3,0.4,0.2,0.4,0.3,0.4,0.3,0.4,staff,Hill East Homestay,East Godavari,mid_range,3 Star
+HTL0112,5,3.42,0.4975,0.2,0.0,0.8,0.2,0.4,0.4,0.2,0.2,0.8,0.2,0.4,amenities,Serene Hotel,East Godavari,mid_range,3 Star
+HTL0113,10,3.28,0.3436,0.2,0.2,0.6,0.6,0.4,0.2,0.1,0.0,0.8,0.7,0.2,amenities,Elite Hotel,East Godavari,budget,1-2 Star
+HTL0114,10,3.56,0.0936,0.4,0.0,0.6,0.5,0.4,0.3,0.2,0.0,0.8,0.5,0.2,amenities,Serene Villa,East Godavari,budget,1-2 Star
+HTL0115,10,3.44,0.4353,0.1,0.3,0.6,0.5,0.4,0.3,0.1,0.0,0.8,0.6,0.2,amenities,Pearl East Lodge,East Godavari,budget,1-2 Star
+HTL0116,5,3.38,0.4022,0.2,0.0,0.8,0.2,0.2,0.2,0.4,0.0,0.6,0.4,0.2,amenities,Tranquil Homestay,East Godavari,mid_range,3 Star
+HTL0117,5,3.32,0.2728,0.4,0.0,0.6,0.2,0.4,0.0,0.2,0.4,0.4,0.2,0.0,staff,Heritage East Hotel,East Godavari,premium,4 Star
+HTL0118,10,3.56,0.37,0.2,0.2,0.6,0.6,0.4,0.2,0.1,0.0,0.8,0.6,0.1,amenities,Crystal Palace,East Godavari,budget,1-2 Star
+HTL0119,10,3.48,0.5681,0.1,0.0,0.9,0.1,0.3,0.2,0.6,0.2,0.6,0.3,0.4,food,Blue East Lodge,East Godavari,mid_range,3 Star
+HTL0121,10,3.21,0.3093,0.4,0.0,0.6,0.3,0.5,0.2,0.5,0.2,0.5,0.4,0.3,staff,Royal Nandyal Palace,Nandyal,mid_range,3 Star
+HTL0123,5,3.3,0.132,0.4,0.0,0.6,0.6,0.6,0.2,0.0,0.0,0.8,0.6,0.2,amenities,Cloud9 Nandyal Cottage,Nandyal,budget,1-2 Star
+HTL0124,10,3.29,0.3394,0.3,0.0,0.7,0.2,0.3,0.2,0.5,0.2,0.6,0.5,0.4,amenities,Sunset Hotel,Nandyal,mid_range,3 Star
+HTL0125,5,3.3,0.1394,0.4,0.0,0.6,0.6,0.4,0.4,0.0,0.0,0.8,0.6,0.2,amenities,Hill Nandyal Palace,Nandyal,budget,1-2 Star
+HTL0126,10,3.3,0.2565,0.2,0.2,0.6,0.6,0.4,0.2,0.2,0.0,0.9,0.6,0.1,amenities,Sunrise Hotel,Nandyal,budget,1-2 Star
+HTL0127,5,3.3,0.3224,0.2,0.0,0.8,0.0,0.4,0.0,0.0,0.0,0.4,0.2,0.0,staff,Grand Nandyal Retreat,Nandyal,luxury,5 Star
+HTL0128,5,3.58,0.356,0.4,0.0,0.6,0.4,0.4,0.2,0.2,0.4,0.4,0.4,0.4,cleanliness,Horizon Stays,Nandyal,mid_range,3 Star
+HTL0129,10,3.44,0.4033,0.2,0.0,0.8,0.6,0.4,0.3,0.3,0.1,0.5,0.2,0.2,cleanliness,River Nest,Nandyal,mid_range,3 Star
+HTL0131,15,3.3467,0.1242,0.3333333333333333,0.06666666666666667,0.6,0.6,0.4,0.3333,0.0,0.0,0.8667,0.7333,0.2667,amenities,Blue Retreat,Nandyal,budget,1-2 Star
+HTL0133,5,3.66,0.2622,0.2,0.2,0.6,0.4,0.2,0.6,0.2,0.0,0.6,0.6,0.4,location,Lotus Residency,Nandyal,budget,1-2 Star
+HTL0134,10,3.5,0.3745,0.2,0.0,0.8,0.0,0.5,0.0,0.1,0.0,0.6,0.1,0.0,amenities,Hill Suites,Nandyal,luxury,5 Star
+HTL0135,5,3.66,0.2749,0.4,0.0,0.6,0.0,0.2,0.0,0.2,0.6,0.6,0.2,0.0,service,Mystic Homestay,Nandyal,premium,4 Star
+HTL0136,15,3.42,0.2224,0.26666666666666666,0.13333333333333333,0.6,0.4667,0.6,0.2667,0.0,0.0,0.8,0.7333,0.1333,amenities,Crystal Retreat,Nandyal,budget,1-2 Star
+HTL0137,5,3.46,0.2557,0.2,0.2,0.6,0.2,0.4,0.8,0.0,0.0,0.6,0.8,0.4,location,Blue Residency,Nandyal,budget,1-2 Star
+HTL0138,20,3.275,0.2171,0.3,0.1,0.6,0.6,0.5,0.2,0.1,0.0,0.75,0.65,0.1,amenities,River Nandyal Guest House,Nandyal,budget,1-2 Star
+HTL0139,10,3.31,0.3686,0.1,0.2,0.7,0.0,0.2,0.1,0.5,0.6,0.7,0.4,0.0,amenities,Elite Nandyal Guest House,Nandyal,premium,4 Star
+HTL0140,5,3.5,0.5159,0.2,0.0,0.8,0.2,0.0,0.2,0.2,0.4,0.8,0.2,0.4,amenities,Saffron Nandyal Homestay,Nandyal,mid_range,3 Star
+HTL0141,15,3.48,0.4084,0.2,0.0,0.8,0.2667,0.3333,0.4667,0.4,0.2667,0.7333,0.2667,0.2,amenities,Heritage Enclave,Nandyal,mid_range,3 Star
+HTL0142,15,3.34,0.3773,0.2,0.0,0.8,0.3333,0.2667,0.2667,0.4667,0.2667,0.6667,0.4667,0.2,amenities,Sunset Suites,Nandyal,mid_range,3 Star
+HTL0143,5,3.46,0.4792,0.0,0.4,0.6,0.2,0.4,0.0,0.4,0.4,0.6,0.2,0.0,amenities,Crystal Suites,Nandyal,premium,4 Star
+HTL0145,10,3.61,0.3388,0.3,0.0,0.7,0.5,0.5,0.3,0.3,0.1,0.7,0.4,0.1,amenities,Comfort Nest,Nandyal,mid_range,3 Star
+HTL0146,10,3.34,0.2353,0.3,0.1,0.6,0.4,0.4,0.4,0.1,0.0,0.7,0.5,0.3,amenities,Sunset Palace,Nandyal,budget,1-2 Star
+HTL0147,5,3.52,0.3068,0.2,0.2,0.6,0.4,0.4,0.2,0.0,0.0,0.8,0.8,0.0,amenities,Cloud9 Lodge,Nandyal,budget,1-2 Star
+HTL0149,10,3.34,0.2805,0.2,0.2,0.6,0.5,0.2,0.3,0.2,0.0,0.9,0.5,0.1,amenities,Heritage Nandyal Cottage,Nandyal,budget,1-2 Star
+HTL0151,5,3.72,0.4374,0.2,0.0,0.8,0.2,0.4,0.4,0.8,0.6,0.6,0.2,0.2,food,Grand Nandyal Inn,Nandyal,mid_range,3 Star
+HTL0152,10,3.21,0.264,0.3,0.1,0.6,0.7,0.4,0.1,0.1,0.0,0.8,0.8,0.0,amenities,Silver Cottage,Nandyal,budget,1-2 Star
+HTL0153,5,3.4,0.166,0.4,0.0,0.6,1.0,0.4,0.2,0.0,0.0,1.0,0.6,0.4,cleanliness,Lotus Stays,Nandyal,budget,1-2 Star
+HTL0154,5,3.9,0.3977,0.2,0.2,0.6,0.4,0.4,0.2,0.0,0.0,0.6,0.6,0.2,amenities,Horizon Resort,Nandyal,budget,1-2 Star
+HTL0155,10,3.42,0.4067,0.2,0.0,0.8,0.4,0.4,0.4,0.5,0.3,0.7,0.0,0.2,amenities,Golden Villa,Nandyal,mid_range,3 Star
+HTL0158,5,3.58,0.2211,0.4,0.0,0.6,1.0,0.2,0.0,0.2,0.0,1.0,0.6,0.0,cleanliness,Oasis Nandyal Villa,Nandyal,budget,1-2 Star
+HTL0159,5,3.44,0.1052,0.4,0.0,0.6,0.8,0.4,0.2,0.0,0.0,0.8,0.8,0.4,cleanliness,Nature Inn,Nandyal,budget,1-2 Star
+HTL0160,10,3.48,0.4065,0.2,0.1,0.7,0.1,0.2,0.1,0.5,0.3,0.4,0.3,0.0,food,Sunrise Suites,Nandyal,premium,4 Star
+HTL0161,15,3.62,0.5019,0.13333333333333333,0.06666666666666667,0.8,0.0667,0.4,0.0667,0.5333,0.3333,0.4667,0.2,0.0,food,Elite Tirupati Suites,Tirupati,premium,4 Star
+HTL0162,20,3.42,0.4606,0.15,0.05,0.8,0.0,0.35,0.0,0.1,0.25,0.35,0.15,0.0,staff,Mystic Tirupati Homestay,Tirupati,luxury,5 Star
+HTL0164,5,3.4,0.3841,0.2,0.0,0.8,0.4,0.4,0.6,0.2,0.2,0.8,0.0,0.2,amenities,Green Tirupati Hotel,Tirupati,mid_range,3 Star
+HTL0165,5,2.96,0.3378,0.2,0.2,0.6,0.6,0.6,0.0,0.2,0.0,0.8,0.6,0.0,amenities,Paradise Hotel,Tirupati,budget,1-2 Star
+HTL0166,5,3.44,0.4429,0.2,0.0,0.8,0.0,0.4,0.4,0.6,0.0,0.8,0.4,0.2,amenities,Heritage Hotel,Tirupati,mid_range,3 Star
+HTL0168,5,3.56,0.6346,0.0,0.0,1.0,0.2,0.6,0.2,0.2,0.4,0.2,0.0,0.0,staff,Palm Guest House,Tirupati,premium,4 Star
+HTL0170,10,3.29,0.2617,0.2,0.2,0.6,0.4,0.4,0.4,0.0,0.0,0.7,0.7,0.2,amenities,Silver Stays,Tirupati,budget,1-2 Star
+HTL0172,5,3.44,0.6211,0.0,0.0,1.0,0.2,0.2,0.2,0.6,0.2,0.6,0.4,0.2,food,Crystal Tirupati Lodge,Tirupati,mid_range,3 Star
+HTL0173,5,3.34,0.5633,0.0,0.0,1.0,0.2,0.2,0.6,0.2,0.2,1.0,0.0,0.2,amenities,Regal Tirupati Hotel,Tirupati,mid_range,3 Star
+HTL0175,10,3.36,0.4599,0.2,0.0,0.8,0.4,0.3,0.2,0.3,0.2,0.8,0.4,0.2,amenities,Paradise Inn,Tirupati,mid_range,3 Star
+HTL0176,10,3.48,0.2327,0.3,0.1,0.6,0.0,0.1,0.0,0.2,0.4,0.1,0.3,0.0,service,Serene Homestay,Tirupati,luxury,5 Star
+HTL0177,5,3.38,0.374,0.2,0.2,0.6,0.8,0.2,0.0,0.2,0.0,1.0,0.4,0.0,amenities,Green Inn,Tirupati,budget,1-2 Star
+HTL0178,20,3.27,0.4574,0.2,0.0,0.8,0.3,0.35,0.3,0.35,0.15,0.65,0.2,0.25,amenities,Comfort Cottage,Tirupati,mid_range,3 Star
+HTL0180,10,3.27,0.4944,0.1,0.0,0.9,0.2,0.2,0.3,0.3,0.1,0.6,0.2,0.4,amenities,Crystal Suites,Tirupati,mid_range,3 Star
+HTL0181,5,3.62,0.2937,0.4,0.0,0.6,0.4,0.4,0.2,0.4,0.0,0.6,0.6,0.2,amenities,Comfort Resort,Tirupati,mid_range,3 Star
+HTL0182,5,3.3,0.5158,0.0,0.2,0.8,0.0,0.4,0.4,0.2,0.4,0.6,0.0,0.0,amenities,Comfort Tirupati Lodge,Tirupati,premium,4 Star
+HTL0184,15,3.3533,0.19,0.2,0.2,0.6,0.4,0.6667,0.2667,0.0667,0.0,0.8667,0.6667,0.0667,amenities,Comfort Retreat,Tirupati,budget,1-2 Star
+HTL0185,5,3.44,0.5621,0.0,0.0,1.0,0.2,0.2,0.4,0.4,0.2,1.0,0.0,0.2,amenities,Horizon Tirupati Retreat,Tirupati,mid_range,3 Star
+HTL0186,5,3.7,0.21,0.2,0.2,0.6,0.4,0.6,0.2,0.0,0.0,1.0,0.6,0.0,amenities,Mystic Tirupati Villa,Tirupati,budget,1-2 Star
+HTL0187,5,3.02,0.4741,0.2,0.0,0.8,0.2,0.2,0.6,0.4,0.4,0.6,0.0,0.2,location,Royal Cottage,Tirupati,mid_range,3 Star
+HTL0188,15,3.4,0.4549,0.2,0.0,0.8,0.2,0.2,0.2667,0.4,0.2667,0.6667,0.2,0.3333,amenities,Regal Tirupati Resort,Tirupati,mid_range,3 Star
+HTL0189,20,3.315,0.4229,0.2,0.0,0.8,0.3,0.2,0.3,0.3,0.3,0.75,0.3,0.35,amenities,Serene Palace,Tirupati,mid_range,3 Star
+HTL0190,5,3.18,0.3275,0.4,0.0,0.6,0.4,0.6,0.2,0.4,0.2,0.4,0.4,0.2,staff,Palm Retreat,Tirupati,mid_range,3 Star
+HTL0191,10,3.56,0.4852,0.0,0.3,0.7,0.0,0.3,0.1,0.5,0.5,0.5,0.3,0.0,food,Palm Tirupati Lodge,Tirupati,premium,4 Star
+HTL0194,10,3.37,0.4886,0.2,0.0,0.8,0.3,0.4,0.2,0.4,0.3,0.4,0.1,0.5,ambiance,Classic Hotel,Tirupati,mid_range,3 Star
+HTL0195,5,3.48,0.3137,0.4,0.0,0.6,0.0,0.4,0.4,0.6,0.6,0.6,0.2,0.4,food,Sunset Tirupati Nest,Tirupati,mid_range,3 Star
+HTL0196,10,3.32,0.4468,0.1,0.2,0.7,0.2,0.4,0.2,0.3,0.3,0.2,0.2,0.0,staff,Green Cottage,Tirupati,premium,4 Star
+HTL0197,20,3.245,0.4299,0.1,0.25,0.65,0.15,0.1,0.2,0.4,0.3,0.2,0.35,0.0,food,Sunset Villa,Tirupati,premium,4 Star
+HTL0198,5,3.7,0.4349,0.0,0.4,0.6,0.2,0.0,0.2,0.4,0.4,0.6,0.2,0.0,amenities,Grand Homestay,Tirupati,premium,4 Star
+HTL0202,5,3.36,0.1344,0.2,0.2,0.6,0.6,0.2,0.2,0.0,0.0,1.0,0.6,0.2,amenities,Regal Residency,Tirupati,budget,1-2 Star
+HTL0203,5,3.44,0.3578,0.2,0.2,0.6,0.4,0.4,0.2,0.0,0.0,0.8,0.6,0.0,amenities,Mystic Homestay,Tirupati,budget,1-2 Star
+HTL0206,10,3.34,0.5393,0.1,0.0,0.9,0.2,0.1,0.3,0.3,0.4,0.6,0.1,0.5,amenities,Emerald Homestay,Tirupati,mid_range,3 Star
+HTL0207,10,3.29,0.1984,0.3,0.1,0.6,0.4,0.7,0.3,0.1,0.0,0.8,0.6,0.2,amenities,Horizon Hotel,Tirupati,budget,1-2 Star
+HTL0208,10,3.51,0.2359,0.3,0.1,0.6,0.0,0.3,0.0,0.1,0.2,0.6,0.2,0.0,amenities,Saffron Hotel,Tirupati,luxury,5 Star
+HTL0209,5,3.24,0.4835,0.2,0.0,0.8,0.0,0.4,0.2,0.2,0.4,0.4,0.0,0.0,staff,Serene Cottage,Tirupati,premium,4 Star
+HTL0210,10,3.55,0.2275,0.3,0.1,0.6,0.7,0.4,0.1,0.1,0.0,0.9,0.6,0.1,amenities,Royal Tirupati Guest House,Tirupati,budget,1-2 Star
+HTL0211,5,3.22,0.4929,0.0,0.2,0.8,0.0,0.4,0.0,0.2,0.2,0.2,0.2,0.0,staff,Lotus Resort,Tirupati,luxury,5 Star
+HTL0212,20,3.415,0.4533,0.05,0.1,0.85,0.0,0.5,0.0,0.25,0.2,0.25,0.35,0.0,staff,Cloud9 Enclave,Tirupati,luxury,5 Star
+HTL0213,5,3.46,0.0763,0.4,0.0,0.6,0.6,0.2,0.4,0.0,0.0,1.0,0.6,0.4,amenities,Elite Inn,Tirupati,budget,1-2 Star
+HTL0214,5,3.32,0.5046,0.2,0.0,0.8,0.2,0.6,0.4,0.4,0.0,0.8,0.2,0.2,amenities,Royal Tirupati Lodge,Tirupati,mid_range,3 Star
+HTL0216,5,3.48,0.4279,0.2,0.0,0.8,0.0,0.2,0.2,0.6,0.6,0.6,0.4,0.6,food,Mystic Suites,Tirupati,mid_range,3 Star
+HTL0217,5,3.24,0.1774,0.4,0.0,0.6,1.0,0.4,0.2,0.0,0.0,1.0,0.8,0.2,cleanliness,Hill Villa,Tirupati,budget,1-2 Star
+HTL0218,15,3.4467,0.3829,0.26666666666666666,0.0,0.7333333333333333,0.2,0.4,0.3333,0.5333,0.1333,0.4667,0.1333,0.2667,food,Royal Tirupati Enclave,Tirupati,mid_range,3 Star
+HTL0219,15,3.3133,0.4109,0.13333333333333333,0.13333333333333333,0.7333333333333333,0.2,0.4667,0.1333,0.1333,0.5333,0.4,0.1333,0.0,service,Comfort Tirupati Stays,Tirupati,premium,4 Star
+HTL0221,10,3.54,0.1947,0.3,0.1,0.6,0.4,0.2,0.5,0.0,0.0,0.8,0.6,0.3,amenities,Horizon Residency,Tirupati,budget,1-2 Star
+HTL0222,10,3.46,0.376,0.3,0.0,0.7,0.3,0.1,0.2,0.4,0.4,0.6,0.3,0.4,amenities,Sunrise Tirupati Guest House,Tirupati,mid_range,3 Star
+HTL0224,10,3.43,0.5011,0.2,0.0,0.8,0.2,0.4,0.3,0.7,0.4,0.5,0.3,0.3,food,Blue Resort,Tirupati,mid_range,3 Star
+HTL0225,5,3.3,0.4117,0.2,0.2,0.6,0.4,0.4,0.0,0.2,0.2,0.4,0.0,0.0,cleanliness,Crystal Tirupati Stays,Tirupati,premium,4 Star
+HTL0226,5,3.58,0.6117,0.0,0.0,1.0,0.4,0.2,0.4,0.4,0.2,0.8,0.2,0.0,amenities,Blue Tirupati Lodge,Tirupati,mid_range,3 Star
+HTL0227,15,3.36,0.4391,0.13333333333333333,0.0,0.8666666666666667,0.3333,0.1333,0.3333,0.3333,0.2,0.6667,0.3333,0.2,amenities,Palm Resort,Tirupati,mid_range,3 Star
+HTL0228,10,3.51,0.3168,0.3,0.0,0.7,0.2,0.4,0.4,0.5,0.2,0.5,0.3,0.3,food,Golden Tirupati Inn,Tirupati,mid_range,3 Star
+HTL0230,5,3.68,0.4146,0.2,0.0,0.8,0.6,0.2,0.4,0.0,0.2,0.8,0.2,0.2,amenities,Emerald Tirupati Cottage,Tirupati,mid_range,3 Star
+HTL0231,10,3.48,0.4245,0.2,0.0,0.8,0.2,0.6,0.6,0.5,0.2,0.8,0.1,0.1,amenities,Crystal Tirupati Guest House,Tirupati,mid_range,3 Star
+HTL0232,5,3.5,0.4358,0.2,0.0,0.8,0.0,0.2,0.4,0.4,0.2,0.8,0.4,0.4,amenities,Pearl Tirupati Guest House,Tirupati,mid_range,3 Star
+HTL0235,15,3.5867,0.1532,0.3333333333333333,0.06666666666666667,0.6,0.6667,0.3333,0.2667,0.2,0.0,1.0,0.6,0.0667,amenities,Silver Tirupati Villa,Tirupati,budget,1-2 Star
+HTL0236,15,3.4333,0.2275,0.26666666666666666,0.13333333333333333,0.6,0.6667,0.3333,0.3333,0.0667,0.0,0.8667,0.6667,0.3333,amenities,Regal Tirupati Enclave,Tirupati,budget,1-2 Star
+HTL0239,10,3.45,0.299,0.3,0.1,0.6,0.5,0.5,0.1,0.2,0.0,0.8,0.4,0.1,amenities,Royal Residency,Tirupati,budget,1-2 Star
+HTL0240,10,3.1,0.4321,0.2,0.0,0.8,0.2,0.3,0.4,0.4,0.2,0.7,0.3,0.2,amenities,Emerald Lodge,Tirupati,mid_range,3 Star
+HTL0241,10,3.22,0.4428,0.2,0.0,0.8,0.2,0.4,0.4,0.5,0.2,0.8,0.2,0.1,amenities,Golden Cottage,Tirupati,mid_range,3 Star
+HTL0242,5,3.36,0.5679,0.2,0.0,0.8,0.0,0.2,0.4,0.6,0.6,0.8,0.2,0.4,amenities,Elite Stays,Tirupati,mid_range,3 Star
+HTL0244,5,3.74,0.2722,0.2,0.2,0.6,0.4,0.6,0.2,0.2,0.0,0.8,0.6,0.0,amenities,Classic Retreat,Tirupati,budget,1-2 Star
+HTL0245,15,3.2067,0.2759,0.2,0.2,0.6,0.3333,0.6,0.2,0.0667,0.0,0.8,0.6,0.0667,amenities,Serene Suites,Tirupati,budget,1-2 Star
+HTL0246,10,3.35,0.4276,0.3,0.0,0.7,0.3,0.7,0.3,0.6,0.2,0.3,0.2,0.3,staff,Paradise Suites,Tirupati,mid_range,3 Star
+HTL0247,15,3.2867,0.1439,0.3333333333333333,0.06666666666666667,0.6,0.4667,0.4667,0.4,0.0667,0.0,0.9333,0.6,0.1333,amenities,Saffron Guest House,Tirupati,budget,1-2 Star
+HTL0248,10,3.16,0.1624,0.4,0.0,0.6,0.6,0.3,0.3,0.2,0.0,0.8,0.4,0.2,amenities,Royal Nest,Tirupati,budget,1-2 Star
+HTL0249,10,3.4,0.5792,0.1,0.0,0.9,0.2,0.3,0.3,0.5,0.4,0.8,0.3,0.2,amenities,Nature Retreat,Tirupati,mid_range,3 Star
+HTL0250,20,3.47,0.4048,0.25,0.0,0.75,0.3,0.25,0.25,0.35,0.25,0.6,0.35,0.3,amenities,Dew Drop Retreat,Tirupati,mid_range,3 Star
+HTL0252,10,3.28,0.394,0.2,0.0,0.8,0.0,0.3,0.0,0.2,0.2,0.5,0.1,0.0,amenities,Comfort Palace,Tirupati,luxury,5 Star
+HTL0253,10,3.44,0.4506,0.0,0.2,0.8,0.0,0.5,0.0,0.4,0.1,0.3,0.4,0.0,staff,Oasis Tirupati Inn,Tirupati,luxury,5 Star
+HTL0255,10,3.63,0.5245,0.0,0.2,0.8,0.2,0.3,0.2,0.3,0.4,0.3,0.1,0.0,service,Sunrise Tirupati Inn,Tirupati,premium,4 Star
+HTL0256,20,3.41,0.3946,0.15,0.1,0.75,0.0,0.4,0.0,0.1,0.25,0.45,0.3,0.0,amenities,Royal Tirupati Enclave,Tirupati,luxury,5 Star
+HTL0257,10,3.35,0.1653,0.4,0.0,0.6,0.7,0.4,0.1,0.0,0.0,0.8,0.7,0.2,amenities,Elite Tirupati Hotel,Tirupati,budget,1-2 Star
+HTL0258,5,3.28,0.4245,0.2,0.2,0.6,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.0,cleanliness,Golden Tirupati Suites,Tirupati,premium,4 Star
+HTL0260,10,3.48,0.2208,0.3,0.1,0.6,0.5,0.6,0.0,0.2,0.0,0.7,0.6,0.0,amenities,Sunset Inn,Tirupati,budget,1-2 Star
+HTL0261,15,3.2867,0.2624,0.3333333333333333,0.06666666666666667,0.6,0.5333,0.4667,0.3333,0.0667,0.0,0.7333,0.5333,0.3333,amenities,Classic Inn,Tirupati,budget,1-2 Star
+HTL0262,5,3.34,0.2482,0.2,0.2,0.6,0.0,0.2,0.0,0.0,0.0,0.4,0.2,0.0,amenities,Silver Enclave,Tirupati,luxury,5 Star
+HTL0263,10,3.42,0.48,0.1,0.2,0.7,0.1,0.2,0.2,0.4,0.3,0.2,0.2,0.0,food,Sunset Enclave,Tirupati,premium,4 Star
+HTL0264,10,3.44,0.5187,0.1,0.0,0.9,0.1,0.1,0.3,0.5,0.4,0.8,0.2,0.4,amenities,Golden Villa,Tirupati,mid_range,3 Star
+HTL0267,15,3.3333,0.4989,0.2,0.0,0.8,0.1333,0.2,0.3333,0.3333,0.3333,0.6667,0.2,0.4,amenities,Heritage Tirupati Retreat,Tirupati,mid_range,3 Star
+HTL0268,10,3.37,0.3523,0.2,0.1,0.7,0.0,0.4,0.0,0.2,0.3,0.2,0.4,0.0,staff,Lotus Villa,Tirupati,luxury,5 Star
+HTL0269,5,3.2,0.5255,0.2,0.0,0.8,0.2,0.2,0.2,0.2,0.4,0.6,0.0,0.6,amenities,Cloud9 Nest,Tirupati,mid_range,3 Star
+HTL0270,5,3.64,0.0478,0.4,0.0,0.6,1.0,0.2,0.0,0.2,0.0,1.0,0.6,0.2,cleanliness,Hill Retreat,Tirupati,budget,1-2 Star
+HTL0271,10,3.53,0.4714,0.2,0.0,0.8,0.2,0.5,0.5,0.5,0.3,0.7,0.2,0.2,amenities,River Nest,Tirupati,mid_range,3 Star
+HTL0272,10,3.48,0.4408,0.1,0.1,0.8,0.0,0.3,0.0,0.2,0.2,0.3,0.3,0.0,staff,Cloud9 Lodge,Tirupati,luxury,5 Star
+HTL0273,5,3.24,0.6881,0.0,0.0,1.0,0.2,0.6,0.4,0.6,0.2,0.6,0.0,0.2,staff,Blue Eluru Cottage,Eluru,mid_range,3 Star
+HTL0275,5,3.06,0.5793,0.0,0.0,1.0,0.0,0.4,0.4,0.6,0.0,0.8,0.2,0.2,amenities,Tranquil Residency,Eluru,mid_range,3 Star
+HTL0276,10,3.24,0.1774,0.3,0.1,0.6,0.5,0.4,0.2,0.1,0.0,0.9,0.5,0.1,amenities,Palm Eluru Stays,Eluru,budget,1-2 Star
+HTL0277,10,3.33,0.3336,0.2,0.2,0.6,0.5,0.4,0.2,0.0,0.0,0.7,0.7,0.2,amenities,Blue Inn,Eluru,budget,1-2 Star
+HTL0278,15,3.44,0.4217,0.26666666666666666,0.0,0.7333333333333333,0.4667,0.6,0.3333,0.3333,0.2,0.6,0.1333,0.2667,staff,Tranquil Homestay,Eluru,mid_range,3 Star
+HTL0280,5,3.72,0.2655,0.2,0.2,0.6,0.6,0.4,0.4,0.0,0.0,0.6,0.8,0.4,value,Sunrise Suites,Eluru,budget,1-2 Star
+HTL0281,5,3.28,0.2191,0.2,0.2,0.6,0.8,0.4,0.2,0.2,0.0,0.8,0.6,0.4,cleanliness,Dew Drop Villa,Eluru,budget,1-2 Star
+HTL0282,15,3.52,0.4749,0.06666666666666667,0.13333333333333333,0.8,0.2,0.5333,0.0667,0.3333,0.4667,0.3333,0.2,0.0,staff,Grand Eluru Cottage,Eluru,premium,4 Star
+HTL0283,10,3.27,0.2202,0.2,0.2,0.6,0.6,0.4,0.2,0.1,0.0,1.0,0.6,0.1,amenities,Hill Eluru Suites,Eluru,budget,1-2 Star
+HTL0284,10,3.1,0.2385,0.3,0.1,0.6,0.5,0.4,0.2,0.0,0.0,0.8,0.6,0.3,amenities,Regal Retreat,Eluru,budget,1-2 Star
+HTL0285,5,3.22,0.1249,0.4,0.0,0.6,0.8,0.4,0.0,0.2,0.0,1.0,0.4,0.0,amenities,Cloud9 Eluru Hotel,Eluru,budget,1-2 Star
+HTL0287,10,3.38,0.1561,0.4,0.0,0.6,0.9,0.1,0.3,0.2,0.0,1.0,0.6,0.3,amenities,Comfort Eluru Resort,Eluru,budget,1-2 Star
+HTL0288,10,3.34,0.3142,0.3,0.0,0.7,0.4,0.4,0.4,0.3,0.2,0.6,0.3,0.3,amenities,Silver Retreat,Eluru,mid_range,3 Star
+HTL0290,10,3.58,0.4458,0.2,0.1,0.7,0.0,0.3,0.0,0.4,0.5,0.5,0.1,0.0,service,Silver Nest,Eluru,premium,4 Star
+HTL0291,10,3.19,0.3557,0.3,0.0,0.7,0.4,0.4,0.4,0.2,0.1,0.8,0.3,0.2,amenities,Sunrise Palace,Vizianagaram,mid_range,3 Star
+HTL0292,5,3.38,0.5187,0.0,0.4,0.6,0.0,0.2,0.0,0.6,0.4,0.4,0.2,0.0,food,Saffron Hotel,Vizianagaram,premium,4 Star
+HTL0294,5,3.32,0.3691,0.2,0.2,0.6,0.6,0.4,0.2,0.0,0.0,0.8,0.6,0.4,amenities,Saffron Enclave,Vizianagaram,budget,1-2 Star
+HTL0295,5,3.2,0.2384,0.4,0.0,0.6,0.6,0.4,0.4,0.0,0.0,0.8,0.6,0.4,amenities,Crystal Vizianagaram Villa,Vizianagaram,budget,1-2 Star
+HTL0297,5,3.18,0.646,0.0,0.0,1.0,0.2,0.2,0.6,0.4,0.4,0.8,0.0,0.2,amenities,Heritage Vizianagaram Residency,Vizianagaram,mid_range,3 Star
+HTL0299,5,3.4,0.1144,0.4,0.0,0.6,0.4,0.4,0.4,0.0,0.0,1.0,0.6,0.0,amenities,Oasis Vizianagaram Nest,Vizianagaram,budget,1-2 Star
+HTL0300,5,3.62,0.3352,0.2,0.2,0.6,0.4,0.4,0.0,0.2,0.4,0.4,0.2,0.0,cleanliness,Hill Enclave,Vizianagaram,premium,4 Star
+HTL0301,15,3.3733,0.4314,0.2,0.0,0.8,0.2,0.2667,0.2667,0.4,0.2,0.6667,0.2,0.4,amenities,Elite Inn,Vizianagaram,mid_range,3 Star
+HTL0302,15,3.3267,0.2847,0.4,0.0,0.6,0.4667,0.4667,0.2667,0.3333,0.2,0.4667,0.2667,0.2667,cleanliness,Paradise Vizianagaram Suites,Vizianagaram,mid_range,3 Star
+HTL0303,10,3.21,0.0949,0.4,0.0,0.6,0.4,0.5,0.5,0.0,0.0,0.7,0.7,0.3,amenities,Golden Vizianagaram Villa,Vizianagaram,budget,1-2 Star
+HTL0304,10,3.33,0.4254,0.1,0.1,0.8,0.1,0.4,0.1,0.2,0.7,0.3,0.2,0.0,service,Elite Inn,Vizianagaram,premium,4 Star
+HTL0305,5,3.68,0.5623,0.2,0.0,0.8,0.4,0.4,0.2,0.6,0.4,0.6,0.2,0.2,food,Royal Homestay,Vizianagaram,mid_range,3 Star
+HTL0306,5,3.56,0.4832,0.2,0.0,0.8,0.0,0.2,0.4,0.6,0.4,0.6,0.4,0.4,food,Blue Guest House,Vizianagaram,mid_range,3 Star
+HTL0307,20,3.595,0.3076,0.15,0.25,0.6,0.5,0.35,0.3,0.1,0.0,0.8,0.7,0.2,amenities,Comfort Palace,Vizianagaram,budget,1-2 Star
+HTL0309,10,3.59,0.4097,0.1,0.2,0.7,0.2,0.4,0.1,0.3,0.5,0.4,0.2,0.0,service,Golden Vizianagaram Hotel,Vizianagaram,premium,4 Star
+HTL0310,5,3.28,0.5862,0.0,0.0,1.0,0.4,0.4,0.4,0.4,0.2,0.6,0.0,0.2,amenities,Horizon Residency,Vizianagaram,mid_range,3 Star
+HTL0311,15,3.38,0.4685,0.2,0.0,0.8,0.0,0.4667,0.0,0.2,0.2667,0.2,0.2,0.0,staff,Sunrise Residency,Vizianagaram,luxury,5 Star
+HTL0312,5,3.32,0.3059,0.2,0.2,0.6,0.6,0.4,0.2,0.2,0.0,1.0,0.4,0.2,amenities,Paradise Enclave,Vizianagaram,budget,1-2 Star
+HTL0314,5,3.6,0.3993,0.2,0.0,0.8,0.0,0.2,0.2,0.6,0.2,0.8,0.4,0.4,amenities,Sunrise Villa,Vizianagaram,mid_range,3 Star
+HTL0315,10,3.42,0.1798,0.3,0.1,0.6,0.7,0.3,0.3,0.1,0.0,0.9,0.6,0.2,amenities,Saffron Resort,Vizianagaram,budget,1-2 Star
+HTL0316,10,3.32,0.4674,0.2,0.0,0.8,0.3,0.2,0.3,0.3,0.4,0.6,0.2,0.5,amenities,Saffron Vizianagaram Homestay,Vizianagaram,mid_range,3 Star
+HTL0317,10,3.37,0.3684,0.2,0.1,0.7,0.0,0.3,0.0,0.3,0.3,0.4,0.3,0.0,amenities,Serene Vizianagaram Enclave,Vizianagaram,luxury,5 Star
+HTL0319,15,3.38,0.1869,0.26666666666666666,0.13333333333333333,0.6,0.6,0.2,0.3333,0.1333,0.0,1.0,0.4667,0.2,amenities,Dew Drop Vizianagaram Cottage,Vizianagaram,budget,1-2 Star
+HTL0320,10,3.65,0.412,0.2,0.0,0.8,0.3,0.1,0.1,0.3,0.2,0.7,0.3,0.4,amenities,Dew Drop Stays,Vizianagaram,mid_range,3 Star
+HTL0321,5,3.02,0.3007,0.4,0.0,0.6,0.2,0.4,0.2,0.6,0.2,0.6,0.8,0.2,value,Lotus Enclave,Vizianagaram,mid_range,3 Star
+HTL0322,5,3.24,0.4404,0.2,0.2,0.6,0.2,0.2,0.0,0.4,0.2,0.6,0.0,0.0,amenities,Sunset Vizianagaram Palace,Vizianagaram,premium,4 Star
+HTL0323,10,3.38,0.55,0.2,0.0,0.8,0.1,0.3,0.3,0.5,0.4,0.7,0.1,0.4,amenities,Dew Drop Vizianagaram Guest House,Vizianagaram,mid_range,3 Star
+HTL0324,5,3.32,0.3152,0.4,0.0,0.6,0.2,0.2,0.2,0.4,0.2,0.8,0.4,0.2,amenities,Mystic Homestay,Vizianagaram,mid_range,3 Star
+HTL0325,10,3.54,0.3346,0.4,0.0,0.6,0.3,0.5,0.3,0.4,0.3,0.6,0.3,0.3,amenities,Green Cottage,Vizianagaram,mid_range,3 Star
+HTL0326,5,3.26,0.2566,0.2,0.2,0.6,0.6,0.4,0.2,0.0,0.0,1.0,0.6,0.0,amenities,Oasis Suites,Vizianagaram,budget,1-2 Star
+HTL0327,5,3.48,0.2305,0.2,0.2,0.6,0.8,0.2,0.2,0.2,0.0,1.0,0.6,0.2,amenities,Pearl Sri Hotel,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0328,10,3.42,0.2914,0.1,0.3,0.6,0.3,0.6,0.4,0.0,0.0,0.8,0.8,0.1,amenities,Blue Guest House,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0330,5,3.52,0.2802,0.2,0.2,0.6,0.2,0.4,0.4,0.0,0.0,0.8,0.6,0.2,amenities,Sunrise Sri Cottage,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0331,5,3.18,0.4624,0.0,0.0,1.0,0.0,0.6,0.0,0.2,0.2,0.2,0.2,0.0,staff,Dew Drop Sri Resort,Sri Potti Sriramulu Nellore,luxury,5 Star
+HTL0332,15,3.38,0.4452,0.2,0.0,0.8,0.2,0.4,0.2,0.4667,0.1333,0.6667,0.2667,0.4,amenities,Mystic Inn,Sri Potti Sriramulu Nellore,mid_range,3 Star
+HTL0333,15,3.4333,0.2691,0.26666666666666666,0.13333333333333333,0.6,0.6667,0.4,0.0667,0.1333,0.0,0.8667,0.6,0.0667,amenities,Oasis Sri Retreat,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0334,15,3.3,0.4569,0.06666666666666667,0.13333333333333333,0.8,0.0,0.4,0.0,0.1333,0.2,0.2667,0.2667,0.0,staff,Mystic Resort,Sri Potti Sriramulu Nellore,luxury,5 Star
+HTL0335,15,3.5267,0.2344,0.26666666666666666,0.13333333333333333,0.6,0.4667,0.2667,0.3333,0.0667,0.0,0.9333,0.5333,0.1333,amenities,Heritage Resort,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0337,5,3.32,0.4677,0.2,0.0,0.8,0.4,0.0,0.2,0.4,0.4,0.6,0.2,0.2,amenities,Green Sri Stays,Sri Potti Sriramulu Nellore,mid_range,3 Star
+HTL0338,5,3.74,0.4271,0.2,0.0,0.8,0.2,0.2,0.6,0.2,0.2,0.8,0.0,0.2,amenities,Serene Residency,Sri Potti Sriramulu Nellore,mid_range,3 Star
+HTL0340,15,3.42,0.4529,0.2,0.0,0.8,0.2,0.4667,0.4,0.6667,0.3333,0.5333,0.3333,0.2,food,Classic Nest,Sri Potti Sriramulu Nellore,mid_range,3 Star
+HTL0341,15,3.4067,0.4675,0.26666666666666666,0.0,0.7333333333333333,0.1333,0.3333,0.2,0.5333,0.4,0.6,0.2667,0.4667,amenities,Grand Sri Guest House,Sri Potti Sriramulu Nellore,mid_range,3 Star
+HTL0342,5,3.36,0.2124,0.4,0.0,0.6,0.4,0.6,0.6,0.4,0.4,0.6,0.2,0.2,staff,Classic Guest House,Sri Potti Sriramulu Nellore,mid_range,3 Star
+HTL0343,5,3.52,0.153,0.4,0.0,0.6,0.8,0.4,0.2,0.2,0.0,1.0,0.6,0.2,amenities,Nature Villa,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0344,10,3.25,0.331,0.3,0.0,0.7,0.5,0.6,0.5,0.4,0.1,0.5,0.0,0.1,staff,Nature Sri Enclave,Sri Potti Sriramulu Nellore,mid_range,3 Star
+HTL0345,20,3.525,0.2542,0.25,0.15,0.6,0.4,0.4,0.4,0.1,0.0,0.7,0.55,0.3,amenities,Sunset Nest,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0346,5,3.32,0.4294,0.2,0.2,0.6,0.0,0.2,0.2,0.4,0.2,0.4,0.2,0.0,food,Classic Suites,Sri Potti Sriramulu Nellore,premium,4 Star
+HTL0347,5,3.24,0.2752,0.2,0.2,0.6,0.6,0.4,0.4,0.0,0.0,0.8,1.0,0.2,value,Palm Stays,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0349,5,3.44,0.2144,0.2,0.2,0.6,0.6,0.2,0.4,0.0,0.0,0.8,0.8,0.4,amenities,Classic Sri Residency,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0351,15,3.3533,0.1469,0.3333333333333333,0.06666666666666667,0.6,0.6667,0.2667,0.2667,0.0667,0.0,0.8667,0.6667,0.2667,amenities,Lotus Sri Nest,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0352,5,3.1,0.2454,0.2,0.2,0.6,0.6,0.2,0.2,0.0,0.0,1.0,0.6,0.2,amenities,Dew Drop Residency,Sri Potti Sriramulu Nellore,budget,1-2 Star
+HTL0353,5,3.56,0.4819,0.2,0.0,0.8,0.2,0.4,0.2,0.2,0.2,0.4,0.0,0.0,staff,Green Hotel,Sri Potti Sriramulu Nellore,premium,4 Star
+HTL0354,10,3.4,0.4183,0.2,0.1,0.7,0.2,0.2,0.3,0.1,0.3,0.4,0.1,0.0,amenities,Heritage Sri Palace,Sri Potti Sriramulu Nellore,premium,4 Star
+HTL0356,10,3.39,0.3058,0.4,0.0,0.6,0.4,0.6,0.2,0.5,0.2,0.4,0.3,0.3,staff,Classic Palace,Bapatla,mid_range,3 Star
+HTL0358,5,3.26,0.4853,0.2,0.0,0.8,0.2,0.6,0.4,0.6,0.2,0.8,0.0,0.2,amenities,Green Palace,Bapatla,mid_range,3 Star
+HTL0359,15,3.2333,0.1498,0.3333333333333333,0.06666666666666667,0.6,0.7333,0.4,0.2667,0.0667,0.0,0.8667,0.7333,0.2667,amenities,Hill Villa,Bapatla,budget,1-2 Star
+HTL0360,10,3.2,0.2839,0.3,0.1,0.6,0.3,0.6,0.4,0.0,0.0,0.7,0.6,0.3,amenities,Paradise Bapatla Inn,Bapatla,budget,1-2 Star
+HTL0361,15,3.3133,0.4903,0.2,0.0,0.8,0.3333,0.3333,0.2,0.3333,0.2,0.7333,0.2667,0.3333,amenities,Comfort Inn,Bapatla,mid_range,3 Star
+HTL0363,5,3.18,0.2483,0.2,0.0,0.8,0.0,0.4,0.0,0.0,0.2,0.4,0.0,0.0,staff,Saffron Guest House,Bapatla,luxury,5 Star
+HTL0364,10,3.42,0.5433,0.1,0.0,0.9,0.1,0.2,0.2,0.5,0.4,0.8,0.3,0.4,amenities,Grand Bapatla Hotel,Bapatla,mid_range,3 Star
+HTL0365,15,3.3,0.2601,0.26666666666666666,0.13333333333333333,0.6,0.5333,0.4667,0.4,0.1333,0.0,0.6667,0.6667,0.3333,amenities,Regal Bapatla Palace,Bapatla,budget,1-2 Star
+HTL0366,5,3.8,0.3926,0.2,0.0,0.8,0.4,0.4,0.4,0.4,0.2,0.8,0.4,0.0,amenities,River Palace,Bapatla,mid_range,3 Star
+HTL0368,15,3.5067,0.3885,0.3333333333333333,0.0,0.6666666666666666,0.2667,0.5333,0.2667,0.4667,0.3333,0.6,0.2667,0.3333,amenities,Classic Cottage,Bapatla,mid_range,3 Star
+HTL0369,5,3.62,0.484,0.0,0.4,0.6,0.0,0.4,0.0,0.6,0.4,0.8,0.2,0.0,amenities,Lotus Homestay,Bapatla,premium,4 Star
+HTL0370,5,3.68,0.3114,0.2,0.2,0.6,0.2,0.6,0.0,0.2,0.6,0.6,0.2,0.0,staff,Emerald Bapatla Resort,Bapatla,premium,4 Star
+HTL0371,10,3.24,0.1236,0.4,0.0,0.6,0.6,0.3,0.5,0.1,0.0,0.8,0.7,0.3,amenities,River Bapatla Hotel,Bapatla,budget,1-2 Star
+HTL0373,5,3.54,0.3625,0.4,0.0,0.6,0.4,0.6,0.2,0.4,0.2,0.6,0.6,0.2,staff,Palm Nest,Bapatla,mid_range,3 Star
+HTL0374,5,3.48,0.6894,0.0,0.0,1.0,0.0,0.2,0.2,0.8,0.4,0.6,0.2,0.4,food,Cloud9 Bapatla Inn,Bapatla,mid_range,3 Star
+HTL0375,5,3.38,0.5192,0.2,0.0,0.8,0.0,0.6,0.0,0.2,0.2,0.2,0.2,0.0,staff,Classic Bapatla Homestay,Bapatla,luxury,5 Star
+HTL0376,10,3.41,0.3832,0.2,0.2,0.6,0.0,0.1,0.0,0.5,0.5,0.7,0.2,0.0,amenities,Emerald Retreat,Bapatla,premium,4 Star
+HTL0377,15,3.34,0.2498,0.3333333333333333,0.06666666666666667,0.6,0.6,0.6,0.0667,0.0667,0.0,0.6667,0.6,0.1333,amenities,Royal Stays,Bapatla,budget,1-2 Star
+HTL0378,5,3.6,0.221,0.2,0.2,0.6,0.4,0.6,0.2,0.2,0.0,1.0,0.4,0.0,amenities,Golden Resort,Bapatla,budget,1-2 Star
+HTL0379,5,3.44,0.3672,0.0,0.4,0.6,0.2,0.2,0.2,0.2,0.6,0.6,0.2,0.0,service,Palm Guntur Retreat,Guntur,premium,4 Star
+HTL0380,5,3.46,0.482,0.2,0.0,0.8,0.0,0.2,0.2,0.8,0.4,0.6,0.4,0.4,food,Classic Suites,Guntur,mid_range,3 Star
+HTL0381,20,3.31,0.5263,0.15,0.0,0.85,0.2,0.3,0.35,0.45,0.3,0.7,0.15,0.3,amenities,Palm Guntur Inn,Guntur,mid_range,3 Star
+HTL0382,10,3.25,0.23,0.2,0.2,0.6,0.2,0.2,0.1,0.2,0.7,0.4,0.4,0.0,service,Serene Guntur Homestay,Guntur,premium,4 Star
+HTL0383,10,3.32,0.1742,0.4,0.0,0.6,0.6,0.2,0.5,0.1,0.0,0.8,0.5,0.4,amenities,Mystic Guntur Suites,Guntur,budget,1-2 Star
+HTL0384,5,3.52,0.3488,0.4,0.0,0.6,0.6,0.6,0.2,0.2,0.4,0.4,0.4,0.4,cleanliness,Nature Suites,Guntur,mid_range,3 Star
+HTL0385,5,3.34,0.3431,0.4,0.0,0.6,0.4,0.6,0.2,0.6,0.4,0.6,0.4,0.2,staff,Emerald Guest House,Guntur,mid_range,3 Star
+HTL0386,10,3.1,0.1371,0.4,0.0,0.6,0.6,0.3,0.3,0.1,0.0,0.7,0.7,0.2,amenities,Paradise Resort,Guntur,budget,1-2 Star
+HTL0388,5,3.46,0.129,0.4,0.0,0.6,0.6,0.4,0.4,0.0,0.0,0.8,0.6,0.2,amenities,Green Guntur Inn,Guntur,budget,1-2 Star
+HTL0389,15,3.4667,0.2318,0.26666666666666666,0.13333333333333333,0.6,0.4667,0.4667,0.4,0.0667,0.0,0.8,0.6,0.2,amenities,Tranquil Hotel,Guntur,budget,1-2 Star
+HTL0390,10,3.61,0.3681,0.3,0.0,0.7,0.3,0.4,0.3,0.4,0.4,0.7,0.2,0.4,amenities,Oasis Guntur Lodge,Guntur,mid_range,3 Star
+HTL0391,5,3.7,0.4182,0.2,0.0,0.8,0.4,0.0,0.2,0.4,0.2,0.4,0.4,0.2,cleanliness,Regal Nest,Guntur,mid_range,3 Star
+HTL0394,10,3.47,0.2208,0.3,0.1,0.6,0.3,0.6,0.3,0.1,0.0,0.6,0.6,0.1,staff,Paradise Guntur Inn,Guntur,budget,1-2 Star
+HTL0395,10,3.29,0.4479,0.2,0.0,0.8,0.2,0.5,0.5,0.4,0.2,0.8,0.2,0.2,amenities,Oasis Nest,Guntur,mid_range,3 Star
+HTL0396,5,3.1,0.6299,0.0,0.0,1.0,0.0,0.4,0.6,0.4,0.2,1.0,0.0,0.2,amenities,Oasis Retreat,Guntur,mid_range,3 Star
+HTL0397,10,3.48,0.4314,0.1,0.2,0.7,0.2,0.3,0.3,0.2,0.3,0.5,0.1,0.0,amenities,Heritage Retreat,Guntur,premium,4 Star
+HTL0399,5,3.36,0.5539,0.0,0.2,0.8,0.2,0.2,0.4,0.2,0.2,0.0,0.2,0.0,location,Comfort Retreat,Guntur,premium,4 Star
+HTL0401,15,3.4,0.1788,0.4,0.0,0.6,0.7333,0.4,0.1333,0.1333,0.0,0.8667,0.6,0.1333,amenities,Heritage Hotel,Guntur,budget,1-2 Star
+HTL0402,5,3.38,0.3691,0.2,0.2,0.6,0.6,0.4,0.2,0.0,0.0,0.8,0.6,0.4,amenities,Comfort Residency,Guntur,budget,1-2 Star
+HTL0403,5,3.36,0.3856,0.2,0.0,0.8,0.6,0.4,0.4,0.2,0.0,0.8,0.2,0.0,amenities,Nature Lodge,Guntur,mid_range,3 Star
+HTL0404,15,3.3667,0.4831,0.06666666666666667,0.26666666666666666,0.6666666666666666,0.2,0.3333,0.1333,0.3333,0.2667,0.4667,0.0667,0.0,amenities,Saffron Guntur Hotel,Guntur,premium,4 Star
+HTL0405,10,3.54,0.2951,0.2,0.2,0.6,0.5,0.7,0.2,0.0,0.0,0.8,0.7,0.1,amenities,Hill Guntur Cottage,Guntur,budget,1-2 Star
+HTL0406,5,3.38,0.437,0.2,0.0,0.8,0.0,0.4,0.0,0.2,0.2,0.6,0.0,0.0,amenities,Sunrise Nest,Guntur,luxury,5 Star
+HTL0407,10,3.45,0.1067,0.4,0.0,0.6,0.4,0.5,0.3,0.2,0.0,0.8,0.5,0.1,amenities,Dew Drop Stays,Guntur,budget,1-2 Star
+HTL0408,5,3.42,0.3369,0.2,0.2,0.6,0.0,0.4,0.0,0.4,0.6,0.6,0.2,0.0,service,Crystal Guntur Resort,Guntur,premium,4 Star
+HTL0409,5,3.54,0.4869,0.2,0.0,0.8,0.2,0.2,0.2,0.4,0.2,0.8,0.2,0.2,amenities,Classic Lodge,Markapuram,mid_range,3 Star
+HTL0410,5,3.3,0.5481,0.0,0.2,0.8,0.0,0.2,0.2,0.4,0.4,0.4,0.2,0.0,food,Oasis Markapuram Cottage,Markapuram,premium,4 Star
+HTL0411,5,3.56,-0.0243,0.4,0.0,0.6,0.6,0.4,0.4,0.0,0.0,1.0,0.8,0.2,amenities,Elite Markapuram Inn,Markapuram,budget,1-2 Star
+HTL0412,15,3.4333,0.2429,0.26666666666666666,0.13333333333333333,0.6,0.4667,0.4667,0.2667,0.0,0.0,0.8667,0.6667,0.1333,amenities,Paradise Suites,Markapuram,budget,1-2 Star
+HTL0413,10,3.6,0.4729,0.1,0.2,0.7,0.2,0.3,0.0,0.3,0.5,0.3,0.1,0.0,service,Regal Villa,Markapuram,premium,4 Star
+HTL0414,5,3.52,0.4362,0.2,0.0,0.8,0.0,0.2,0.4,0.4,0.2,0.8,0.4,0.4,amenities,Golden Hotel,Markapuram,mid_range,3 Star
+HTL0415,5,3.36,0.078,0.4,0.0,0.6,0.6,0.4,0.4,0.0,0.0,0.8,0.8,0.2,amenities,Horizon Enclave,Markapuram,budget,1-2 Star
+HTL0416,10,3.16,0.2466,0.3,0.1,0.6,0.7,0.5,0.1,0.0,0.0,0.8,0.7,0.2,amenities,Classic Markapuram Inn,Markapuram,budget,1-2 Star
+HTL0417,20,3.63,0.2067,0.3,0.1,0.6,0.55,0.4,0.25,0.05,0.0,0.75,0.65,0.25,amenities,Blue Markapuram Lodge,Markapuram,budget,1-2 Star
+HTL0418,5,3.4,0.3165,0.2,0.2,0.6,0.4,0.4,0.4,0.0,0.0,0.6,0.8,0.2,value,Green Markapuram Guest House,Markapuram,budget,1-2 Star
+HTL0419,10,3.41,0.3241,0.2,0.2,0.6,0.6,0.4,0.3,0.1,0.0,0.6,0.7,0.3,value,Cloud9 Markapuram Guest House,Markapuram,budget,1-2 Star
+HTL0421,15,3.2667,0.3821,0.13333333333333333,0.13333333333333333,0.7333333333333333,0.0,0.3333,0.0,0.2,0.3333,0.3333,0.4,0.0,value,Silver Inn,Markapuram,luxury,5 Star
+HTL0422,10,3.63,0.4447,0.3,0.0,0.7,0.3,0.4,0.4,0.3,0.3,0.6,0.2,0.3,amenities,Grand Markapuram Retreat,Markapuram,mid_range,3 Star
+HTL0424,5,3.32,0.304,0.4,0.0,0.6,0.2,0.4,0.2,0.4,0.4,0.2,0.4,0.6,ambiance,Mystic Annamayya Palace,Annamayya,mid_range,3 Star
+HTL0425,10,3.2,0.5245,0.1,0.0,0.9,0.1,0.5,0.1,0.3,0.5,0.4,0.1,0.0,staff,Sunrise Nest,Annamayya,premium,4 Star
+HTL0426,20,3.32,0.5151,0.15,0.0,0.85,0.15,0.5,0.05,0.35,0.4,0.4,0.1,0.0,staff,Nature Retreat,Annamayya,premium,4 Star
+HTL0428,5,3.16,0.4977,0.2,0.0,0.8,0.2,0.4,0.4,0.2,0.2,0.6,0.0,0.4,amenities,Cloud9 Stays,Annamayya,mid_range,3 Star
+HTL0430,10,3.28,0.5075,0.1,0.2,0.7,0.1,0.2,0.1,0.5,0.3,0.4,0.1,0.0,food,Crystal Annamayya Nest,Annamayya,premium,4 Star
+HTL0431,15,3.1733,0.4176,0.26666666666666666,0.0,0.7333333333333333,0.2667,0.3333,0.1333,0.5333,0.3333,0.4667,0.4,0.4,food,Classic Annamayya Palace,Annamayya,mid_range,3 Star
+HTL0433,5,3.18,0.4046,0.2,0.2,0.6,0.0,0.2,0.0,0.6,0.4,0.6,0.2,0.0,food,Sunrise Retreat,Annamayya,premium,4 Star
+HTL0434,20,3.485,0.2771,0.3,0.05,0.65,0.0,0.35,0.0,0.1,0.2,0.45,0.15,0.0,amenities,Elite Guest House,Annamayya,luxury,5 Star
+HTL0435,10,3.55,0.2563,0.4,0.0,0.6,0.2,0.2,0.3,0.4,0.3,0.7,0.5,0.3,amenities,Crystal Cottage,Annamayya,mid_range,3 Star
+HTL0436,5,3.7,0.6107,0.0,0.0,1.0,0.2,0.2,0.6,0.4,0.4,0.8,0.0,0.2,amenities,Classic Villa,Annamayya,mid_range,3 Star
+HTL0437,10,3.37,0.729,0.0,0.0,1.0,0.2,0.3,0.3,0.5,0.4,0.7,0.1,0.3,amenities,Pearl Lodge,Annamayya,mid_range,3 Star
+HTL0438,5,3.48,0.1945,0.4,0.0,0.6,0.8,0.2,0.2,0.2,0.0,0.8,0.4,0.4,cleanliness,Oasis Lodge,Annamayya,budget,1-2 Star
+HTL0439,10,3.4,0.1952,0.4,0.0,0.6,0.5,0.4,0.4,0.1,0.0,0.7,0.6,0.4,amenities,Sunset Polavaram Residency,Polavaram,budget,1-2 Star
+HTL0440,5,3.24,0.157,0.4,0.0,0.6,0.6,0.2,0.6,0.0,0.0,0.8,0.6,0.6,amenities,Lotus Cottage,Polavaram,budget,1-2 Star
+HTL0441,10,3.28,0.4176,0.1,0.2,0.7,0.2,0.2,0.1,0.3,0.5,0.4,0.3,0.0,service,Oasis Stays,Polavaram,premium,4 Star
+HTL0442,10,3.44,0.3166,0.4,0.0,0.6,0.4,0.5,0.2,0.4,0.5,0.4,0.4,0.5,staff,Palm Residency,Polavaram,mid_range,3 Star
+HTL0443,10,3.44,0.3778,0.3,0.0,0.7,0.5,0.3,0.3,0.3,0.2,0.5,0.3,0.2,cleanliness,Blue Polavaram Inn,Polavaram,mid_range,3 Star
+HTL0444,10,3.69,0.4869,0.2,0.0,0.8,0.3,0.3,0.1,0.3,0.1,0.6,0.3,0.4,amenities,Comfort Cottage,Polavaram,mid_range,3 Star
+HTL0445,5,3.4,0.1589,0.4,0.0,0.6,1.0,0.4,0.0,0.0,0.0,1.0,0.8,0.0,cleanliness,Nature Polavaram Inn,Polavaram,budget,1-2 Star
+HTL0446,5,3.34,0.4453,0.2,0.0,0.8,0.2,0.6,0.6,0.8,0.4,0.6,0.2,0.0,food,Classic Polavaram Lodge,Polavaram,mid_range,3 Star
+HTL0447,5,3.14,0.1458,0.2,0.2,0.6,0.6,0.2,0.2,0.0,0.0,1.0,0.8,0.0,amenities,River Guest House,Polavaram,budget,1-2 Star
+HTL0448,5,3.26,0.256,0.2,0.2,0.6,0.0,0.6,0.4,0.0,0.0,0.8,0.6,0.0,amenities,Nature Polavaram Suites,Polavaram,budget,1-2 Star
+HTL0449,5,3.14,0.4362,0.0,0.4,0.6,0.4,0.2,0.0,0.4,0.4,0.4,0.2,0.0,cleanliness,Comfort Hotel,West Godavari,premium,4 Star
+HTL0450,5,3.34,0.2303,0.4,0.0,0.6,0.4,0.4,0.4,0.0,0.0,0.6,0.6,0.2,amenities,Comfort Homestay,West Godavari,budget,1-2 Star
+HTL0451,5,3.28,0.4989,0.2,0.0,0.8,0.4,0.6,0.2,0.4,0.2,0.6,0.4,0.2,staff,Crystal West Retreat,West Godavari,mid_range,3 Star
+HTL0452,10,3.3,0.2847,0.3,0.1,0.6,0.7,0.5,0.3,0.1,0.0,0.8,0.6,0.3,amenities,Mystic Enclave,West Godavari,budget,1-2 Star
+HTL0453,15,3.3067,0.3922,0.26666666666666666,0.0,0.7333333333333333,0.2,0.4,0.3333,0.5333,0.2,0.6667,0.2,0.2,amenities,Sunrise West Residency,West Godavari,mid_range,3 Star
+HTL0455,10,3.4,0.5454,0.0,0.2,0.8,0.1,0.3,0.2,0.3,0.4,0.3,0.1,0.0,service,Dew Drop West Cottage,West Godavari,premium,4 Star
+HTL0456,5,3.26,0.2335,0.4,0.0,0.6,0.6,0.4,0.2,0.0,0.0,0.6,0.6,0.4,cleanliness,Sunrise Nest,West Godavari,budget,1-2 Star
+HTL0457,5,3.08,0.5296,0.2,0.0,0.8,0.2,0.4,0.2,0.6,0.2,0.4,0.4,0.4,food,Regal West Residency,West Godavari,mid_range,3 Star
+HTL0458,10,3.34,0.3955,0.2,0.2,0.6,0.6,0.3,0.2,0.2,0.0,0.8,0.4,0.2,amenities,Oasis Homestay,West Godavari,budget,1-2 Star
+HTL0461,5,3.54,0.4878,0.2,0.0,0.8,0.2,0.4,0.4,0.4,0.4,0.8,0.4,0.2,amenities,Palm Retreat,Anakapalli,mid_range,3 Star
+HTL0462,5,3.48,0.4193,0.2,0.0,0.8,0.2,0.4,0.2,0.2,0.4,0.2,0.2,0.0,staff,Dew Drop Anakapalli Palace,Anakapalli,premium,4 Star
+HTL0463,5,3.44,0.3528,0.4,0.0,0.6,0.4,0.6,0.2,0.4,0.2,0.6,0.2,0.4,staff,Nature Anakapalli Stays,Anakapalli,mid_range,3 Star
+HTL0465,5,3.2,0.362,0.2,0.2,0.6,0.6,0.4,0.0,0.0,0.0,0.8,0.8,0.0,amenities,Tranquil Nest,Anakapalli,budget,1-2 Star
+HTL0466,15,3.4867,0.5093,0.2,0.0,0.8,0.2,0.4,0.2667,0.6,0.3333,0.5333,0.3333,0.3333,food,Grand Guest House,Anakapalli,mid_range,3 Star
+HTL0468,25,3.364,0.5255,0.12,0.0,0.88,0.28,0.12,0.16,0.32,0.24,0.72,0.32,0.36,amenities,Horizon Lodge,Anakapalli,mid_range,3 Star
+HTL0469,10,3.45,0.4593,0.3,0.0,0.7,0.3,0.4,0.2,0.4,0.6,0.4,0.1,0.6,service,Nature Homestay,Anakapalli,mid_range,3 Star
+HTL0470,5,3.78,0.4119,0.2,0.0,0.8,0.2,0.4,0.2,0.4,0.0,0.4,0.2,0.4,staff,Nature Palace,Anakapalli,mid_range,3 Star
+HTL0471,5,3.44,0.6042,0.0,0.2,0.8,0.2,0.0,0.4,0.4,0.0,0.2,0.0,0.0,location,Pearl Inn,Anakapalli,premium,4 Star
+HTL0472,10,3.78,0.2226,0.3,0.1,0.6,0.6,0.1,0.5,0.0,0.0,0.9,0.7,0.3,amenities,Sunrise Inn,Anakapalli,budget,1-2 Star
+HTL0473,5,3.26,0.3514,0.2,0.2,0.6,0.6,0.6,0.0,0.2,0.0,0.6,0.6,0.2,cleanliness,Golden Inn,Anakapalli,budget,1-2 Star
+HTL0475,5,3.3,0.5341,0.2,0.0,0.8,0.2,0.2,0.2,0.6,0.4,0.8,0.4,0.2,amenities,Pearl Homestay,Anakapalli,mid_range,3 Star
+HTL0476,10,3.26,0.5343,0.0,0.2,0.8,0.1,0.4,0.2,0.3,0.4,0.5,0.1,0.0,amenities,Nature Anakapalli Homestay,Anakapalli,premium,4 Star
+HTL0478,5,3.64,0.4005,0.2,0.0,0.8,0.0,0.2,0.4,0.4,0.2,0.8,0.4,0.4,amenities,Crystal Inn,Anakapalli,mid_range,3 Star
+HTL0479,5,3.52,0.2967,0.4,0.0,0.6,0.4,0.4,0.2,0.2,0.2,0.4,0.4,0.6,ambiance,Comfort Resort,Anakapalli,mid_range,3 Star
+HTL0480,5,3.54,0.1623,0.4,0.0,0.6,0.6,0.8,0.0,0.0,0.0,0.8,0.8,0.0,staff,Palm Lodge,Anakapalli,budget,1-2 Star
+HTL0481,15,3.6733,0.4482,0.2,0.0,0.8,0.3333,0.4,0.2,0.5333,0.2667,0.5333,0.4,0.2667,food,Dew Drop Enclave,Anakapalli,mid_range,3 Star
+HTL0482,10,3.53,0.3806,0.2,0.2,0.6,0.0,0.3,0.1,0.3,0.5,0.6,0.1,0.0,amenities,Palm Hotel,Anakapalli,premium,4 Star
+HTL0483,5,3.0,0.1871,0.4,0.0,0.6,0.4,0.6,0.4,0.0,0.0,0.8,0.8,0.2,amenities,River Konaseema Inn,Konaseema,budget,1-2 Star
+HTL0484,5,3.64,0.3827,0.2,0.2,0.6,0.6,0.2,0.2,0.2,0.0,0.8,0.4,0.2,amenities,Crystal Palace,Konaseema,budget,1-2 Star
+HTL0486,10,3.55,0.5013,0.2,0.0,0.8,0.4,0.5,0.2,0.5,0.2,0.5,0.2,0.3,staff,Nature Stays,Konaseema,mid_range,3 Star
+HTL0487,5,3.58,0.1985,0.4,0.0,0.6,0.8,0.4,0.0,0.2,0.0,0.8,0.6,0.2,cleanliness,Elite Konaseema Guest House,Konaseema,budget,1-2 Star
+HTL0488,15,3.5333,0.1297,0.3333333333333333,0.06666666666666667,0.6,0.6667,0.4667,0.1333,0.0667,0.0,0.9333,0.6667,0.1333,amenities,Hill Konaseema Lodge,Konaseema,budget,1-2 Star
+HTL0490,10,3.52,0.4366,0.3,0.0,0.7,0.2,0.3,0.2,0.5,0.4,0.5,0.4,0.4,food,Crystal Lodge,Konaseema,mid_range,3 Star
+HTL0491,10,3.3,0.4145,0.3,0.0,0.7,0.3,0.5,0.2,0.4,0.3,0.4,0.2,0.5,staff,Silver Konaseema Nest,Konaseema,mid_range,3 Star
+HTL0492,15,3.4267,0.349,0.3333333333333333,0.0,0.6666666666666666,0.2,0.2667,0.0667,0.5333,0.3333,0.6,0.5333,0.4,amenities,Paradise Konaseema Inn,Konaseema,mid_range,3 Star
+HTL0493,15,3.32,0.2967,0.3333333333333333,0.06666666666666667,0.6,0.6,0.4,0.4,0.0667,0.0,0.7333,0.6,0.3333,amenities,Sunset Konaseema Villa,Konaseema,budget,1-2 Star
+HTL0494,15,3.3867,0.4553,0.2,0.0,0.8,0.1333,0.4667,0.3333,0.6,0.2,0.5333,0.3333,0.3333,food,Pearl Konaseema Nest,Konaseema,mid_range,3 Star
+HTL0495,10,3.58,0.339,0.3,0.0,0.7,0.2,0.3,0.4,0.4,0.1,0.8,0.2,0.1,amenities,Palm Konaseema Hotel,Konaseema,mid_range,3 Star
+HTL0496,10,3.65,0.1219,0.4,0.0,0.6,0.7,0.1,0.4,0.2,0.0,0.8,0.4,0.4,amenities,Paradise Palace,Konaseema,budget,1-2 Star
+HTL0497,10,3.3,0.4282,0.2,0.0,0.8,0.4,0.3,0.4,0.5,0.2,0.5,0.2,0.1,food,Blue Retreat,Krishna district,mid_range,3 Star
+HTL0498,5,3.4,0.3827,0.2,0.2,0.6,0.6,0.4,0.2,0.2,0.0,0.6,0.6,0.2,cleanliness,Sunset Hotel,Krishna district,budget,1-2 Star
+HTL0499,15,3.4,0.5743,0.13333333333333333,0.0,0.8666666666666667,0.3333,0.2,0.1333,0.3333,0.2667,0.6,0.3333,0.3333,amenities,Elite Palace,Krishna district,mid_range,3 Star
+HTL0500,5,3.38,0.5621,0.0,0.0,1.0,0.2,0.2,0.4,0.4,0.2,1.0,0.0,0.2,amenities,Paradise Nest,Krishna district,mid_range,3 Star
+HTL0501,5,3.64,0.4494,0.0,0.4,0.6,0.2,0.6,0.2,0.0,0.0,0.6,0.8,0.0,value,Tranquil Homestay,Krishna district,budget,1-2 Star
+HTL0502,5,3.54,0.3012,0.2,0.2,0.6,0.2,0.2,0.6,0.0,0.0,0.6,0.6,0.4,location,Horizon Krishna Inn,Krishna district,budget,1-2 Star
+HTL0503,5,3.0,0.1936,0.4,0.0,0.6,0.6,0.4,0.2,0.2,0.0,0.8,0.6,0.2,amenities,Paradise Krishna Retreat,Krishna district,budget,1-2 Star
+HTL0504,10,3.38,0.5655,0.0,0.2,0.8,0.3,0.4,0.1,0.2,0.4,0.2,0.0,0.0,staff,Emerald Krishna Hotel,Krishna district,premium,4 Star
+HTL0505,10,3.51,0.3351,0.1,0.3,0.6,0.4,0.4,0.4,0.1,0.0,0.8,0.6,0.2,amenities,Silver Inn,Krishna district,budget,1-2 Star
+HTL0506,10,3.41,0.44,0.2,0.0,0.8,0.1,0.5,0.3,0.7,0.2,0.6,0.5,0.2,food,Lotus Residency,Krishna district,mid_range,3 Star
+HTL0507,25,3.508,0.4868,0.2,0.0,0.8,0.36,0.36,0.32,0.44,0.4,0.64,0.28,0.24,amenities,Silver Krishna Suites,Krishna district,mid_range,3 Star
+HTL0508,5,3.56,0.6332,0.0,0.0,1.0,0.2,0.4,0.2,0.4,0.2,0.8,0.0,0.4,amenities,Hill Homestay,Krishna district,mid_range,3 Star
+HTL0509,5,3.32,0.4588,0.2,0.2,0.6,0.2,0.4,0.0,0.4,0.2,0.8,0.0,0.0,amenities,Crystal Resort,Krishna district,premium,4 Star
+HTL0510,5,3.38,0.5098,0.0,0.2,0.8,0.0,0.2,0.4,0.0,0.6,0.4,0.0,0.0,service,Green Krishna Enclave,Krishna district,premium,4 Star
+HTL0512,15,3.3733,0.3841,0.06666666666666667,0.3333333333333333,0.6,0.1333,0.2,0.0667,0.4667,0.4667,0.4667,0.3333,0.0,food,Sunrise Residency,Krishna district,premium,4 Star
+HTL0513,10,3.5,0.2609,0.4,0.0,0.6,0.2,0.3,0.2,0.5,0.1,0.5,0.4,0.3,food,Cloud9 Cottage,Krishna district,mid_range,3 Star
+HTL0515,10,3.46,0.3995,0.3,0.0,0.7,0.2,0.5,0.4,0.6,0.3,0.6,0.4,0.2,food,Emerald Kakinada Stays,Kakinada,mid_range,3 Star
+HTL0516,5,3.44,0.6805,0.0,0.0,1.0,0.0,0.2,0.4,0.4,0.2,0.2,0.0,0.0,location,Paradise Kakinada Suites,Kakinada,premium,4 Star
+HTL0518,20,3.255,0.3242,0.2,0.1,0.7,0.0,0.25,0.0,0.15,0.35,0.2,0.3,0.0,service,Heritage Stays,Kakinada,luxury,5 Star
+HTL0519,10,3.42,0.5004,0.1,0.0,0.9,0.5,0.3,0.4,0.2,0.2,0.7,0.1,0.2,amenities,Hill Kakinada Suites,Kakinada,mid_range,3 Star
+HTL0521,10,3.4,0.492,0.1,0.0,0.9,0.3,0.4,0.5,0.4,0.1,0.8,0.1,0.1,amenities,River Hotel,Kakinada,mid_range,3 Star
+HTL0522,10,3.22,0.624,0.1,0.0,0.9,0.2,0.0,0.2,0.4,0.5,0.7,0.4,0.4,amenities,Blue Suites,Kakinada,mid_range,3 Star
+HTL0523,5,3.64,0.141,0.4,0.0,0.6,0.6,0.4,0.4,0.0,0.0,0.6,0.6,0.6,cleanliness,Horizon Kakinada Homestay,Kakinada,budget,1-2 Star
+HTL0524,20,3.35,0.2078,0.35,0.05,0.6,0.65,0.25,0.35,0.1,0.0,0.9,0.55,0.3,amenities,Emerald Cottage,Kakinada,budget,1-2 Star
+HTL0526,10,3.36,0.5076,0.2,0.0,0.8,0.1,0.5,0.3,0.7,0.5,0.5,0.3,0.4,food,Oasis Nest,Kakinada,mid_range,3 Star
+HTL0527,5,3.76,0.2146,0.4,0.0,0.6,0.6,0.2,0.4,0.2,0.0,0.6,0.6,0.4,cleanliness,Green Kakinada Homestay,Kakinada,budget,1-2 Star
+HTL0528,5,3.34,0.4137,0.2,0.2,0.6,0.6,0.4,0.0,0.2,0.0,0.8,0.4,0.0,amenities,Sunrise Suites,Kakinada,budget,1-2 Star
+HTL0529,5,3.38,0.5725,0.2,0.0,0.8,0.2,0.2,0.2,0.4,0.6,0.4,0.0,0.6,service,Golden Palace,Kakinada,mid_range,3 Star
+HTL0530,5,3.3,0.6247,0.0,0.0,1.0,0.2,0.2,0.4,0.2,0.2,1.0,0.2,0.2,amenities,Classic Kakinada Hotel,Kakinada,mid_range,3 Star
+HTL0531,5,3.72,0.6504,0.0,0.0,1.0,0.4,0.2,0.4,0.2,0.4,0.6,0.0,0.4,amenities,Regal Lodge,Kakinada,mid_range,3 Star
+HTL0532,25,3.292,0.2386,0.32,0.08,0.6,0.6,0.32,0.44,0.08,0.0,0.88,0.6,0.28,amenities,Nature Hotel,Kakinada,budget,1-2 Star
+HTL0533,20,3.165,0.4366,0.1,0.1,0.8,0.15,0.3,0.2,0.3,0.5,0.3,0.3,0.0,service,Oasis Villa,Kakinada,premium,4 Star
+HTL0534,5,3.58,0.3867,0.2,0.2,0.6,0.2,0.4,0.2,0.2,0.2,0.4,0.2,0.0,staff,Classic Nest,Kakinada,premium,4 Star
+HTL0535,5,3.54,0.3171,0.0,0.4,0.6,0.4,0.4,0.4,0.0,0.0,0.8,0.8,0.2,amenities,Emerald Palace,Kakinada,budget,1-2 Star
+HTL0536,5,3.62,0.1952,0.2,0.2,0.6,0.6,0.6,0.2,0.0,0.0,0.8,1.0,0.0,value,Horizon Stays,Kakinada,budget,1-2 Star
+HTL0537,10,3.49,0.2994,0.3,0.0,0.7,0.6,0.4,0.2,0.2,0.1,0.4,0.3,0.3,cleanliness,Mystic Palace,Kakinada,mid_range,3 Star
+HTL0538,20,3.505,0.2377,0.3,0.1,0.6,0.45,0.5,0.25,0.0,0.0,0.75,0.7,0.1,amenities,River Kakinada Inn,Kakinada,budget,1-2 Star
+HTL0539,10,3.46,0.2998,0.1,0.3,0.6,0.4,0.4,0.3,0.1,0.0,0.9,0.6,0.1,amenities,Hill Guest House,Kakinada,budget,1-2 Star
+HTL0540,10,3.32,0.4668,0.2,0.0,0.8,0.2,0.3,0.1,0.5,0.2,0.4,0.3,0.5,food,Oasis Hotel,Kakinada,mid_range,3 Star
+HTL0543,5,3.46,0.3018,0.2,0.2,0.6,0.0,0.2,0.0,0.2,0.2,0.0,0.4,0.0,value,Hill Kakinada Suites,Kakinada,luxury,5 Star
+HTL0544,5,3.7,0.2907,0.2,0.2,0.6,0.4,0.8,0.4,0.0,0.0,0.6,0.8,0.2,staff,Royal Nest,Kakinada,budget,1-2 Star
+HTL0545,5,3.44,0.2631,0.4,0.0,0.6,0.0,0.2,0.2,0.6,0.2,0.6,0.4,0.4,food,Horizon Stays,Kakinada,mid_range,3 Star
+HTL0546,5,3.56,0.4826,0.2,0.0,0.8,0.2,0.4,0.2,0.4,0.0,0.6,0.4,0.4,amenities,Tranquil Kakinada Lodge,Kakinada,mid_range,3 Star
+HTL0547,15,3.54,0.317,0.13333333333333333,0.26666666666666666,0.6,0.4,0.4667,0.3333,0.0667,0.0,0.9333,0.6,0.0667,amenities,Royal Kakinada Stays,Kakinada,budget,1-2 Star
+HTL0548,10,3.43,0.1791,0.3,0.1,0.6,0.5,0.7,0.3,0.0,0.0,0.8,0.8,0.1,amenities,Horizon Lodge,Kakinada,budget,1-2 Star
+HTL0549,10,3.44,0.2487,0.3,0.1,0.6,0.6,0.6,0.3,0.0,0.0,0.7,0.7,0.3,amenities,Nature Suites,Kakinada,budget,1-2 Star
+HTL0550,10,3.3,0.3948,0.1,0.3,0.6,0.2,0.2,0.2,0.2,0.4,0.1,0.3,0.0,service,Sunset Hotel,Kakinada,premium,4 Star
+HTL0551,5,3.14,0.3578,0.2,0.2,0.6,0.4,0.4,0.2,0.0,0.0,0.8,0.6,0.0,amenities,Green Villa,Kakinada,budget,1-2 Star
+HTL0553,5,3.7,0.1185,0.4,0.0,0.6,0.4,0.2,0.4,0.0,0.0,0.6,0.6,0.4,amenities,Royal Prakasam Suites,Prakasam,budget,1-2 Star
+HTL0554,15,3.3667,0.3495,0.13333333333333333,0.26666666666666666,0.6,0.3333,0.4667,0.2667,0.0,0.0,0.7333,0.6667,0.0667,amenities,Pearl Lodge,Prakasam,budget,1-2 Star
+HTL0556,15,3.2667,0.2259,0.2,0.2,0.6,0.4667,0.4,0.3333,0.0667,0.0,0.8667,0.6667,0.1333,amenities,Comfort Resort,Prakasam,budget,1-2 Star
+HTL0557,10,3.48,0.4233,0.1,0.2,0.7,0.2,0.3,0.0,0.3,0.6,0.4,0.2,0.0,service,Sunset Prakasam Villa,Prakasam,premium,4 Star
+HTL0558,5,3.5,0.4856,0.2,0.0,0.8,0.0,0.4,0.4,0.6,0.6,0.8,0.2,0.4,amenities,Nature Lodge,Prakasam,mid_range,3 Star
+HTL0560,10,3.32,0.5941,0.1,0.0,0.9,0.1,0.2,0.2,0.7,0.4,0.7,0.3,0.3,food,Royal Enclave,Prakasam,mid_range,3 Star
+HTL0561,10,3.31,0.3913,0.1,0.1,0.8,0.0,0.3,0.0,0.3,0.4,0.2,0.4,0.0,service,Heritage Retreat,Prakasam,luxury,5 Star
+HTL0562,10,3.17,0.2731,0.3,0.1,0.6,0.6,0.4,0.3,0.0,0.0,0.8,0.7,0.2,amenities,Blue Residency,Prakasam,budget,1-2 Star
+HTL0566,5,3.3,0.2972,0.2,0.2,0.6,0.6,0.4,0.2,0.2,0.0,0.8,0.4,0.2,amenities,Pearl Hotel,Palnadu,budget,1-2 Star
+HTL0568,10,3.65,0.4001,0.2,0.0,0.8,0.3,0.2,0.4,0.4,0.3,0.6,0.1,0.3,amenities,Golden Villa,Palnadu,mid_range,3 Star
+HTL0570,10,3.31,0.4764,0.2,0.0,0.8,0.4,0.3,0.2,0.4,0.2,0.5,0.4,0.2,amenities,Grand Cottage,Palnadu,mid_range,3 Star
+HTL0571,5,3.4,0.0835,0.4,0.0,0.6,0.8,0.2,0.2,0.2,0.0,0.8,0.4,0.4,cleanliness,Horizon Retreat,Palnadu,budget,1-2 Star
+HTL0573,15,3.42,0.4736,0.2,0.0,0.8,0.3333,0.3333,0.2,0.4667,0.3333,0.4,0.1333,0.4667,food,Crystal Palnadu Villa,Palnadu,mid_range,3 Star
+HTL0574,30,3.4067,0.2688,0.26666666666666666,0.13333333333333333,0.6,0.6,0.3667,0.2,0.0667,0.0,0.9,0.5667,0.1667,amenities,Hill Palnadu Residency,Palnadu,budget,1-2 Star
+HTL0575,10,3.44,0.473,0.1,0.2,0.7,0.1,0.2,0.2,0.5,0.2,0.3,0.2,0.0,food,Emerald Homestay,Palnadu,premium,4 Star
+HTL0576,5,3.44,0.5225,0.2,0.0,0.8,0.2,0.2,0.2,0.4,0.2,0.8,0.2,0.2,amenities,Mystic Lodge,Palnadu,mid_range,3 Star
+HTL0577,10,3.64,0.3999,0.3,0.0,0.7,0.1,0.2,0.4,0.4,0.3,0.6,0.3,0.3,amenities,Dew Drop Palnadu Inn,Palnadu,mid_range,3 Star
+HTL0578,20,3.3,0.2462,0.25,0.15,0.6,0.55,0.5,0.2,0.05,0.0,0.7,0.7,0.2,amenities,Silver Guest House,Palnadu,budget,1-2 Star
+HTL0579,10,3.46,0.1322,0.4,0.0,0.6,0.6,0.6,0.4,0.0,0.0,0.8,0.7,0.3,amenities,Comfort Nest,Palnadu,budget,1-2 Star
+HTL0580,5,3.46,0.5817,0.0,0.0,1.0,0.2,0.4,0.6,0.6,0.2,0.8,0.0,0.0,amenities,Regal Hotel,Palnadu,mid_range,3 Star
+HTL0581,10,3.66,0.3602,0.2,0.2,0.6,0.1,0.1,0.2,0.3,0.4,0.4,0.3,0.0,service,Sunset Homestay,Palnadu,premium,4 Star
+HTL0582,15,3.2933,0.2973,0.2,0.2,0.6,0.6,0.4,0.2667,0.0667,0.0,0.8,0.6,0.2667,amenities,Oasis Lodge,Palnadu,budget,1-2 Star
+HTL0583,10,3.37,0.4835,0.2,0.0,0.8,0.2,0.4,0.3,0.7,0.4,0.5,0.3,0.3,food,River Cottage,Palnadu,mid_range,3 Star
+HTL0584,10,3.4,0.5472,0.1,0.0,0.9,0.1,0.2,0.2,0.5,0.3,0.6,0.3,0.5,amenities,Dew Drop Palnadu Nest,Palnadu,mid_range,3 Star
+HTL0585,35,3.3543,0.4532,0.11428571428571428,0.17142857142857143,0.7142857142857143,0.0857,0.2286,0.1714,0.4286,0.3429,0.4,0.2286,0.0,food,Emerald Palnadu Palace,Palnadu,premium,4 Star
+HTL0586,10,3.23,0.3169,0.2,0.2,0.6,0.6,0.4,0.3,0.1,0.0,0.8,0.6,0.2,amenities,Oasis Palnadu Suites,Palnadu,budget,1-2 Star
+HTL0588,10,3.41,0.3102,0.3,0.0,0.7,0.2,0.3,0.3,0.5,0.2,0.7,0.4,0.2,amenities,Paradise Palnadu Stays,Palnadu,mid_range,3 Star
+HTL0589,5,3.46,0.5849,0.0,0.2,0.8,0.2,0.4,0.2,0.2,0.4,0.4,0.0,0.0,staff,Dew Drop Palace,Palnadu,premium,4 Star
+HTL0590,5,3.14,0.523,0.0,0.4,0.6,0.2,0.4,0.0,0.6,0.2,0.6,0.2,0.0,food,Oasis Nest,Palnadu,premium,4 Star
+HTL0591,20,3.48,0.4449,0.05,0.2,0.75,0.0,0.4,0.0,0.25,0.15,0.25,0.4,0.0,staff,Silver Palnadu Nest,Palnadu,luxury,5 Star
+HTL0592,5,3.34,0.5165,0.0,0.2,0.8,0.0,0.2,0.0,0.6,0.6,0.2,0.4,0.0,food,Oasis Homestay,Palnadu,premium,4 Star
+HTL0593,10,3.5,0.4574,0.2,0.0,0.8,0.3,0.4,0.3,0.5,0.3,0.8,0.4,0.1,amenities,Paradise Palnadu Villa,Palnadu,mid_range,3 Star
+HTL0594,10,3.39,0.5453,0.0,0.2,0.8,0.0,0.1,0.3,0.4,0.4,0.3,0.2,0.0,food,Tranquil Resort,Palnadu,premium,4 Star
+HTL0595,5,3.48,0.077,0.4,0.0,0.6,0.6,0.4,0.4,0.0,0.0,0.8,0.6,0.4,amenities,Elite Inn,Palnadu,budget,1-2 Star
+HTL0600,10,3.66,0.2957,0.2,0.2,0.6,0.3,0.8,0.2,0.0,0.0,0.8,0.7,0.0,staff,Cloud9 Lodge,Palnadu,budget,1-2 Star
+HTL0601,5,3.28,0.0558,0.4,0.0,0.6,0.6,0.2,0.6,0.0,0.0,1.0,0.8,0.4,amenities,Regal Hotel,Palnadu,budget,1-2 Star
+HTL0602,5,3.6,0.5452,0.2,0.0,0.8,0.2,0.4,0.4,0.4,0.4,0.4,0.0,0.4,staff,Classic Stays,Palnadu,mid_range,3 Star
+HTL0604,5,3.54,0.349,0.4,0.0,0.6,0.6,0.4,0.2,0.0,0.2,0.4,0.2,0.4,cleanliness,Paradise Resort,Palnadu,mid_range,3 Star
+HTL0606,5,3.24,0.3578,0.2,0.2,0.6,0.4,0.4,0.2,0.0,0.0,0.8,0.6,0.0,amenities,Green Inn,Palnadu,budget,1-2 Star
+HTL0607,25,3.404,0.1892,0.36,0.04,0.6,0.68,0.32,0.28,0.12,0.0,0.88,0.56,0.24,amenities,Sunrise Palnadu Retreat,Palnadu,budget,1-2 Star
+HTL0612,15,3.4467,0.2528,0.2,0.2,0.6,0.5333,0.4667,0.3333,0.0,0.0,0.8667,0.7333,0.2667,amenities,Saffron Homestay,Palnadu,budget,1-2 Star
+HTL0613,5,3.5,0.6122,0.0,0.0,1.0,0.4,0.2,0.4,0.4,0.2,0.8,0.2,0.0,amenities,Oasis Lodge,Palnadu,mid_range,3 Star
+HTL0614,5,3.36,0.5405,0.2,0.0,0.8,0.0,0.6,0.6,0.8,0.6,0.6,0.2,0.2,food,Tranquil Stays,Palnadu,mid_range,3 Star
+HTL0615,5,3.36,0.5243,0.2,0.0,0.8,0.4,0.4,0.0,0.6,0.4,0.2,0.6,0.4,food,Hill Palnadu Palace,Palnadu,mid_range,3 Star
+HTL0616,25,3.344,0.2389,0.24,0.16,0.6,0.48,0.44,0.28,0.04,0.0,0.8,0.68,0.12,amenities,Mystic Homestay,Palnadu,budget,1-2 Star
+HTL0617,5,3.24,0.2056,0.2,0.2,0.6,0.6,0.6,0.2,0.0,0.0,0.8,1.0,0.0,value,Paradise Palnadu Guest House,Palnadu,budget,1-2 Star
+HTL0618,5,3.44,0.3772,0.2,0.2,0.6,0.6,0.4,0.4,0.2,0.0,0.6,0.6,0.4,cleanliness,Serene Cottage,Palnadu,budget,1-2 Star
+HTL0619,5,3.46,0.3675,0.2,0.2,0.6,0.4,0.2,0.4,0.2,0.0,0.6,0.4,0.4,amenities,Blue Nest,Palnadu,budget,1-2 Star
+HTL0620,10,3.22,0.4344,0.2,0.0,0.8,0.1,0.3,0.4,0.5,0.1,0.8,0.2,0.2,amenities,Saffron Palnadu Nest,Palnadu,mid_range,3 Star
+HTL0621,15,3.3133,0.3181,0.13333333333333333,0.2,0.6666666666666666,0.0,0.0667,0.0,0.2667,0.3333,0.4,0.4,0.0,amenities,Blue Residency,YSR Kadapa,luxury,5 Star
+HTL0622,10,3.16,0.3295,0.2,0.2,0.6,0.5,0.4,0.3,0.1,0.0,0.8,0.6,0.2,amenities,Cloud9 Cottage,YSR Kadapa,budget,1-2 Star
+HTL0623,15,3.4733,0.261,0.26666666666666666,0.13333333333333333,0.6,0.5333,0.5333,0.2,0.0667,0.0,0.8,0.6667,0.2,amenities,Tranquil Residency,YSR Kadapa,budget,1-2 Star
+HTL0624,5,3.32,0.5156,0.2,0.0,0.8,0.2,0.0,0.2,0.2,0.4,1.0,0.4,0.4,amenities,Crystal Stays,YSR Kadapa,mid_range,3 Star
+HTL0625,5,3.46,0.4156,0.2,0.2,0.6,0.0,0.2,0.0,0.4,0.4,0.4,0.2,0.0,food,Cloud9 YSR Cottage,YSR Kadapa,premium,4 Star
+HTL0627,10,3.5,0.2293,0.3,0.1,0.6,0.4,0.6,0.3,0.0,0.0,0.8,0.8,0.1,amenities,Elite YSR Hotel,YSR Kadapa,budget,1-2 Star
+HTL0629,5,3.52,0.3118,0.2,0.2,0.6,0.8,0.4,0.0,0.0,0.0,1.0,0.6,0.0,amenities,Comfort YSR Lodge,YSR Kadapa,budget,1-2 Star
+HTL0630,5,3.3,0.2512,0.2,0.2,0.6,0.0,0.2,0.0,0.4,0.0,0.6,0.2,0.0,amenities,Regal Suites,YSR Kadapa,luxury,5 Star
+HTL0631,5,3.14,0.2672,0.4,0.0,0.6,0.8,0.4,0.2,0.0,0.0,0.8,0.6,0.4,cleanliness,Golden Stays,YSR Kadapa,budget,1-2 Star
+HTL0632,10,3.1,0.453,0.3,0.0,0.7,0.3,0.3,0.2,0.5,0.5,0.6,0.3,0.3,amenities,Mystic YSR Nest,YSR Kadapa,mid_range,3 Star
+HTL0633,5,3.66,0.6174,0.0,0.0,1.0,0.2,0.4,0.6,0.6,0.2,0.8,0.0,0.0,amenities,Regal Homestay,YSR Kadapa,mid_range,3 Star
+HTL0634,10,3.47,0.3695,0.3,0.0,0.7,0.5,0.5,0.3,0.3,0.1,0.6,0.1,0.2,amenities,Blue YSR Suites,YSR Kadapa,mid_range,3 Star
+HTL0635,10,3.34,0.3622,0.3,0.0,0.7,0.3,0.3,0.2,0.4,0.4,0.5,0.4,0.4,amenities,Cloud9 Lodge,YSR Kadapa,mid_range,3 Star
+HTL0637,20,3.54,0.2657,0.25,0.15,0.6,0.55,0.4,0.25,0.1,0.0,0.7,0.65,0.25,amenities,Emerald Inn,YSR Kadapa,budget,1-2 Star
+HTL0640,5,3.02,0.5751,0.0,0.0,1.0,0.2,0.2,0.6,0.4,0.4,0.8,0.0,0.2,amenities,Regal YSR Residency,YSR Kadapa,mid_range,3 Star
+HTL0641,5,3.28,0.0332,0.4,0.0,0.6,0.8,0.2,0.2,0.2,0.0,1.0,0.4,0.2,amenities,Saffron Guest House,YSR Kadapa,budget,1-2 Star
+HTL0642,5,3.22,0.433,0.2,0.0,0.8,0.6,0.2,0.2,0.0,0.0,0.6,0.2,0.2,cleanliness,Sunrise Nest,YSR Kadapa,mid_range,3 Star
+HTL0643,5,3.42,0.0916,0.4,0.0,0.6,0.8,0.4,0.2,0.0,0.0,1.0,0.8,0.2,amenities,River Palace,YSR Kadapa,budget,1-2 Star
+HTL0644,5,3.7,0.6717,0.0,0.0,1.0,0.2,0.2,0.4,0.4,0.4,0.8,0.2,0.2,amenities,Lotus YSR Suites,YSR Kadapa,mid_range,3 Star
+HTL0645,15,3.4333,0.2494,0.26666666666666666,0.13333333333333333,0.6,0.4667,0.3333,0.4,0.0667,0.0,0.6667,0.6667,0.2667,amenities,Royal Nest,YSR Kadapa,budget,1-2 Star
+HTL0646,20,3.51,0.3956,0.25,0.0,0.75,0.25,0.35,0.35,0.4,0.25,0.65,0.4,0.3,amenities,Classic Stays,YSR Kadapa,mid_range,3 Star
+HTL0647,20,3.415,0.4822,0.2,0.0,0.8,0.3,0.35,0.3,0.35,0.25,0.7,0.3,0.3,amenities,Regal Guest House,YSR Kadapa,mid_range,3 Star
+HTL0648,15,3.42,0.3641,0.3333333333333333,0.0,0.6666666666666666,0.2667,0.4667,0.3333,0.5333,0.3333,0.5333,0.3333,0.2667,food,Silver YSR Villa,YSR Kadapa,mid_range,3 Star
+HTL0649,5,3.38,0.3834,0.2,0.0,0.8,0.4,0.4,0.4,0.4,0.2,0.8,0.0,0.2,amenities,Elite Residency,YSR Kadapa,mid_range,3 Star
+HTL0650,5,3.4,0.2396,0.2,0.2,0.6,0.4,0.6,0.4,0.0,0.0,0.8,0.8,0.2,amenities,Lotus YSR Homestay,YSR Kadapa,budget,1-2 Star
+HTL0651,10,3.14,0.36,0.3,0.0,0.7,0.2,0.2,0.3,0.4,0.3,0.7,0.4,0.3,amenities,Cloud9 YSR Retreat,YSR Kadapa,mid_range,3 Star
+HTL0652,5,3.52,0.3683,0.2,0.2,0.6,0.6,0.4,0.2,0.2,0.0,1.0,0.4,0.0,amenities,Pearl Resort,YSR Kadapa,budget,1-2 Star
+HTL0653,20,3.415,0.2684,0.25,0.15,0.6,0.45,0.4,0.3,0.1,0.0,0.8,0.5,0.2,amenities,Heritage Stays,YSR Kadapa,budget,1-2 Star
+HTL0654,10,3.22,0.5116,0.0,0.3,0.7,0.3,0.2,0.1,0.4,0.3,0.4,0.1,0.0,food,Classic Palace,YSR Kadapa,premium,4 Star
+HTL0656,10,3.28,0.4588,0.2,0.0,0.8,0.2,0.2,0.3,0.5,0.5,0.7,0.2,0.3,amenities,Paradise Cottage,YSR Kadapa,mid_range,3 Star
+HTL0657,15,3.3467,0.3983,0.26666666666666666,0.0,0.7333333333333333,0.2667,0.2667,0.2,0.4,0.3333,0.6667,0.4,0.4,amenities,Mystic Inn,YSR Kadapa,mid_range,3 Star
+HTL0658,5,3.18,0.2755,0.2,0.2,0.6,0.6,0.8,0.0,0.0,0.0,0.8,0.8,0.0,staff,Heritage Villa,YSR Kadapa,budget,1-2 Star
+HTL0659,5,3.88,0.5152,0.0,0.4,0.6,0.2,0.2,0.2,0.6,0.0,0.2,0.2,0.0,food,Golden Stays,YSR Kadapa,premium,4 Star
+HTL0660,20,3.305,0.4671,0.2,0.0,0.8,0.25,0.3,0.25,0.4,0.3,0.6,0.25,0.4,amenities,Regal YSR Homestay,YSR Kadapa,mid_range,3 Star
+HTL0662,10,3.47,0.1309,0.4,0.0,0.6,0.5,0.4,0.3,0.0,0.0,0.7,0.7,0.2,amenities,Emerald Nest,YSR Kadapa,budget,1-2 Star
+HTL0665,25,3.396,0.1741,0.36,0.04,0.6,0.6,0.4,0.24,0.16,0.0,0.88,0.56,0.08,amenities,Paradise Retreat,YSR Kadapa,budget,1-2 Star
+HTL0666,5,3.58,0.5806,0.0,0.2,0.8,0.0,0.2,0.2,0.2,0.6,0.2,0.0,0.0,service,Horizon Nest,YSR Kadapa,premium,4 Star
+HTL0667,25,3.48,0.4538,0.24,0.0,0.76,0.32,0.4,0.2,0.44,0.28,0.52,0.32,0.32,amenities,Tranquil YSR Palace,YSR Kadapa,mid_range,3 Star
+HTL0668,5,3.2,0.4775,0.0,0.0,1.0,0.2,0.2,0.4,0.4,0.0,0.8,0.2,0.2,amenities,Green Villa,YSR Kadapa,mid_range,3 Star
+HTL0669,10,3.36,0.3774,0.1,0.2,0.7,0.0,0.3,0.0,0.4,0.2,0.3,0.3,0.0,food,Pearl Nest,YSR Kadapa,luxury,5 Star
+HTL0671,10,3.28,0.471,0.1,0.2,0.7,0.2,0.5,0.1,0.3,0.3,0.5,0.1,0.0,staff,Tranquil YSR Residency,YSR Kadapa,premium,4 Star
+HTL0673,5,3.26,0.3052,0.2,0.2,0.6,0.4,0.4,0.4,0.0,0.0,0.6,0.6,0.4,amenities,Nature Cottage,YSR Kadapa,budget,1-2 Star
+HTL0675,5,3.12,0.6599,0.0,0.0,1.0,0.0,0.4,0.4,0.4,0.2,0.4,0.0,0.0,staff,Classic Guest House,YSR Kadapa,premium,4 Star
+HTL0676,10,3.52,0.4401,0.2,0.0,0.8,0.4,0.4,0.2,0.3,0.1,0.5,0.3,0.3,amenities,Grand YSR Residency,YSR Kadapa,mid_range,3 Star
+HTL0677,5,3.42,0.3091,0.4,0.0,0.6,0.4,0.6,0.4,0.4,0.4,0.6,0.4,0.2,staff,Cloud9 YSR Guest House,YSR Kadapa,mid_range,3 Star
+HTL0678,15,3.48,0.3794,0.26666666666666666,0.0,0.7333333333333333,0.2667,0.4,0.4,0.3333,0.2,0.6667,0.1333,0.3333,amenities,Royal Guest House,YSR Kadapa,mid_range,3 Star
+HTL0681,5,2.94,0.0827,0.4,0.0,0.6,0.6,0.2,0.2,0.0,0.0,0.8,0.8,0.2,amenities,Saffron Nest,YSR Kadapa,budget,1-2 Star
+HTL0683,10,3.22,0.4868,0.1,0.2,0.7,0.1,0.3,0.2,0.3,0.3,0.5,0.1,0.0,amenities,Cloud9 Enclave,YSR Kadapa,premium,4 Star
+HTL0685,5,3.32,0.2666,0.2,0.2,0.6,0.0,0.2,0.0,0.6,0.6,0.6,0.6,0.0,food,Pearl Inn,YSR Kadapa,premium,4 Star
+HTL0686,10,3.35,0.5365,0.1,0.1,0.8,0.2,0.5,0.1,0.2,0.4,0.4,0.0,0.0,staff,Horizon Resort,YSR Kadapa,premium,4 Star
+HTL0687,20,3.25,0.1448,0.35,0.05,0.6,0.5,0.35,0.3,0.05,0.0,0.9,0.7,0.15,amenities,Blue YSR Residency,YSR Kadapa,budget,1-2 Star
+HTL0688,10,3.37,0.3919,0.2,0.0,0.8,0.3,0.3,0.4,0.4,0.3,0.5,0.2,0.3,amenities,Oasis Resort,YSR Kadapa,mid_range,3 Star
+HTL0690,15,3.3467,0.388,0.06666666666666667,0.26666666666666666,0.6666666666666666,0.0,0.2,0.0,0.3333,0.2667,0.4,0.4667,0.0,value,Blue Suites,YSR Kadapa,luxury,5 Star
+HTL0691,15,3.3933,0.3512,0.26666666666666666,0.0,0.7333333333333333,0.4667,0.2667,0.2667,0.2,0.0667,0.6667,0.4,0.2667,amenities,Saffron Enclave,YSR Kadapa,mid_range,3 Star
+HTL0692,10,3.38,0.5252,0.0,0.3,0.7,0.1,0.5,0.0,0.5,0.4,0.4,0.2,0.0,staff,Heritage Villa,YSR Kadapa,premium,4 Star
+HTL0694,15,3.2733,0.4163,0.2,0.0,0.8,0.1333,0.2,0.2667,0.4667,0.0667,0.6667,0.3333,0.2667,amenities,Cloud9 Sri Residency,Sri Sathya Sai,mid_range,3 Star
+HTL0695,15,3.2133,0.1714,0.3333333333333333,0.06666666666666667,0.6,0.4667,0.2667,0.4667,0.1333,0.0,0.8667,0.5333,0.2667,amenities,Grand Resort,Sri Sathya Sai,budget,1-2 Star
+HTL0696,5,3.26,0.5452,0.2,0.0,0.8,0.2,0.4,0.4,0.4,0.4,0.4,0.0,0.4,staff,Mystic Suites,Sri Sathya Sai,mid_range,3 Star
+HTL0697,20,3.39,0.171,0.35,0.05,0.6,0.45,0.6,0.4,0.05,0.0,0.85,0.6,0.2,amenities,Saffron Hotel,Sri Sathya Sai,budget,1-2 Star
+HTL0699,10,3.48,0.4432,0.2,0.1,0.7,0.1,0.1,0.3,0.3,0.2,0.2,0.1,0.0,location,Royal Stays,Sri Sathya Sai,premium,4 Star
+HTL0700,10,3.2,0.4465,0.2,0.0,0.8,0.2,0.2,0.1,0.5,0.2,0.7,0.4,0.4,amenities,Crystal Stays,Sri Sathya Sai,mid_range,3 Star
+HTL0701,15,3.26,0.3761,0.3333333333333333,0.0,0.6666666666666666,0.4,0.6,0.3333,0.4667,0.2,0.5333,0.3333,0.1333,staff,Paradise Retreat,Sri Sathya Sai,mid_range,3 Star
+HTL0702,5,3.06,0.5194,0.0,0.2,0.8,0.2,0.4,0.2,0.2,0.4,0.2,0.2,0.0,staff,Dew Drop Residency,Sri Sathya Sai,premium,4 Star
+HTL0703,10,3.49,0.4035,0.3,0.0,0.7,0.2,0.4,0.2,0.4,0.1,0.6,0.3,0.4,amenities,Silver Residency,Sri Sathya Sai,mid_range,3 Star
+HTL0704,5,3.6,0.2984,0.4,0.0,0.6,0.0,0.2,0.2,0.6,0.2,0.6,0.4,0.4,food,Palm Sri Suites,Sri Sathya Sai,mid_range,3 Star
+HTL0705,10,3.32,0.4627,0.2,0.0,0.8,0.2,0.5,0.3,0.5,0.3,0.6,0.2,0.4,amenities,Saffron Sri Enclave,Sri Sathya Sai,mid_range,3 Star
+HTL0706,10,3.44,0.2563,0.3,0.1,0.6,0.5,0.6,0.2,0.1,0.0,0.9,0.5,0.2,amenities,Hill Homestay,Sri Sathya Sai,budget,1-2 Star
+HTL0707,5,3.7,0.3308,0.2,0.2,0.6,0.0,0.4,0.0,0.4,0.0,0.4,0.2,0.0,staff,Lotus Suites,Sri Sathya Sai,luxury,5 Star
+HTL0709,15,3.3667,0.2092,0.3333333333333333,0.06666666666666667,0.6,0.4,0.4,0.4667,0.0667,0.0,0.6667,0.6667,0.3333,amenities,Comfort Residency,Sri Sathya Sai,budget,1-2 Star
+HTL0710,10,3.47,0.336,0.3,0.0,0.7,0.3,0.4,0.2,0.5,0.2,0.4,0.3,0.4,food,Golden Cottage,Sri Sathya Sai,mid_range,3 Star
+HTL0711,15,3.26,0.4631,0.2,0.0,0.8,0.2,0.3333,0.3333,0.4,0.3333,0.7333,0.3333,0.3333,amenities,Dew Drop Inn,Sri Sathya Sai,mid_range,3 Star
+HTL0712,10,3.34,0.2232,0.4,0.0,0.6,0.3,0.3,0.3,0.4,0.2,0.5,0.3,0.4,amenities,Oasis Homestay,Sri Sathya Sai,mid_range,3 Star
+HTL0713,5,3.48,0.081,0.4,0.0,0.6,0.8,0.4,0.2,0.2,0.0,1.0,0.4,0.4,amenities,Heritage Sri Homestay,Sri Sathya Sai,budget,1-2 Star
+HTL0714,5,3.28,0.2367,0.4,0.0,0.6,0.0,0.0,0.2,0.4,0.4,0.6,0.4,0.0,amenities,Heritage Guest House,Sri Sathya Sai,premium,4 Star
+HTL0715,5,3.12,0.2412,0.2,0.2,0.6,0.2,0.4,0.4,0.0,0.0,0.8,0.8,0.0,amenities,Pearl Stays,Sri Sathya Sai,budget,1-2 Star
+HTL0716,10,3.45,0.2673,0.3,0.1,0.6,0.5,0.5,0.3,0.0,0.0,0.8,0.6,0.2,amenities,Mystic Homestay,Sri Sathya Sai,budget,1-2 Star
+HTL0717,10,3.41,0.138,0.4,0.0,0.6,0.4,0.5,0.5,0.0,0.0,0.8,0.6,0.3,amenities,Crystal Villa,Sri Sathya Sai,budget,1-2 Star
+HTL0718,15,3.4133,0.4029,0.2,0.13333333333333333,0.6666666666666666,0.1333,0.2,0.0667,0.4667,0.3333,0.4,0.2667,0.0,food,Sunset Residency,Sri Sathya Sai,premium,4 Star
+HTL0719,15,3.4133,0.1891,0.3333333333333333,0.06666666666666667,0.6,0.4667,0.4,0.4667,0.0,0.0,0.6667,0.7333,0.3333,value,Paradise Visakhapatnam Hotel,Visakhapatnam,budget,1-2 Star
+HTL0721,10,3.42,0.5668,0.1,0.0,0.9,0.1,0.3,0.4,0.5,0.4,0.7,0.1,0.4,amenities,Heritage Visakhapatnam Inn,Visakhapatnam,mid_range,3 Star
+HTL0722,5,3.44,0.5393,0.2,0.0,0.8,0.0,0.4,0.4,0.8,0.4,0.8,0.2,0.2,food,Palm Inn,Visakhapatnam,mid_range,3 Star
+HTL0724,10,3.28,0.2864,0.3,0.1,0.6,0.6,0.5,0.1,0.2,0.0,0.8,0.4,0.1,amenities,Hill Lodge,Visakhapatnam,budget,1-2 Star
+HTL0726,15,3.2933,0.4849,0.06666666666666667,0.2,0.7333333333333333,0.2,0.3333,0.2,0.0667,0.4667,0.3333,0.0,0.0,service,Grand Nest,Visakhapatnam,premium,4 Star
+HTL0727,5,3.42,0.4313,0.2,0.0,0.8,0.4,0.4,0.4,0.2,0.4,0.6,0.2,0.4,amenities,Blue Visakhapatnam Enclave,Visakhapatnam,mid_range,3 Star
+HTL0728,10,3.35,0.4149,0.1,0.3,0.6,0.2,0.4,0.1,0.4,0.3,0.5,0.2,0.0,amenities,River Visakhapatnam Resort,Visakhapatnam,premium,4 Star
+HTL0729,10,3.42,0.3995,0.2,0.2,0.6,0.2,0.2,0.2,0.3,0.2,0.3,0.2,0.0,food,Paradise Villa,Visakhapatnam,premium,4 Star
+HTL0731,5,3.6,0.4857,0.0,0.2,0.8,0.2,0.4,0.2,0.4,0.4,0.6,0.2,0.0,amenities,Tranquil Lodge,Visakhapatnam,premium,4 Star
+HTL0732,5,3.38,0.1815,0.4,0.0,0.6,0.6,0.4,0.2,0.0,0.0,0.8,0.6,0.4,amenities,Horizon Homestay,Visakhapatnam,budget,1-2 Star
+HTL0733,15,3.4933,0.3383,0.2,0.13333333333333333,0.6666666666666666,0.0,0.2667,0.0,0.2,0.3333,0.2667,0.2667,0.0,service,Pearl Guest House,Visakhapatnam,luxury,5 Star
+HTL0734,20,3.405,0.2745,0.25,0.15,0.6,0.5,0.55,0.25,0.05,0.0,0.85,0.65,0.05,amenities,Classic Guest House,Visakhapatnam,budget,1-2 Star
+HTL0735,5,3.38,0.3791,0.2,0.2,0.6,0.4,0.4,0.0,0.4,0.2,0.4,0.2,0.0,cleanliness,River Nest,Visakhapatnam,premium,4 Star
+HTL0738,5,3.44,0.2509,0.4,0.0,0.6,0.6,0.4,0.2,0.2,0.2,0.6,0.2,0.4,cleanliness,Crystal Visakhapatnam Villa,Visakhapatnam,mid_range,3 Star
+HTL0739,30,3.5067,0.5568,0.1,0.0,0.9,0.2,0.2333,0.2667,0.4333,0.3,0.6667,0.2667,0.3333,amenities,Sunset Inn,Visakhapatnam,mid_range,3 Star
+HTL0740,15,3.3267,0.4939,0.06666666666666667,0.2,0.7333333333333333,0.2,0.4,0.1333,0.2667,0.4,0.3333,0.0667,0.0,staff,Oasis Visakhapatnam Lodge,Visakhapatnam,premium,4 Star
+HTL0741,20,3.465,0.4337,0.1,0.25,0.65,0.1,0.15,0.1,0.4,0.45,0.5,0.2,0.0,amenities,Golden Visakhapatnam Nest,Visakhapatnam,premium,4 Star
+HTL0743,10,3.55,0.2239,0.2,0.2,0.6,0.5,0.4,0.3,0.0,0.0,0.9,0.8,0.0,amenities,Oasis Lodge,Visakhapatnam,budget,1-2 Star
+HTL0744,15,3.1933,0.3752,0.26666666666666666,0.0,0.7333333333333333,0.3333,0.3333,0.4,0.4,0.2,0.6667,0.3333,0.1333,amenities,Tranquil Visakhapatnam Homestay,Visakhapatnam,mid_range,3 Star
+HTL0745,20,3.415,0.2091,0.25,0.15,0.6,0.55,0.4,0.25,0.1,0.0,0.9,0.65,0.1,amenities,Saffron Suites,Visakhapatnam,budget,1-2 Star
+HTL0746,10,3.28,0.4069,0.2,0.0,0.8,0.2,0.3,0.3,0.5,0.1,0.7,0.5,0.2,amenities,River Visakhapatnam Cottage,Visakhapatnam,mid_range,3 Star
+HTL0747,20,3.21,0.3565,0.2,0.05,0.75,0.0,0.45,0.0,0.1,0.15,0.3,0.3,0.0,staff,Mystic Villa,Visakhapatnam,luxury,5 Star
+HTL0748,20,3.285,0.4101,0.3,0.0,0.7,0.4,0.4,0.3,0.25,0.2,0.55,0.15,0.3,amenities,Royal Villa,Visakhapatnam,mid_range,3 Star
+HTL0749,5,3.42,0.397,0.2,0.0,0.8,0.6,0.4,0.2,0.2,0.2,0.6,0.4,0.2,cleanliness,River Palace,Visakhapatnam,mid_range,3 Star
+HTL0751,5,3.24,0.2427,0.4,0.0,0.6,0.6,0.2,0.4,0.0,0.2,0.6,0.2,0.2,cleanliness,Nature Visakhapatnam Inn,Visakhapatnam,mid_range,3 Star
+HTL0752,5,3.28,0.2022,0.2,0.2,0.6,0.4,0.2,0.4,0.2,0.0,1.0,0.6,0.0,amenities,Mystic Inn,Visakhapatnam,budget,1-2 Star
+HTL0753,15,3.4933,0.5286,0.2,0.0,0.8,0.4,0.4,0.1333,0.4667,0.2667,0.4667,0.3333,0.2667,food,Mystic Suites,Visakhapatnam,mid_range,3 Star
+HTL0754,5,3.6,0.5211,0.2,0.0,0.8,0.0,0.2,0.4,0.4,0.4,0.8,0.0,0.4,amenities,Hill Resort,Visakhapatnam,mid_range,3 Star
+HTL0755,10,3.37,0.4268,0.2,0.0,0.8,0.4,0.3,0.2,0.3,0.3,0.6,0.3,0.4,amenities,Blue Resort,Visakhapatnam,mid_range,3 Star
+HTL0756,5,3.36,0.3458,0.2,0.2,0.6,0.2,0.4,0.2,0.2,0.4,0.4,0.2,0.0,staff,Grand Guest House,Visakhapatnam,premium,4 Star
+HTL0757,15,3.52,0.4595,0.06666666666666667,0.13333333333333333,0.8,0.1333,0.4,0.1333,0.2667,0.6,0.4667,0.2,0.0,service,Horizon Visakhapatnam Palace,Visakhapatnam,premium,4 Star
+HTL0758,10,3.47,0.5301,0.1,0.0,0.9,0.2,0.3,0.1,0.6,0.3,0.5,0.4,0.4,food,Nature Nest,Visakhapatnam,mid_range,3 Star
+HTL0759,5,3.22,0.2085,0.4,0.0,0.6,0.4,0.4,0.2,0.4,0.2,0.4,0.6,0.4,value,Comfort Enclave,Visakhapatnam,mid_range,3 Star
+HTL0760,5,3.3,-0.0185,0.4,0.0,0.6,0.8,0.2,0.2,0.0,0.0,1.0,0.8,0.2,amenities,Sunset Palace,Visakhapatnam,budget,1-2 Star
+HTL0761,5,3.18,0.3972,0.0,0.4,0.6,0.2,0.2,0.0,0.4,0.6,0.6,0.2,0.0,service,Cloud9 Inn,Visakhapatnam,premium,4 Star
+HTL0762,25,3.36,0.3268,0.32,0.0,0.68,0.28,0.36,0.28,0.48,0.2,0.56,0.44,0.28,amenities,Cloud9 Visakhapatnam Guest House,Visakhapatnam,mid_range,3 Star
+HTL0763,5,3.44,0.364,0.2,0.0,0.8,0.6,0.2,0.2,0.2,0.0,0.6,0.4,0.2,cleanliness,Saffron Stays,Visakhapatnam,mid_range,3 Star
+HTL0764,5,3.42,0.3378,0.2,0.2,0.6,0.6,0.4,0.0,0.2,0.0,1.0,0.4,0.0,amenities,Blue Retreat,Visakhapatnam,budget,1-2 Star
+HTL0765,10,3.5,0.2675,0.2,0.2,0.6,0.4,0.6,0.3,0.1,0.0,0.8,0.6,0.2,amenities,Paradise Residency,Visakhapatnam,budget,1-2 Star
+HTL0766,5,3.34,0.1369,0.4,0.0,0.6,0.4,0.2,0.6,0.0,0.0,0.6,0.6,0.6,location,Lotus Stays,Visakhapatnam,budget,1-2 Star
+HTL0767,10,3.29,0.3882,0.1,0.2,0.7,0.0,0.4,0.0,0.1,0.2,0.0,0.4,0.0,staff,Elite Enclave,Visakhapatnam,luxury,5 Star
+HTL0768,5,2.98,0.3262,0.2,0.2,0.6,0.6,0.4,0.4,0.0,0.0,0.8,0.8,0.2,amenities,Sunrise Enclave,Visakhapatnam,budget,1-2 Star
+HTL0769,15,3.5267,0.1893,0.26666666666666666,0.13333333333333333,0.6,0.4,0.4667,0.3333,0.0667,0.0,0.8667,0.5333,0.2,amenities,Nature Retreat,Visakhapatnam,budget,1-2 Star
+HTL0771,10,3.27,0.2896,0.2,0.2,0.6,0.5,0.6,0.2,0.0,0.0,0.8,0.7,0.2,amenities,Cloud9 Palace,Visakhapatnam,budget,1-2 Star
+HTL0772,5,3.4,0.4975,0.2,0.0,0.8,0.2,0.4,0.4,0.2,0.2,0.8,0.2,0.4,amenities,Horizon Nest,Visakhapatnam,mid_range,3 Star
+HTL0773,15,3.4133,0.1514,0.3333333333333333,0.06666666666666667,0.6,0.6667,0.2667,0.4,0.0667,0.0,0.8667,0.6,0.4,amenities,Lotus Guest House,Visakhapatnam,budget,1-2 Star
+HTL0774,15,3.3133,0.193,0.3333333333333333,0.06666666666666667,0.6,0.6,0.3333,0.2667,0.1333,0.0,0.8667,0.5333,0.2,amenities,Paradise Homestay,Visakhapatnam,budget,1-2 Star
+HTL0775,15,3.5333,0.5586,0.06666666666666667,0.0,0.9333333333333333,0.2,0.0667,0.3333,0.4667,0.4,0.6667,0.2667,0.3333,amenities,Blue Lodge,Visakhapatnam,mid_range,3 Star
+HTL0777,5,3.7,0.349,0.2,0.2,0.6,0.4,0.4,0.2,0.2,0.0,0.4,0.6,0.2,value,Silver Retreat,Visakhapatnam,budget,1-2 Star
+HTL0778,5,3.4,0.1598,0.4,0.0,0.6,0.4,0.4,0.2,0.0,0.0,0.8,0.6,0.0,amenities,Comfort Resort,Visakhapatnam,budget,1-2 Star
+HTL0779,10,3.46,0.5486,0.1,0.0,0.9,0.2,0.4,0.3,0.4,0.2,0.7,0.1,0.4,amenities,Comfort Retreat,Visakhapatnam,mid_range,3 Star
+HTL0780,5,3.38,0.2015,0.4,0.0,0.6,0.6,0.6,0.2,0.4,0.2,0.2,0.4,0.4,cleanliness,Dew Drop Guest House,Visakhapatnam,mid_range,3 Star
+HTL0782,10,3.12,0.2737,0.2,0.2,0.6,0.5,0.3,0.3,0.1,0.0,1.0,0.6,0.1,amenities,Grand Retreat,Visakhapatnam,budget,1-2 Star
+HTL0783,20,3.395,0.4682,0.2,0.0,0.8,0.35,0.35,0.4,0.3,0.2,0.75,0.15,0.2,amenities,River Stays,Visakhapatnam,mid_range,3 Star
+HTL0784,5,3.06,0.3952,0.2,0.2,0.6,0.4,0.6,0.2,0.0,0.0,0.8,0.6,0.2,amenities,Paradise Resort,Visakhapatnam,budget,1-2 Star
+HTL0786,5,3.68,0.5556,0.2,0.0,0.8,0.4,0.2,0.2,0.4,0.6,0.6,0.2,0.4,service,Pearl Visakhapatnam Guest House,Visakhapatnam,mid_range,3 Star
+HTL0787,5,3.42,0.179,0.4,0.0,0.6,0.4,0.4,0.4,0.2,0.0,0.6,0.4,0.4,amenities,Regal Visakhapatnam Stays,Visakhapatnam,budget,1-2 Star
+HTL0788,25,3.352,0.4329,0.08,0.2,0.72,0.0,0.32,0.0,0.28,0.24,0.28,0.36,0.0,value,Pearl Stays,Visakhapatnam,luxury,5 Star
+HTL0789,5,3.42,0.4257,0.2,0.0,0.8,0.2,0.2,0.4,0.4,0.2,1.0,0.2,0.2,amenities,Horizon Visakhapatnam Lodge,Visakhapatnam,mid_range,3 Star
+HTL0791,5,3.18,0.1772,0.4,0.0,0.6,1.0,0.2,0.2,0.2,0.0,1.0,0.6,0.4,cleanliness,Crystal Visakhapatnam Nest,Visakhapatnam,budget,1-2 Star
+HTL0795,5,3.38,0.3514,0.2,0.2,0.6,0.6,0.6,0.0,0.2,0.0,0.6,0.6,0.2,cleanliness,Silver Stays,Visakhapatnam,budget,1-2 Star
+HTL0796,5,3.42,0.3944,0.2,0.0,0.8,0.4,0.4,0.2,0.4,0.4,0.6,0.2,0.4,amenities,Silver Visakhapatnam Residency,Visakhapatnam,mid_range,3 Star
+HTL0799,5,3.48,0.129,0.4,0.0,0.6,0.6,0.4,0.4,0.0,0.0,0.8,0.6,0.2,amenities,Golden Villa,Visakhapatnam,budget,1-2 Star
+HTL0800,5,3.68,0.3213,0.4,0.0,0.6,0.0,0.6,0.6,0.6,0.4,0.8,0.4,0.2,amenities,Lotus Visakhapatnam Lodge,Visakhapatnam,mid_range,3 Star
+HTL0801,20,3.33,0.4004,0.25,0.0,0.75,0.45,0.35,0.3,0.4,0.25,0.55,0.3,0.25,amenities,Elite Retreat,Visakhapatnam,mid_range,3 Star
+HTL0802,10,3.27,0.5128,0.0,0.3,0.7,0.1,0.3,0.2,0.5,0.2,0.4,0.2,0.0,food,Classic Villa,Visakhapatnam,premium,4 Star
+HTL0803,10,3.39,0.4454,0.2,0.0,0.8,0.3,0.4,0.4,0.3,0.2,0.7,0.2,0.2,amenities,Crystal Retreat,Visakhapatnam,mid_range,3 Star
+HTL0804,5,3.34,0.4055,0.0,0.4,0.6,0.0,0.2,0.0,0.6,0.6,0.8,0.4,0.0,amenities,Emerald Hotel,Visakhapatnam,premium,4 Star
+HTL0805,15,3.4867,0.1692,0.3333333333333333,0.06666666666666667,0.6,0.6667,0.2667,0.3333,0.0667,0.0,0.8667,0.6667,0.2667,amenities,Regal Guest House,Visakhapatnam,budget,1-2 Star
+HTL0806,5,3.02,0.5875,0.0,0.0,1.0,0.2,0.0,0.2,0.6,0.4,0.6,0.2,0.4,food,Royal Inn,Visakhapatnam,mid_range,3 Star
+HTL0807,5,3.22,0.438,0.2,0.0,0.8,0.4,0.4,0.4,0.2,0.0,0.8,0.2,0.2,amenities,Classic Visakhapatnam Inn,Visakhapatnam,mid_range,3 Star
+HTL0809,15,3.44,0.4401,0.13333333333333333,0.06666666666666667,0.8,0.0667,0.2,0.2,0.3333,0.4667,0.4,0.2,0.0,service,Tranquil Stays,Visakhapatnam,premium,4 Star
+HTL0812,5,3.24,0.4462,0.2,0.2,0.6,0.2,0.2,0.2,0.2,0.2,0.4,0.0,0.0,amenities,Horizon Suites,Visakhapatnam,premium,4 Star
+HTL0814,15,3.4267,0.4886,0.0,0.3333333333333333,0.6666666666666666,0.1333,0.2,0.0667,0.4667,0.4667,0.5333,0.1333,0.0,amenities,Nature Residency,Visakhapatnam,premium,4 Star
+HTL0815,5,3.42,0.1741,0.2,0.2,0.6,0.4,0.4,0.2,0.0,0.0,0.8,0.6,0.2,amenities,Saffron Visakhapatnam Suites,Visakhapatnam,budget,1-2 Star
+HTL0816,5,3.32,0.7471,0.0,0.0,1.0,0.4,0.2,0.2,0.2,0.4,0.6,0.2,0.4,amenities,Classic Retreat,Visakhapatnam,mid_range,3 Star
+HTL0817,10,3.29,0.1852,0.4,0.0,0.6,0.6,0.5,0.3,0.0,0.0,0.8,0.6,0.3,amenities,Crystal Anantapuram Hotel,Anantapuram,budget,1-2 Star
+HTL0819,10,3.26,0.3596,0.2,0.1,0.7,0.1,0.2,0.2,0.4,0.4,0.5,0.3,0.0,amenities,Hill Suites,Anantapuram,premium,4 Star
+HTL0820,5,3.14,0.6519,0.0,0.0,1.0,0.6,0.2,0.2,0.2,0.2,0.6,0.2,0.2,cleanliness,Sunset Stays,Anantapuram,mid_range,3 Star
+HTL0821,5,3.46,0.4994,0.2,0.0,0.8,0.4,0.6,0.2,0.4,0.2,0.6,0.4,0.2,staff,Hill Suites,Anantapuram,mid_range,3 Star
+HTL0822,10,3.35,0.3419,0.2,0.2,0.6,0.0,0.3,0.0,0.1,0.3,0.3,0.3,0.0,staff,Comfort Cottage,Anantapuram,luxury,5 Star
+HTL0823,10,3.38,0.5671,0.1,0.0,0.9,0.3,0.2,0.3,0.4,0.2,0.8,0.2,0.1,amenities,Tranquil Anantapuram Stays,Anantapuram,mid_range,3 Star
+HTL0824,10,3.33,0.5222,0.1,0.0,0.9,0.1,0.2,0.3,0.6,0.3,0.7,0.1,0.3,amenities,Lotus Anantapuram Retreat,Anantapuram,mid_range,3 Star
+HTL0825,5,3.28,0.338,0.2,0.2,0.6,0.0,0.2,0.0,0.4,0.6,0.8,0.2,0.0,amenities,Tranquil Anantapuram Cottage,Anantapuram,premium,4 Star
+HTL0826,15,3.36,0.2812,0.3333333333333333,0.0,0.6666666666666666,0.4,0.2,0.2667,0.2667,0.1333,0.6667,0.5333,0.2,amenities,Oasis Villa,Anantapuram,mid_range,3 Star
+HTL0827,10,3.25,0.5007,0.2,0.0,0.8,0.4,0.5,0.4,0.4,0.3,0.6,0.2,0.2,amenities,Silver Anantapuram Palace,Anantapuram,mid_range,3 Star
+HTL0828,20,3.355,0.0646,0.4,0.0,0.6,0.5,0.3,0.5,0.0,0.0,0.95,0.6,0.3,amenities,Regal Hotel,Anantapuram,budget,1-2 Star
+HTL0830,10,3.67,0.339,0.1,0.3,0.6,0.4,0.2,0.3,0.2,0.0,0.8,0.5,0.1,amenities,Emerald Nest,Anantapuram,budget,1-2 Star
+HTL0831,10,3.48,0.2032,0.3,0.1,0.6,0.7,0.3,0.1,0.2,0.0,0.8,0.7,0.1,amenities,Grand Palace,Anantapuram,budget,1-2 Star
+HTL0832,10,3.22,0.3329,0.2,0.2,0.6,0.3,0.1,0.1,0.3,0.4,0.2,0.3,0.0,service,Saffron Villa,Anantapuram,premium,4 Star
+HTL0833,5,3.36,0.4866,0.2,0.0,0.8,0.2,0.2,0.2,0.4,0.2,1.0,0.4,0.2,amenities,Crystal Resort,Anantapuram,mid_range,3 Star
+HTL0834,5,3.4,0.1822,0.4,0.0,0.6,0.6,0.4,0.2,0.2,0.0,0.8,0.4,0.4,amenities,Royal Enclave,Anantapuram,budget,1-2 Star
+HTL0835,10,3.39,0.4435,0.2,0.0,0.8,0.1,0.5,0.5,0.5,0.3,0.7,0.2,0.3,amenities,Blue Anantapuram Inn,Anantapuram,mid_range,3 Star
+HTL0836,5,3.22,0.3446,0.4,0.0,0.6,0.4,0.4,0.4,0.2,0.2,0.6,0.2,0.2,amenities,Silver Nest,Anantapuram,mid_range,3 Star
+HTL0838,5,3.28,0.5621,0.0,0.0,1.0,0.2,0.2,0.4,0.4,0.2,1.0,0.0,0.2,amenities,Nature Anantapuram Residency,Anantapuram,mid_range,3 Star
+HTL0839,5,3.78,0.4782,0.2,0.0,0.8,0.2,0.4,0.4,0.4,0.4,0.8,0.0,0.4,amenities,Sunrise Guest House,Anantapuram,mid_range,3 Star
+HTL0840,20,3.455,0.2265,0.3,0.1,0.6,0.45,0.45,0.4,0.1,0.0,0.85,0.55,0.3,amenities,Heritage Palace,Anantapuram,budget,1-2 Star
+HTL0842,10,3.37,0.4105,0.2,0.2,0.6,0.5,0.5,0.1,0.1,0.0,0.8,0.5,0.0,amenities,Pearl Chittoor Villa,Chittoor,budget,1-2 Star
+HTL0843,5,3.52,0.2917,0.4,0.0,0.6,0.0,0.0,0.2,0.4,0.4,0.6,0.4,0.6,amenities,Blue Chittoor Residency,Chittoor,mid_range,3 Star
+HTL0844,10,3.25,0.4469,0.3,0.0,0.7,0.1,0.4,0.4,0.5,0.5,0.6,0.2,0.4,amenities,Saffron Cottage,Chittoor,mid_range,3 Star
+HTL0847,15,3.4,0.4272,0.26666666666666666,0.0,0.7333333333333333,0.2667,0.4667,0.2667,0.4,0.3333,0.5333,0.2667,0.4,amenities,Comfort Guest House,Chittoor,mid_range,3 Star
+HTL0848,10,3.36,0.1694,0.4,0.0,0.6,0.6,0.3,0.4,0.1,0.0,0.9,0.6,0.2,amenities,River Chittoor Palace,Chittoor,budget,1-2 Star
+HTL0849,5,3.4,0.2603,0.4,0.0,0.6,0.4,0.6,0.2,0.2,0.0,0.6,0.4,0.2,staff,Serene Suites,Chittoor,budget,1-2 Star
+HTL0851,15,3.2933,0.2609,0.26666666666666666,0.13333333333333333,0.6,0.5333,0.3333,0.2667,0.0667,0.0,0.8,0.6,0.2,amenities,Elite Cottage,Chittoor,budget,1-2 Star
+HTL0852,10,3.63,0.396,0.3,0.0,0.7,0.2,0.3,0.4,0.4,0.5,0.6,0.2,0.4,amenities,Sunrise Retreat,Chittoor,mid_range,3 Star
+HTL0855,15,3.38,0.3998,0.26666666666666666,0.0,0.7333333333333333,0.2,0.4667,0.3333,0.4667,0.1333,0.5333,0.2667,0.2667,amenities,Comfort Villa,NTR,mid_range,3 Star
+HTL0856,15,3.3733,0.4779,0.13333333333333333,0.0,0.8666666666666667,0.2667,0.1333,0.2667,0.2667,0.0667,0.7333,0.3333,0.2,amenities,Green NTR Homestay,NTR,mid_range,3 Star
+HTL0860,5,3.22,0.5124,0.0,0.2,0.8,0.0,0.2,0.0,0.0,0.2,0.4,0.2,0.0,amenities,Cloud9 NTR Palace,NTR,luxury,5 Star
+HTL0862,5,3.52,0.386,0.2,0.2,0.6,0.6,0.4,0.4,0.0,0.0,1.0,0.6,0.2,amenities,Royal Guest House,NTR,budget,1-2 Star
+HTL0864,5,3.6,0.3548,0.4,0.0,0.6,0.4,0.4,0.0,0.4,0.4,0.4,0.4,0.4,cleanliness,Paradise NTR Residency,NTR,mid_range,3 Star
+HTL0865,5,3.4,0.2994,0.2,0.2,0.6,0.2,0.0,0.0,0.4,0.6,0.4,0.4,0.0,service,Tranquil Villa,NTR,premium,4 Star
+HTL0866,5,3.38,0.3755,0.2,0.0,0.8,0.2,0.4,0.2,0.0,0.6,0.2,0.2,0.0,service,Classic Homestay,NTR,premium,4 Star
+HTL0867,10,3.38,0.1809,0.3,0.1,0.6,0.7,0.2,0.2,0.2,0.0,0.9,0.7,0.1,amenities,Green Enclave,NTR,budget,1-2 Star
+HTL0868,10,3.41,0.2019,0.2,0.2,0.6,0.5,0.4,0.4,0.0,0.0,0.9,0.8,0.2,amenities,Royal Villa,NTR,budget,1-2 Star
+HTL0870,5,3.54,0.2212,0.2,0.2,0.6,0.2,0.4,0.4,0.0,0.0,0.6,0.6,0.2,amenities,Saffron NTR Homestay,NTR,budget,1-2 Star
+HTL0871,10,3.39,0.4708,0.2,0.0,0.8,0.3,0.3,0.3,0.4,0.3,0.6,0.2,0.4,amenities,River Villa,NTR,mid_range,3 Star
+HTL0872,10,3.58,0.4582,0.2,0.0,0.8,0.2,0.3,0.4,0.3,0.4,0.8,0.2,0.4,amenities,Sunrise Residency,NTR,mid_range,3 Star
+HTL0873,10,3.31,0.1955,0.2,0.2,0.6,0.3,0.5,0.3,0.1,0.0,0.8,0.6,0.1,amenities,Heritage Villa,NTR,budget,1-2 Star
+HTL0874,15,3.44,0.11,0.4,0.0,0.6,0.8,0.3333,0.2,0.1333,0.0,1.0,0.6,0.1333,amenities,River Homestay,NTR,budget,1-2 Star
+HTL0875,25,3.244,0.4761,0.2,0.0,0.8,0.08,0.24,0.28,0.56,0.36,0.6,0.28,0.4,amenities,Sunset Lodge,NTR,mid_range,3 Star
+HTL0876,10,3.63,0.1838,0.4,0.0,0.6,0.8,0.4,0.2,0.1,0.0,1.0,0.7,0.1,amenities,Nature NTR Hotel,NTR,budget,1-2 Star
+HTL0877,5,3.3,0.2258,0.2,0.2,0.6,0.6,0.2,0.4,0.0,0.0,0.8,1.0,0.2,value,Sunrise Guest House,NTR,budget,1-2 Star
+HTL0878,15,3.52,0.4816,0.06666666666666667,0.13333333333333333,0.8,0.2,0.3333,0.1333,0.3333,0.4667,0.4667,0.2,0.0,service,Serene Hotel,NTR,premium,4 Star
+HTL0880,10,3.52,0.1091,0.4,0.0,0.6,0.7,0.3,0.3,0.0,0.0,1.0,0.7,0.3,amenities,Classic Nest,NTR,budget,1-2 Star
+HTL0881,5,3.46,0.2943,0.4,0.0,0.6,0.2,0.2,0.2,0.4,0.4,0.4,0.6,0.4,value,Regal Retreat,NTR,mid_range,3 Star
+HTL0882,5,3.34,0.34,0.2,0.2,0.6,0.2,0.6,0.4,0.0,0.0,0.8,0.6,0.2,amenities,Horizon NTR Lodge,NTR,budget,1-2 Star
+HTL0883,15,3.4733,0.2304,0.26666666666666666,0.13333333333333333,0.6,0.5333,0.4667,0.2667,0.2,0.0,0.8,0.5333,0.2,amenities,Blue NTR Palace,NTR,budget,1-2 Star
+HTL0884,15,3.3667,0.4636,0.06666666666666667,0.26666666666666666,0.6666666666666666,0.1333,0.2,0.0667,0.5333,0.3333,0.3333,0.2667,0.0,food,Classic NTR Suites,NTR,premium,4 Star
+HTL0885,20,3.47,0.2567,0.25,0.15,0.6,0.6,0.4,0.3,0.05,0.0,0.8,0.75,0.15,amenities,Golden NTR Suites,NTR,budget,1-2 Star
+HTL0887,5,3.52,0.0916,0.4,0.0,0.6,0.8,0.4,0.2,0.0,0.0,1.0,0.8,0.2,amenities,Lotus Retreat,NTR,budget,1-2 Star
+HTL0888,10,3.48,0.4553,0.2,0.0,0.8,0.3,0.2,0.2,0.3,0.2,0.8,0.4,0.3,amenities,Elite Resort,NTR,mid_range,3 Star
+HTL0890,5,3.3,0.4755,0.2,0.0,0.8,0.4,0.2,0.4,0.4,0.2,0.6,0.2,0.0,amenities,Golden NTR Villa,NTR,mid_range,3 Star
