@@ -1,0 +1,442 @@
+"""
+member3/src/itinerary.py
+=========================
+Day-wise itinerary scheduling engine for TripSense.
+
+Responsibilities
+----------------
+- Accept a list of recommended places (from the recommendation service).
+- Allocate them across the requested number of days.
+- Respect actual visit_duration_hrs fields.
+- Group geographically nearby attractions using Haversine distance.
+- Respect user preferences: pace, interests, traveler type, accessibility.
+- Leave reasonable time for meals and rest.
+- Return a structured day-by-day plan with explanations.
+- Avoid fabricating travel times; use transparent distance-based approximations
+  labelled as estimated.
+- Handle gracefully: missing coordinates, missing durations, < enough places.
+
+Schedule assumptions (clearly labelled)
+----------------------------------------
+- Day starts at 08:00, ends by 20:00 → 12 usable hours.
+- Meal break: 1.5 hours total (lunch + snacks).
+- Buffer between places: 0.5 hours.
+- Travel time estimate: distance_km / 40 km/h (road speed approximation).
+  Labelled as "estimated ~X min drive" — NOT sourced from a routing API.
+- If coordinates are missing, places in the same district are assumed ~30 min apart.
+- Pace multipliers:
+    relaxed  → max 2–3 places/day
+    balanced → max 4–5 places/day
+    packed   → max 6–7 places/day
+"""
+
+from __future__ import annotations
+
+import logging
+import math
+from dataclasses import dataclass, field
+from datetime import date, timedelta
+from typing import Optional
+
+import pandas as pd
+
+log = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Constants
+# ---------------------------------------------------------------------------
+_DAY_HOURS      = 12.0   # 08:00 – 20:00
+_MEAL_HOURS     = 1.5
+_BUFFER_HOURS   = 0.5    # buffer per place transition
+_DEFAULT_VISIT  = 2.0    # fallback visit duration in hours
+_APPROX_SPEED_KMH = 40.0  # road-speed approximation for travel time
+
+_PACE_MAX_PLACES = {
+    "relaxed":  3,
+    "balanced": 5,
+    "packed":   7,
+}
+_PACE_MAX_HOURS = {
+    "relaxed":  8.0,
+    "balanced": 10.0,
+    "packed":   11.5,
+}
+
+
+# ---------------------------------------------------------------------------
+# Haversine distance
+# ---------------------------------------------------------------------------
+
+def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Great-circle distance in km."""
+    R = 6371.0
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlam = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2
+    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
+def _travel_time_hours(lat1, lon1, lat2, lon2) -> tuple[float, str]:
+    """
+    Return (travel_time_hours, label).
+    If coordinates are unavailable, return a default and an appropriate note.
+    """
+    try:
+        dist_km = _haversine_km(float(lat1), float(lon1), float(lat2), float(lon2))
+        hours   = dist_km / _APPROX_SPEED_KMH
+        mins    = int(round(hours * 60))
+        label   = f"~{mins} min drive (straight-line distance ÷ {int(_APPROX_SPEED_KMH)} km/h — estimated)"
+        return hours, label
+    except (TypeError, ValueError):
+        return 0.5, "~30 min (coordinates unavailable — estimated)"
+
+
+# ---------------------------------------------------------------------------
+# Geographical grouping
+# ---------------------------------------------------------------------------
+
+def _centroid(places: list[dict]) -> tuple[Optional[float], Optional[float]]:
+    lats = [p["latitude"] for p in places if p.get("latitude") and not math.isnan(float(p["latitude"]))]
+    lons = [p["longitude"] for p in places if p.get("longitude") and not math.isnan(float(p["longitude"]))]
+    if not lats:
+        return None, None
+    return sum(lats) / len(lats), sum(lons) / len(lons)
+
+
+def _sort_by_proximity(places: list[dict]) -> list[dict]:
+    """
+    Nearest-neighbour ordering to minimise total travel within a day.
+    Falls back to original order when coordinates are missing.
+    """
+    if len(places) <= 1:
+        return places
+
+    remaining = list(places)
+    ordered   = [remaining.pop(0)]
+
+    while remaining:
+        last = ordered[-1]
+        best_idx  = 0
+        best_dist = float("inf")
+        for i, p in enumerate(remaining):
+            try:
+                d = _haversine_km(
+                    float(last.get("latitude", 0)),
+                    float(last.get("longitude", 0)),
+                    float(p.get("latitude",  0)),
+                    float(p.get("longitude", 0)),
+                )
+            except (TypeError, ValueError):
+                d = float("inf")
+            if d < best_dist:
+                best_dist = d
+                best_idx  = i
+        ordered.append(remaining.pop(best_idx))
+
+    return ordered
+
+
+# ---------------------------------------------------------------------------
+# Data structures
+# ---------------------------------------------------------------------------
+
+@dataclass
+class ItineraryStop:
+    place_id:              str
+    name:                  str
+    category:              str
+    district:              str
+    visit_duration_hrs:    float
+    latitude:              Optional[float]
+    longitude:             Optional[float]
+    description:           str
+    recommendation_reason: str
+    recommendation_method: str
+    weather_note:          str = ""
+    travel_from_prev:      str = ""   # human-readable travel note
+    cumulative_hrs:        float = 0.0
+    tags:                  str = ""
+    suitable_for:          str = ""
+
+
+@dataclass
+class ItineraryDay:
+    day_number:    int
+    date:          Optional[date]
+    stops:         list[ItineraryStop] = field(default_factory=list)
+    total_hrs:     float = 0.0
+    crowd_note:    str = ""
+    weather_note:  str = ""
+    date_quality:  Optional[float] = None   # composite score 0–1
+
+
+@dataclass
+class Itinerary:
+    trip_name:       str
+    traveler_name:   str
+    start_date:      Optional[date]
+    n_days:          int
+    district:        str
+    interests:       list[str]
+    traveler_type:   str
+    n_travelers:     int
+    pace:            str
+    days:            list[ItineraryDay] = field(default_factory=list)
+    unscheduled:     list[dict] = field(default_factory=list)  # places that didn't fit
+    best_months:     list[str] = field(default_factory=list)
+    date_notes:      str = ""
+    warnings:        list[str] = field(default_factory=list)
+
+
+# ---------------------------------------------------------------------------
+# Core builder
+# ---------------------------------------------------------------------------
+
+def build_itinerary(
+    recommendations: pd.DataFrame,
+    n_days: int,
+    start_date: Optional[date] = None,
+    pace: str = "balanced",
+    traveler_name: str = "",
+    traveler_type: str = "solo",
+    n_travelers: int = 1,
+    district: str = "Andhra Pradesh",
+    interests: Optional[list[str]] = None,
+    weather_data: Optional[dict[str, dict]] = None,
+    date_scores: Optional[dict] = None,
+    best_months_suggestions: Optional[list[str]] = None,
+    month: int = 1,
+) -> Itinerary:
+    """
+    Build a day-by-day itinerary from a recommendations DataFrame.
+
+    Parameters
+    ----------
+    recommendations       : Output of recommendation_service.get_recommendations()
+    n_days                : Trip duration (1–30)
+    start_date            : First day of trip; None if flexible
+    pace                  : "relaxed" | "balanced" | "packed"
+    traveler_name         : Optional user name for display
+    traveler_type         : "solo" | "couple" | "family" | "friends" | "group"
+    n_travelers           : Number of travelers
+    district              : Selected region
+    interests             : List of interest strings
+    weather_data          : dict place_id → weather dict from weather_service
+    date_scores           : dict from date_service.score_trip_dates
+    best_months_suggestions: list of month names from date_service
+    month                 : Target travel month (for context)
+
+    Returns
+    -------
+    Itinerary dataclass
+    """
+    n_days    = max(1, min(30, int(n_days)))
+    pace_key  = pace.lower().strip() if pace.lower().strip() in _PACE_MAX_PLACES else "balanced"
+    max_places_per_day = _PACE_MAX_PLACES[pace_key]
+    max_hours_per_day  = _PACE_MAX_HOURS[pace_key]
+    usable_hours       = max_hours_per_day - _MEAL_HOURS
+
+    interests = interests or []
+
+    itinerary = Itinerary(
+        trip_name=f"Andhra Pradesh Adventure — {n_days} Day{'s' if n_days > 1 else ''}",
+        traveler_name=traveler_name,
+        start_date=start_date,
+        n_days=n_days,
+        district=district,
+        interests=interests,
+        traveler_type=traveler_type,
+        n_travelers=n_travelers,
+        pace=pace_key,
+        best_months=best_months_suggestions or [],
+    )
+
+    if recommendations.empty:
+        itinerary.warnings.append("No recommendations available for the selected preferences.")
+        for i in range(n_days):
+            d = start_date + timedelta(days=i) if start_date else None
+            itinerary.days.append(ItineraryDay(day_number=i + 1, date=d))
+        return itinerary
+
+    # --- Convert recs to list of dicts for scheduling ---
+    place_list: list[dict] = _recs_to_place_list(recommendations, weather_data)
+
+    # --- Deduplicate ---
+    seen_ids: set[str] = set()
+    unique_places: list[dict] = []
+    for p in place_list:
+        pid = str(p.get("place_id", ""))
+        if pid and pid not in seen_ids:
+            seen_ids.add(pid)
+            unique_places.append(p)
+
+    # --- Geographic clustering: group nearby places ---
+    # Sort globally by proximity to create sensible day groupings
+    clustered = _sort_by_proximity(unique_places)
+
+    # Target places per day to distribute attractions smoothly across all days
+    total_places = len(unique_places)
+    target_places_per_day = min(max_places_per_day, max(1, math.ceil(total_places / n_days))) if total_places > 0 else max_places_per_day
+
+    # --- Allocate places to days ---
+    scheduled: list[ItineraryDay] = []
+    pool = list(clustered)
+
+    for day_idx in range(n_days):
+        day_date = start_date + timedelta(days=day_idx) if start_date else None
+        day = ItineraryDay(day_number=day_idx + 1, date=day_date)
+
+        # Date quality and crowd note from date_scores
+        if date_scores and date_scores.get("dates_in_dataset"):
+            daily = date_scores.get("daily_scores", [])
+            if day_idx < len(daily):
+                day.date_quality = daily[day_idx].get("avg_score")
+                day.crowd_note   = daily[day_idx].get("crowd_level", "")
+
+        # General weather note for the day (aggregated from stops added later)
+        accumulated_hours = 0.0
+        prev_place: Optional[dict] = None
+
+        # How many remaining days after this one
+        remaining_days = n_days - (day_idx + 1)
+        # Dynamic daily cap ensuring later days also receive places if pool is limited
+        if remaining_days > 0 and len(pool) > 0:
+            effective_cap = min(target_places_per_day, max(1, len(pool) - remaining_days + 1))
+        else:
+            effective_cap = max_places_per_day
+
+        # Pick places for this day
+        day_pool = list(pool)  # candidates
+
+        stops_this_day: list[dict] = []
+        for place in day_pool:
+            if len(stops_this_day) >= effective_cap:
+                break
+
+            visit_hrs = place.get("visit_duration_hrs", _DEFAULT_VISIT)
+            if visit_hrs <= 0:
+                visit_hrs = _DEFAULT_VISIT
+
+            # Travel time from previous stop
+            travel_hrs = 0.0
+            travel_label = ""
+            if prev_place:
+                travel_hrs, travel_label = _travel_time_hours(
+                    prev_place.get("latitude"),
+                    prev_place.get("longitude"),
+                    place.get("latitude"),
+                    place.get("longitude"),
+                )
+            else:
+                travel_label = "Starting point"
+
+            needed = visit_hrs + travel_hrs + _BUFFER_HOURS
+            if accumulated_hours + needed > usable_hours and stops_this_day:
+                break
+
+            stops_this_day.append({**place, "travel_from_prev": travel_label, "travel_hrs": travel_hrs})
+            accumulated_hours += visit_hrs + travel_hrs + _BUFFER_HOURS
+            prev_place = place
+            pool.remove(place)
+
+        # Build ItineraryStop objects
+        cumul = 0.0
+        for p in stops_this_day:
+            visit_hrs = p.get("visit_duration_hrs", _DEFAULT_VISIT)
+            if visit_hrs <= 0:
+                visit_hrs = _DEFAULT_VISIT
+            cumul += p.get("travel_hrs", 0) + visit_hrs + _BUFFER_HOURS
+
+            weather_note = ""
+            if weather_data and p.get("place_id") in weather_data:
+                w = weather_data[p["place_id"]]
+                weather_note = (
+                    f"{w.get('temp_label','').capitalize()} ({w.get('avg_temp_c','')}°C), "
+                    f"{w.get('rain_label','')}."
+                )
+
+            stop = ItineraryStop(
+                place_id=str(p.get("place_id", "")),
+                name=str(p.get("name", "Unknown")),
+                category=str(p.get("category", "")),
+                district=str(p.get("district", "")),
+                visit_duration_hrs=float(visit_hrs),
+                latitude=p.get("latitude"),
+                longitude=p.get("longitude"),
+                description=str(p.get("description", ""))[:400],
+                recommendation_reason=str(p.get("recommendation_reason", "")),
+                recommendation_method=str(p.get("recommendation_method", "content-based")),
+                weather_note=weather_note,
+                travel_from_prev=p.get("travel_from_prev", ""),
+                cumulative_hrs=round(cumul, 2),
+                tags=str(p.get("tags_text", "")),
+                suitable_for=str(p.get("suitable_for", "")),
+            )
+            day.stops.append(stop)
+
+        day.total_hrs = round(accumulated_hours, 2)
+        scheduled.append(day)
+
+    itinerary.days = scheduled
+    itinerary.unscheduled = [
+        {"place_id": p.get("place_id"), "name": p.get("name"), "reason": "Did not fit within the trip duration."}
+        for p in pool
+    ]
+
+    if best_months_suggestions:
+        from datetime import date as _date
+        current_month_name = [
+            "January","February","March","April","May","June",
+            "July","August","September","October","November","December"
+        ][month - 1]
+        if current_month_name not in best_months_suggestions:
+            itinerary.date_notes = (
+                f"Based on weather and crowd data, the best months for this region are: "
+                f"{', '.join(best_months_suggestions)}. "
+                f"Your selected month ({current_month_name}) may be less optimal — "
+                f"consider flexible dates if possible."
+            )
+        else:
+            itinerary.date_notes = (
+                f"Great choice! {current_month_name} is among the best months "
+                f"for visiting this region."
+            )
+
+    if not any(day.stops for day in itinerary.days):
+        itinerary.warnings.append(
+            "The selected filters returned too few places to build a complete itinerary. "
+            "Try broadening the region or interests."
+        )
+
+    return itinerary
+
+
+# ---------------------------------------------------------------------------
+# Helper
+# ---------------------------------------------------------------------------
+
+def _recs_to_place_list(recs: pd.DataFrame, weather_data: Optional[dict]) -> list[dict]:
+    """Convert recommendation DataFrame rows to plain dicts for scheduling."""
+    places = []
+    for _, row in recs.iterrows():
+        p = row.to_dict()
+        # Normalise visit_duration_hrs
+        try:
+            vd = float(p.get("visit_duration_hrs", _DEFAULT_VISIT))
+            if vd <= 0 or pd.isna(vd):
+                vd = _DEFAULT_VISIT
+        except (TypeError, ValueError):
+            vd = _DEFAULT_VISIT
+        p["visit_duration_hrs"] = vd
+
+        # Normalise coordinates
+        for coord in ["latitude", "longitude"]:
+            try:
+                val = float(p.get(coord, float("nan")))
+                p[coord] = None if math.isnan(val) else val
+            except (TypeError, ValueError):
+                p[coord] = None
+
+        places.append(p)
+    return places

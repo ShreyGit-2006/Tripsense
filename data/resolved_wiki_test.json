@@ -1,0 +1,2666 @@
+{
+  "AP0001": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0002": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0003": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Akashavani_Tirupati_arch_gate_entrance.jpg/960px-Akashavani_Tirupati_arch_gate_entrance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Akashavani Tirupati arch gate entrance.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Akashavani_Tirupati_arch_gate_entrance.jpg",
+    "method": "commons_search:Arch Tirupati"
+  },
+  "AP0004": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/%22A_Divine_View_of_Tirupati%22.jpg/960px-%22A_Divine_View_of_Tirupati%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:\"A Divine View of Tirupati\".jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:%22A_Divine_View_of_Tirupati%22.jpg",
+    "method": "commons_search:Step Tirupati"
+  },
+  "AP0005": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Garudasila_at_Tirupati_2.jpg/960px-Garudasila_at_Tirupati_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Garudasila at Tirupati 2.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Garudasila_at_Tirupati_2.jpg",
+    "method": "commons_search:Shape Tirupati"
+  },
+  "AP0006": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/LEPAKSHI_TEMPLE.jpg/960px-LEPAKSHI_TEMPLE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:LEPAKSHI TEMPLE.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:LEPAKSHI_TEMPLE.jpg",
+    "method": "commons_search:Triple Tirupati"
+  },
+  "AP0007": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Tada_Falls.jpg/800px-Tada_Falls.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Ubbalamadugu Falls",
+    "desc": "https://en.wikipedia.org/wiki/Ubbalamadugu_Falls",
+    "method": "wiki_url"
+  },
+  "AP0008": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Tada_Falls.jpg/800px-Tada_Falls.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Ubbalamadugu Falls",
+    "desc": "https://en.wikipedia.org/wiki/Ubbalamadugu_Falls",
+    "method": "wiki_url"
+  },
+  "AP0009": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Andhra_Pradesh_-_Landscapes_from_Andhra_Pradesh%2C_views_from_Indias_South_Central_Railway_%2883%29.JPG/960px-Andhra_Pradesh_-_Landscapes_from_Andhra_Pradesh%2C_views_from_Indias_South_Central_Railway_%2883%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Andhra Pradesh - Landscapes from Andhra Pradesh, views from Indias South Central Railway (83).JPG",
+    "desc": "https://commons.wikimedia.org/wiki/File:Andhra_Pradesh_-_Landscapes_from_Andhra_Pradesh,_views_from_Indias_South_Central_Railway_(83).JPG",
+    "method": "wikidata"
+  },
+  "AP0010": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Godawari_Kunda_Holy_Spot_Godawari_Lalitpur_Nepal_Rajehs_Dhungana_%2814%29.jpg/960px-Godawari_Kunda_Holy_Spot_Godawari_Lalitpur_Nepal_Rajehs_Dhungana_%2814%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Godawari Kunda Holy Spot Godawari Lalitpur Nepal Rajehs Dhungana (14).jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Godawari_Kunda_Holy_Spot_Godawari_Lalitpur_Nepal_Rajehs_Dhungana_(14).jpg",
+    "method": "commons_search:Side Falls Andhra Pradesh"
+  },
+  "AP0011": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/A_View_of_Tirumala_Venkateswara_Temple.JPG/960px-A_View_of_Tirumala_Venkateswara_Temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:A View of Tirumala Venkateswara Temple.JPG",
+    "desc": "https://commons.wikimedia.org/wiki/File:A_View_of_Tirumala_Venkateswara_Temple.JPG",
+    "method": "wikipedia_article:Tirumala Tirupati Devasthanams"
+  },
+  "AP0012": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Sila_Thoranam_Natural_Arch_near_Thotlakonda%2CBheemili%2C_Thagarapuvalasa_Road%2C_Visakhapatnam%2C.jpg/960px-Sila_Thoranam_Natural_Arch_near_Thotlakonda%2CBheemili%2C_Thagarapuvalasa_Road%2C_Visakhapatnam%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Sila Thoranam Natural Arch near Thotlakonda,Bheemili, Thagarapuvalasa Road, Visakhapatnam,.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Sila_Thoranam_Natural_Arch_near_Thotlakonda,Bheemili,_Thagarapuvalasa_Road,_Visakhapatnam,.jpg",
+    "method": "commons_search:Sila Thoranam"
+  },
+  "AP0013": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Horsley_Hills.jpg/960px-Horsley_Hills.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Horsley Hills.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Horsley_Hills.jpg",
+    "method": "wikidata"
+  },
+  "AP0014": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Rushikonda_beach_view_001.jpg/960px-Rushikonda_beach_view_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Rushikonda beach view 001.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Rushikonda_beach_view_001.jpg",
+    "method": "wikidata"
+  },
+  "AP0015": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Boat_Anchor_and_ropes_at_Rushikonda.JPG/960px-Boat_Anchor_and_ropes_at_Rushikonda.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Boat Anchor and ropes at Rushikonda.JPG",
+    "desc": "https://commons.wikimedia.org/wiki/File:Boat_Anchor_and_ropes_at_Rushikonda.JPG",
+    "method": "commons_search:rushikonda boating Visakhapatnam"
+  },
+  "AP0016": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/RK_Beach_at_Sunset_time_02.JPG/800px-RK_Beach_at_Sunset_time_02.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Dolphin's Nose",
+    "desc": "https://en.wikipedia.org/wiki/Dolphin's_Nose",
+    "method": "wiki_url"
+  },
+  "AP0017": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0018": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Ethipothala_water_falls.JPG/800px-Ethipothala_water_falls.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Ethipothala Falls",
+    "desc": "https://en.wikipedia.org/wiki/Ethipothala_Falls",
+    "method": "wiki_url"
+  },
+  "AP0019": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Kailasagiri.jpg/800px-Kailasagiri.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Kailasagiri",
+    "desc": "https://en.wikipedia.org/wiki/Kailasagiri",
+    "method": "wiki_url"
+  },
+  "AP0020": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Gandhikota.jpg/960px-Gandhikota.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Gandhikota.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Gandhikota.jpg",
+    "method": "commons_search:Grand canyon of India Andhra Pradesh"
+  },
+  "AP0021": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0022": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/2000s_decade_montage3.png/800px-2000s_decade_montage3.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: 2000s",
+    "desc": "https://en.wikipedia.org/wiki/2000s",
+    "method": "wikipedia_article:2000s"
+  },
+  "AP0023": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Details_about_Sun_Dial_at_Annavaram_in_Telugu_Language.jpg/960px-Details_about_Sun_Dial_at_Annavaram_in_Telugu_Language.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Details about Sun Dial at Annavaram in Telugu Language.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Details_about_Sun_Dial_at_Annavaram_in_Telugu_Language.jpg",
+    "method": "commons_search:Sundial Andhra Pradesh"
+  },
+  "AP0024": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Chitravathi_River%2C_Puttaparthi%2C_Andhra_Pradesh%2C_India.jpg/800px-Chitravathi_River%2C_Puttaparthi%2C_Andhra_Pradesh%2C_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Chitravathi River",
+    "desc": "https://en.wikipedia.org/wiki/Chitravathi_River",
+    "method": "wiki_url"
+  },
+  "AP0025": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0026": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Mukhalingeshwara_temple_%2C_srimukhalingam_srikakulam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:Mukhalingeshwara temple , srimukhalingam srikakulam.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Mukhalingeshwara_temple_,_srimukhalingam_srikakulam.jpg",
+    "method": "wikidata"
+  },
+  "AP0027": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Qayoom_Abad_Bridge.JPG/960px-Qayoom_Abad_Bridge.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Qayoom Abad Bridge.JPG",
+    "desc": "https://commons.wikimedia.org/wiki/File:Qayoom_Abad_Bridge.JPG",
+    "method": "commons_search:Korangi bridge"
+  },
+  "AP0028": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0029": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Devipuram.jpg/800px-Devipuram.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Devipuram",
+    "desc": "https://en.wikipedia.org/wiki/Devipuram",
+    "method": "wiki_url"
+  },
+  "AP0030": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/District_Collector_Office_building_at_Kakinada.jpg/800px-District_Collector_Office_building_at_Kakinada.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Kakinada",
+    "desc": "https://en.wikipedia.org/wiki/Kakinada",
+    "method": "wiki_url"
+  },
+  "AP0031": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/A.P._village_Achanta_Vemavaram.jpg/960px-A.P._village_Achanta_Vemavaram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:A.P. village Achanta Vemavaram.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:A.P._village_Achanta_Vemavaram.jpg",
+    "method": "commons_search:P. Vemavaram"
+  },
+  "AP0032": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Andhra_Bank_at_Thallarevu.jpg/800px-Andhra_Bank_at_Thallarevu.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Thallarevu",
+    "desc": "https://en.wikipedia.org/wiki/Thallarevu",
+    "method": "wiki_url"
+  },
+  "AP0033": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/1st_century_BCE_to_3rd_century_CE_Pandavula_Metta%2C_Korukonda_Buddhist_site%2C_Kapavaram_Andhra_Pradesh_-_13.jpg/960px-1st_century_BCE_to_3rd_century_CE_Pandavula_Metta%2C_Korukonda_Buddhist_site%2C_Kapavaram_Andhra_Pradesh_-_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:1st century BCE to 3rd century CE Pandavula Metta, Korukonda Buddhist site, Kapavaram Andhra Pradesh - 13.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:1st_century_BCE_to_3rd_century_CE_Pandavula_Metta,_Korukonda_Buddhist_site,_Kapavaram_Andhra_Pradesh_-_13.jpg",
+    "method": "commons_search:Pandavula metta Andhra Pradesh"
+  },
+  "AP0034": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Dwaraka_Thirumala_Gopuram.jpg/960px-Dwaraka_Thirumala_Gopuram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Dwaraka Thirumala Gopuram.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Dwaraka_Thirumala_Gopuram.jpg",
+    "method": "wikidata"
+  },
+  "AP0035": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/View_of_Pushkar_Ghats.jpg/960px-View_of_Pushkar_Ghats.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:View of Pushkar Ghats.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:View_of_Pushkar_Ghats.jpg",
+    "method": "commons_search:Pushkar Ghat Andhra Pradesh"
+  },
+  "AP0036": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Dead_Common_Seasnake_%28Hydrophis_schistosus%29_at_Kakinada_beach_01.jpg/960px-Dead_Common_Seasnake_%28Hydrophis_schistosus%29_at_Kakinada_beach_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Dead Common Seasnake (Hydrophis schistosus) at Kakinada beach 01.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Dead_Common_Seasnake_(Hydrophis_schistosus)_at_Kakinada_beach_01.jpg",
+    "method": "commons_search:Kakinada beach Kakinada"
+  },
+  "AP0037": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Rick_Perry_and_K.N._Vyas_in_September_2019.jpg/960px-Rick_Perry_and_K.N._Vyas_in_September_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Rick Perry and K.N. Vyas in September 2019.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Rick_Perry_and_K.N._Vyas_in_September_2019.jpg",
+    "method": "commons_search:Kovvada Kakinada"
+  },
+  "AP0038": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/M._Venkaiah_Naidu_addressing_at_the_inauguration_of_the_Demonstration_Housing_and_Community_Building_Project%2C_at_Saraswathi_Nagar%2C_in_SPS_Nellore_district%2C_Andhra_Pradesh.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:M. Venkaiah Naidu addressing at the inauguration of the Demonstration Housing and Community Building Project, at Saraswathi Nagar, in SPS Nellore district, Andhra Pradesh.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:M._Venkaiah_Naidu_addressing_at_the_inauguration_of_the_Demonstration_Housing_and_Community_Building_Project,_at_Saraswathi_Nagar,_in_SPS_Nellore_district,_Andhra_Pradesh.jpg",
+    "method": "commons_search:Saraswathi Nagar Andhra Pradesh"
+  },
+  "AP0039": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/The_Minister_of_State_for_Commerce_%26_Industry_%28Independent_Charge%29%2C_Smt._Nirmala_Sitharaman_addressing_the_gathering%2C_at_Machipuri_village%2C_in_Narsapur%2C_West_Godavari_district%2C_Andhra_Pradesh_on_October_18%2C_2015.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:The Minister of State for Commerce & Industry (Independent Charge), Smt. Nirmala Sitharaman addressing the gathering, at Machipuri village, in Narsapur, West Godavari district, Andhra Pradesh on October 18, 2015.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:The_Minister_of_State_for_Commerce_%26_Industry_(Independent_Charge),_Smt._Nirmala_Sitharaman_addressing_the_gathering,_at_Machipuri_village,_in_Narsapur,_West_Godavari_district,_Andhra_Pradesh_on_October_18,_2015.jpg",
+    "method": "wiki_url_commons"
+  },
+  "AP0040": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Sri_Nimmala_Rama_Naidu.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:Sri Nimmala Rama Naidu.png",
+    "desc": "https://commons.wikimedia.org/wiki/File:Sri_Nimmala_Rama_Naidu.png",
+    "method": "commons_search:home West Godavari"
+  },
+  "AP0041": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0042": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0043": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/District_Collectorate_of_West_Godavari_%28May_2019%29_3.jpg/800px-District_Collectorate_of_West_Godavari_%28May_2019%29_3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Eluru",
+    "desc": "https://en.wikipedia.org/wiki/Eluru",
+    "method": "wiki_url"
+  },
+  "AP0044": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0045": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Ladang_Dayak_Rungkah_Meratus.jpg/960px-Ladang_Dayak_Rungkah_Meratus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Ladang Dayak Rungkah Meratus.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Ladang_Dayak_Rungkah_Meratus.jpg",
+    "method": "commons_search:PADI PETA"
+  },
+  "AP0046": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0047": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0048": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0049": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Penner_or_Pinakini.jpg/960px-Penner_or_Pinakini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Penner or Pinakini.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Penner_or_Pinakini.jpg",
+    "method": "commons_search:Penner river view Andhra Pradesh"
+  },
+  "AP0050": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Gandikota_10.JPG/960px-Gandikota_10.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Gandikota 10.JPG",
+    "desc": "https://commons.wikimedia.org/wiki/File:Gandikota_10.JPG",
+    "method": "wikidata"
+  },
+  "AP0051": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Orvakal_Rock_Formations.jpg/960px-Orvakal_Rock_Formations.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Orvakal Rock Formations.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Orvakal_Rock_Formations.jpg",
+    "method": "wikidata"
+  },
+  "AP0052": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Andhra_Pradesh_-_Landscapes_from_Andhra_Pradesh%2C_views_from_Indias_South_Central_Railway_%2856%29.JPG/960px-Andhra_Pradesh_-_Landscapes_from_Andhra_Pradesh%2C_views_from_Indias_South_Central_Railway_%2856%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Andhra Pradesh - Landscapes from Andhra Pradesh, views from Indias South Central Railway (56).JPG",
+    "desc": "https://commons.wikimedia.org/wiki/File:Andhra_Pradesh_-_Landscapes_from_Andhra_Pradesh,_views_from_Indias_South_Central_Railway_(56).JPG",
+    "method": "commons_search:Quarry Andhra Pradesh"
+  },
+  "AP0053": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0054": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Anantapur_mandals_Bukkapatnam_pre_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:Anantapur mandals Bukkapatnam pre 2022.png",
+    "desc": "https://commons.wikimedia.org/wiki/File:Anantapur_mandals_Bukkapatnam_pre_2022.png",
+    "method": "wiki_url_commons"
+  },
+  "AP0055": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0056": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0057": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0058": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0059": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Aerial_view_of_Sai_Baba_temple_near_Govindapuram.jpg/960px-Aerial_view_of_Sai_Baba_temple_near_Govindapuram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Aerial view of Sai Baba temple near Govindapuram.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Sai_Baba_temple_near_Govindapuram.jpg",
+    "method": "commons_search:Sai Baba Temple Andhra Pradesh"
+  },
+  "AP0060": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0061": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0062": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0063": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0064": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0065": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0066": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0067": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Bapu_museum_18.jpg/800px-Bapu_museum_18.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Bapu Museum, Vijayawada",
+    "desc": "https://en.wikipedia.org/wiki/Bapu_Museum%2C_Vijayawada",
+    "method": "wiki_url"
+  },
+  "AP0068": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Undavalli_Caves%2C_Vijayawada%2C_Guntur%2C_Andhra_Pradesh%2C_India_%282018%29_1.jpg/800px-Undavalli_Caves%2C_Vijayawada%2C_Guntur%2C_Andhra_Pradesh%2C_India_%282018%29_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Undavalli Caves",
+    "desc": "https://en.wikipedia.org/wiki/Undavalli_Caves",
+    "method": "wiki_url"
+  },
+  "AP0069": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0070": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0071": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0072": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0073": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0074": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0075": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0076": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0077": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0078": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0079": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0080": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0081": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0082": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0083": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0084": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0085": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0086": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0087": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0088": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0089": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0090": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0091": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0092": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0093": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0094": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Hilltop_view_of_Saripalli_village_in_Vizianagaram_district.jpg/800px-Hilltop_view_of_Saripalli_village_in_Vizianagaram_district.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Saripalli",
+    "desc": "https://en.wikipedia.org/wiki/Saripalli",
+    "method": "wiki_url"
+  },
+  "AP0095": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0096": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Meghdri_Gedda_dam_gates.jpg/800px-Meghdri_Gedda_dam_gates.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Meghadri Gedda Reservoir",
+    "desc": "https://en.wikipedia.org/wiki/Meghadri_Gedda_Reservoir",
+    "method": "wiki_url"
+  },
+  "AP0097": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0098": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0099": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0100": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0101": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0102": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Amaravathi_Archeology_Museum.JPG/800px-Amaravathi_Archeology_Museum.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Archaeological Museum, Amaravati",
+    "desc": "https://en.wikipedia.org/wiki/Archaeological_Museum%2C_Amaravati",
+    "method": "wiki_url"
+  },
+  "AP0103": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0104": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Kailasagiri.jpg/800px-Kailasagiri.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Kailasagiri",
+    "desc": "https://en.wikipedia.org/wiki/Kailasagiri",
+    "method": "wiki_url"
+  },
+  "AP0105": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0106": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Neophron_percnopterus_-Indira_Gandhi_Zoological_Park%2C_Visakhapatnam%2C_India-8.jpg/800px-Neophron_percnopterus_-Indira_Gandhi_Zoological_Park%2C_Visakhapatnam%2C_India-8.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Indira Gandhi Zoological Park",
+    "desc": "https://en.wikipedia.org/wiki/Indira_Gandhi_Zoological_Park",
+    "method": "wiki_url"
+  },
+  "AP0107": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0108": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Veerabhadra_Temple_Tower.JPG/800px-Veerabhadra_Temple_Tower.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Veerabhadra Temple, Lepakshi",
+    "desc": "https://en.wikipedia.org/wiki/Veerabhadra_Temple%2C_Lepakshi",
+    "method": "wiki_url"
+  },
+  "AP0109": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0110": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Sri_Kala_Hasti.jpg/800px-Sri_Kala_Hasti.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Srikalahasteeswara temple",
+    "desc": "https://en.wikipedia.org/wiki/Srikalahasteeswara_temple",
+    "method": "wiki_url"
+  },
+  "AP0111": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/INS_Kursura_%28S20%29_underway.jpg/800px-INS_Kursura_%28S20%29_underway.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: INS Kursura",
+    "desc": "https://en.wikipedia.org/wiki/INS_Kursura",
+    "method": "wiki_url"
+  },
+  "AP0112": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/War_Memorial%2C_Vizag.jpg/800px-War_Memorial%2C_Vizag.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Victory at Sea Memorial",
+    "desc": "https://en.wikipedia.org/wiki/Victory_at_Sea_Memorial",
+    "method": "wiki_url"
+  },
+  "AP0113": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0114": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Dhyaan_buddha_Amaravthi.jpg/800px-Dhyaan_buddha_Amaravthi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Dhyana Buddha statue",
+    "desc": "https://en.wikipedia.org/wiki/Dhyana_Buddha_statue",
+    "method": "wiki_url"
+  },
+  "AP0115": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/British_Museum_Asia_14.jpg/800px-British_Museum_Asia_14.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Amaravati Stupa",
+    "desc": "https://en.wikipedia.org/wiki/Amaravati_Stupa",
+    "method": "wiki_url"
+  },
+  "AP0116": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Tirumala_090615.jpg/800px-Tirumala_090615.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Venkateswara Temple, Tirumala",
+    "desc": "https://en.wikipedia.org/wiki/Venkateswara_Temple%2C_Tirumala",
+    "method": "wiki_url"
+  },
+  "AP0117": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Front_side_of_Veerabhadra_Temple%2C_Lepakshi.jpg/800px-Front_side_of_Veerabhadra_Temple%2C_Lepakshi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Lepakshi",
+    "desc": "https://en.wikipedia.org/wiki/Lepakshi",
+    "method": "wiki_url"
+  },
+  "AP0118": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Buddhist_site_3rd_century_AD.jpg/800px-Buddhist_site_3rd_century_AD.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Nagarjunakonda",
+    "desc": "https://en.wikipedia.org/wiki/Nagarjunakonda",
+    "method": "wiki_url"
+  },
+  "AP0119": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0120": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/British_Museum_Asia_14.jpg/800px-British_Museum_Asia_14.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Amaravati Stupa",
+    "desc": "https://en.wikipedia.org/wiki/Amaravati_Stupa",
+    "method": "wiki_url"
+  },
+  "AP0121": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0122": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0123": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Belumcave1.jpg/800px-Belumcave1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Belum Caves",
+    "desc": "https://en.wikipedia.org/wiki/Belum_Caves",
+    "method": "wiki_url"
+  },
+  "AP0124": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0125": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0126": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0127": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/TU-142_Aircraft_Model.jpg/800px-TU-142_Aircraft_Model.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: TU 142 Aircraft Museum",
+    "desc": "https://en.wikipedia.org/wiki/TU_142_Aircraft_Museum",
+    "method": "wiki_url"
+  },
+  "AP0128": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0129": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0130": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0131": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0132": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Tenneti_park_as_seen_from_Kailasagiri_%28May_2019%29.jpg/800px-Tenneti_park_as_seen_from_Kailasagiri_%28May_2019%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Tenneti Park",
+    "desc": "https://en.wikipedia.org/wiki/Tenneti_Park",
+    "method": "wiki_url"
+  },
+  "AP0133": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0134": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0135": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0136": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0137": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Visakha_Museum.JPG/800px-Visakha_Museum.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Visakha Museum",
+    "desc": "https://en.wikipedia.org/wiki/Visakha_Museum",
+    "method": "wiki_url"
+  },
+  "AP0138": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Visakha_Museum.JPG/800px-Visakha_Museum.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Visakha Museum",
+    "desc": "https://en.wikipedia.org/wiki/Visakha_Museum",
+    "method": "wiki_url"
+  },
+  "AP0139": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0140": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Araku-valley.jpg/800px-Araku-valley.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Araku Valley",
+    "desc": "https://en.wikipedia.org/wiki/Araku_Valley",
+    "method": "wiki_url"
+  },
+  "AP0141": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0142": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0143": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Vizag2ndInnings-2016Nov21.jpg/800px-Vizag2ndInnings-2016Nov21.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: ACA\u2013VDCA Cricket Stadium",
+    "desc": "https://en.wikipedia.org/wiki/ACA%E2%80%93VDCA_Cricket_Stadium",
+    "method": "wiki_url"
+  },
+  "AP0144": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0145": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Viznm_kota.jpg/800px-Viznm_kota.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Vizianagaram Fort",
+    "desc": "https://en.wikipedia.org/wiki/Vizianagaram_Fort",
+    "method": "wiki_url"
+  },
+  "AP0146": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0147": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Srikurmam_Temple_view_Srikakulam.jpg/800px-Srikurmam_Temple_view_Srikakulam.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Sri Kurmam",
+    "desc": "https://en.wikipedia.org/wiki/Sri_Kurmam",
+    "method": "wiki_url"
+  },
+  "AP0148": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0149": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/St_Mary%27s_Church_Gunadala.jpg/800px-St_Mary%27s_Church_Gunadala.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Gunadala Matha Shrine",
+    "desc": "https://en.wikipedia.org/wiki/Gunadala_Matha_Shrine",
+    "method": "wiki_url"
+  },
+  "AP0150": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Mahanandi_Temple_View.jpg/800px-Mahanandi_Temple_View.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Mahanandi",
+    "desc": "https://en.wikipedia.org/wiki/Mahanandi",
+    "method": "wiki_url"
+  },
+  "AP0151": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0152": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0153": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0154": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Simhachalam_temple_from_a_hilltop.jpg/800px-Simhachalam_temple_from_a_hilltop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Varaha Lakshmi Narasimha temple, Simhachalam",
+    "desc": "https://en.wikipedia.org/wiki/Varaha_Lakshmi_Narasimha_temple%2C_Simhachalam",
+    "method": "wiki_url"
+  },
+  "AP0155": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Uma-Maheswaraswami_Temple.jpg/800px-Uma-Maheswaraswami_Temple.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Yaganti temple",
+    "desc": "https://en.wikipedia.org/wiki/Yaganti_temple",
+    "method": "wiki_url"
+  },
+  "AP0156": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Gopuramxx.jpg/800px-Gopuramxx.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Amararama",
+    "desc": "https://en.wikipedia.org/wiki/Amararama",
+    "method": "wiki_url"
+  },
+  "AP0157": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/BhairavaKona.JPG/800px-BhairavaKona.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Bhairavakona",
+    "desc": "https://en.wikipedia.org/wiki/Bhairavakona",
+    "method": "wiki_url"
+  },
+  "AP0158": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Main_gopuram_at_nagalapuram7.JPG/800px-Main_gopuram_at_nagalapuram7.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Vedanarayana Temple, Nagalapuram",
+    "desc": "https://en.wikipedia.org/wiki/Vedanarayana_Temple%2C_Nagalapuram",
+    "method": "wiki_url"
+  },
+  "AP0159": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0160": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0161": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Antarvedhi.jpg/800px-Antarvedhi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Lakshmi Narasimha Temple, Antarvedi",
+    "desc": "https://en.wikipedia.org/wiki/Lakshmi_Narasimha_Temple%2C_Antarvedi",
+    "method": "wiki_url"
+  },
+  "AP0162": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0163": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0164": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0165": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0166": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0167": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0168": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0169": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0170": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0171": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0172": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0173": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0174": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0175": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0176": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Fishing_boat_near_Suryalanka_beach.jpg/800px-Fishing_boat_near_Suryalanka_beach.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Suryalanka Beach",
+    "desc": "https://en.wikipedia.org/wiki/Suryalanka_Beach",
+    "method": "wiki_url"
+  },
+  "AP0177": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0178": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0179": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0180": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/RK_Beach_Night.jpg/800px-RK_Beach_Night.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: RK Beach",
+    "desc": "https://en.wikipedia.org/wiki/RK_Beach",
+    "method": "wiki_url"
+  },
+  "AP0181": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0182": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Morning_view_at_Vakalpudi_Kakinada.jpg/800px-Morning_view_at_Vakalpudi_Kakinada.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Uppada",
+    "desc": "https://en.wikipedia.org/wiki/Uppada",
+    "method": "wiki_url"
+  },
+  "AP0183": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0184": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0185": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0186": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0187": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Yarada_village_from_hill.jpg/800px-Yarada_village_from_hill.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Yarada",
+    "desc": "https://en.wikipedia.org/wiki/Yarada",
+    "method": "wiki_url"
+  },
+  "AP0188": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0189": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0190": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0191": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Kapilatheertam.jpg/800px-Kapilatheertam.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Kapila Theertham",
+    "desc": "https://en.wikipedia.org/wiki/Kapila_Theertham",
+    "method": "wiki_url"
+  },
+  "AP0192": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0193": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0194": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0195": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0196": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Raaja_mahal_1.JPG/800px-Raaja_mahal_1.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Chandragiri",
+    "desc": "https://en.wikipedia.org/wiki/Chandragiri",
+    "method": "wiki_url"
+  },
+  "AP0197": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0198": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0199": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0200": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0201": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0202": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0203": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0204": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0205": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Aerial_view_of_Sai_Baba_temple_near_Govindapuram.jpg/960px-Aerial_view_of_Sai_Baba_temple_near_Govindapuram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Aerial view of Sai Baba temple near Govindapuram.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Sai_Baba_temple_near_Govindapuram.jpg",
+    "method": "commons_search:Sai Baba Temple Andhra Pradesh"
+  },
+  "AP0206": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0207": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0208": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0209": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0210": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0211": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0212": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0213": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0214": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0215": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0216": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0217": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0218": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0219": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0220": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0221": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Kondavid-drug._Signed_%27W.R.%27.jpg/800px-Kondavid-drug._Signed_%27W.R.%27.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Kondaveedu Fort",
+    "desc": "https://en.wikipedia.org/wiki/Kondaveedu_Fort",
+    "method": "wiki_url"
+  },
+  "AP0222": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Akkanna_madanna_caves.jpg/800px-Akkanna_madanna_caves.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Akkanna Madanna Caves",
+    "desc": "https://en.wikipedia.org/wiki/Akkanna_Madanna_Caves",
+    "method": "wiki_url"
+  },
+  "AP0223": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Bojjana_Konda_statue_06.jpg/800px-Bojjana_Konda_statue_06.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Bojjannakonda",
+    "desc": "https://en.wikipedia.org/wiki/Bojjannakonda",
+    "method": "wikipedia_article:Bojjannakonda"
+  },
+  "AP0224": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Meka_Srikanth_CCL.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "title": "Wikipedia: Srikanth (actor, born 1968)",
+    "desc": "https://en.wikipedia.org/wiki/Srikanth_(actor%2C_born_1968)",
+    "method": "wikipedia_article:Srikanth (actor, born 1968)"
+  },
+  "AP0225": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Buddhist_site_3rd_century_AD.jpg/800px-Buddhist_site_3rd_century_AD.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Nagarjunakonda",
+    "desc": "https://en.wikipedia.org/wiki/Nagarjunakonda",
+    "method": "wiki_url"
+  },
+  "AP0226": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/45Ft_Sri_Abhaya_Anjeeya_Swamy.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:45Ft Sri Abhaya Anjeeya Swamy.JPG",
+    "desc": "https://commons.wikimedia.org/wiki/File:45Ft_Sri_Abhaya_Anjeeya_Swamy.JPG",
+    "method": "commons_search:Veera Abhaya Anjaneya Hanuman Swami Andhra Pradesh"
+  },
+  "AP0227": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Gooty_Fort.JPG/800px-Gooty_Fort.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Gooty",
+    "desc": "https://en.wikipedia.org/wiki/Gooty",
+    "method": "wiki_url"
+  },
+  "AP0228": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0229": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Pre_Historic_Mid_Krishna-Tungabhadra_Valley_sites.jpg/960px-Pre_Historic_Mid_Krishna-Tungabhadra_Valley_sites.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Pre Historic Mid Krishna-Tungabhadra Valley sites.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Pre_Historic_Mid_Krishna-Tungabhadra_Valley_sites.jpg",
+    "method": "commons_search:Jwalapuram Paleolithic Site"
+  },
+  "AP0230": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0231": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/20191203_Jama_Masjid%2C_Delhi_0707_6468_DxO.jpg/960px-20191203_Jama_Masjid%2C_Delhi_0707_6468_DxO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:20191203 Jama Masjid, Delhi 0707 6468 DxO.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:20191203_Jama_Masjid,_Delhi_0707_6468_DxO.jpg",
+    "method": "commons_search:Jama Masjid"
+  },
+  "AP0232": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Garuda_in_Sri_Ranganathaswamy_temple_at_Srirangapatna.jpg/960px-Garuda_in_Sri_Ranganathaswamy_temple_at_Srirangapatna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Garuda in Sri Ranganathaswamy temple at Srirangapatna.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Garuda_in_Sri_Ranganathaswamy_temple_at_Srirangapatna.jpg",
+    "method": "commons_search:Ranganayakulu Temple"
+  },
+  "AP0233": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/1664331175121_Buddha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:1664331175121 Buddha.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:1664331175121_Buddha.jpg",
+    "method": "commons_search:Bojjannakonda Sankaram Monastery Andhra Pradesh"
+  },
+  "AP0234": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0235": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/SidhoutFort2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:SidhoutFort2.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:SidhoutFort2.jpg",
+    "method": "wiki_url"
+  },
+  "AP0236": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Amaravati_mandal_in_Guntur_district.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "title": "Wikipedia: Amaravathi mandal, Andhra Pradesh",
+    "desc": "https://en.wikipedia.org/wiki/Amaravathi_mandal%2C_Andhra_Pradesh",
+    "method": "wiki_url"
+  },
+  "AP0237": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Konda_Reddy_Fort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:Konda Reddy Fort.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Konda_Reddy_Fort.jpg",
+    "method": "wikidata"
+  },
+  "AP0238": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/001_Chaitya_Hall_with_Maha_Stupa.jpg/960px-001_Chaitya_Hall_with_Maha_Stupa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:001 Chaitya Hall with Maha Stupa.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:001_Chaitya_Hall_with_Maha_Stupa.jpg",
+    "method": "commons_search:Maha Chaitya Andhra Pradesh"
+  },
+  "AP0239": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0240": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Thandra_Paparayudu_of_Bobbili.jpg/960px-Thandra_Paparayudu_of_Bobbili.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Thandra Paparayudu of Bobbili.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Thandra_Paparayudu_of_Bobbili.jpg",
+    "method": "wiki_url"
+  },
+  "AP0241": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/ChandraGiri_Fort_-_Raja_Palace.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:ChandraGiri Fort - Raja Palace.JPG",
+    "desc": "https://commons.wikimedia.org/wiki/File:ChandraGiri_Fort_-_Raja_Palace.JPG",
+    "method": "commons_search:Raja Mahal Tirupati"
+  },
+  "AP0242": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Totlakonda_entrance.jpg/800px-Totlakonda_entrance.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Thotlakonda",
+    "desc": "https://en.wikipedia.org/wiki/Thotlakonda",
+    "method": "wiki_url"
+  },
+  "AP0243": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0244": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0245": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Vijayawada-Kondapalli_Quilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:Vijayawada-Kondapalli Quilla.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Vijayawada-Kondapalli_Quilla.jpg",
+    "method": "wikidata"
+  },
+  "AP0246": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Gurubhaktulakonda_Buddhist_Monastery_Remnants_at_Ramatheertham.jpg/960px-Gurubhaktulakonda_Buddhist_Monastery_Remnants_at_Ramatheertham.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Gurubhaktulakonda Buddhist Monastery Remnants at Ramatheertham.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Gurubhaktulakonda_Buddhist_Monastery_Remnants_at_Ramatheertham.jpg",
+    "method": "wikidata"
+  },
+  "AP0247": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Kondavid-drug._Signed_%27W.R.%27.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "File:Kondavid-drug. Signed 'W.R.'.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Kondavid-drug._Signed_%27W.R.%27.jpg",
+    "method": "wikidata"
+  },
+  "AP0248": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Bellamkonda_Sai_Srinivas.jpg/960px-Bellamkonda_Sai_Srinivas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Bellamkonda Sai Srinivas.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Bellamkonda_Sai_Srinivas.jpg",
+    "method": "wiki_url_commons"
+  },
+  "AP0249": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Andra_Fort_close_up_view.jpg/960px-Andra_Fort_close_up_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Andra Fort close up view.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Andra_Fort_close_up_view.jpg",
+    "method": "wikidata"
+  },
+  "AP0250": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0251": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/A_Road_near_lambasinghi.jpg/960px-A_Road_near_lambasinghi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:A Road near lambasinghi.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:A_Road_near_lambasinghi.jpg",
+    "method": "commons_search:Alluri Sitharama Raju Visakhapatnam"
+  },
+  "AP0252": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0253": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Buddhist_brick_temple.jpg/960px-Buddhist_brick_temple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Buddhist brick temple.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Buddhist_brick_temple.jpg",
+    "method": "wikidata"
+  },
+  "AP0254": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Kuppam_railway_station_%28front%29.jpg/800px-Kuppam_railway_station_%28front%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Kuppam railway station",
+    "desc": "https://en.wikipedia.org/wiki/Kuppam_railway_station",
+    "method": "wiki_url"
+  },
+  "AP0255": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/View_of_fields_near_Maadugula.jpg/800px-View_of_fields_near_Maadugula.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Madugula",
+    "desc": "https://en.wikipedia.org/wiki/Madugula",
+    "method": "wiki_url"
+  },
+  "AP0256": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Gandikota_fort_from_Kottapalli.jpg/800px-Gandikota_fort_from_Kottapalli.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Siege of Gandikota",
+    "desc": "https://en.wikipedia.org/wiki/Siege_of_Gandikota",
+    "method": "wiki_url"
+  },
+  "AP0257": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Gandikota_fort_from_Kottapalli.jpg/800px-Gandikota_fort_from_Kottapalli.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Siege of Gandikota",
+    "desc": "https://en.wikipedia.org/wiki/Siege_of_Gandikota",
+    "method": "wiki_url"
+  },
+  "AP0258": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Gun_Foundry%2C_Basheer_Bagh%2C_Hyderabad%2C_Andhra_Pradesh%2C_India_%2834203829536%29.jpg/960px-Gun_Foundry%2C_Basheer_Bagh%2C_Hyderabad%2C_Andhra_Pradesh%2C_India_%2834203829536%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Gun Foundry, Basheer Bagh, Hyderabad, Andhra Pradesh, India (34203829536).jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Gun_Foundry,_Basheer_Bagh,_Hyderabad,_Andhra_Pradesh,_India_(34203829536).jpg",
+    "method": "commons_search:Gun Foundry Andhra Pradesh"
+  },
+  "AP0259": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0260": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Historic_heritage_sites_of_Andhra_Pradesh_with_GPS_coordinates.jpg/960px-Historic_heritage_sites_of_Andhra_Pradesh_with_GPS_coordinates.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Historic heritage sites of Andhra Pradesh with GPS coordinates.jpg",
+    "desc": "https://commons.wikimedia.org/wiki/File:Historic_heritage_sites_of_Andhra_Pradesh_with_GPS_coordinates.jpg",
+    "method": "commons_search:Buddhist Archaeological Museum Visakhapatnam"
+  },
+  "AP0261": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0262": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0263": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0264": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0265": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0266": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0267": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0268": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0269": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0270": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0271": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0272": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0273": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0274": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0275": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0276": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0277": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0278": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0279": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0280": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0281": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0282": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0283": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0284": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0285": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0286": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0287": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0288": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0289": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0290": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0291": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0292": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0293": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0294": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0295": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0296": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0297": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0298": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0299": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0300": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0301": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0302": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0303": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0304": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Padmavathi_Ammavari_Temple.JPG/960px-Padmavathi_Ammavari_Temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "File:Padmavathi Ammavari Temple.JPG",
+    "desc": "https://commons.wikimedia.org/wiki/File:Padmavathi_Ammavari_Temple.JPG",
+    "method": "commons_search:Padmavathi Temple, Tiruchanur Andhra Pradesh"
+  },
+  "AP0305": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0306": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0307": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0308": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0309": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0310": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0311": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0312": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0313": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0314": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0315": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0316": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0317": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0318": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0319": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0320": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0321": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0322": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0323": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0324": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0325": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0326": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0327": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0328": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0329": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0330": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0331": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0332": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0333": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0334": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0335": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0336": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0337": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0338": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0339": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0340": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0341": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0342": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0343": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0344": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0345": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0346": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0347": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0348": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0349": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0350": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0351": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/700_CE_Mukhalingeswara_Temples_Group%2C_Kalinga_architecture%2C_Mukhalingam%2C_Andhra_Pradesh_-_65.jpg/800px-700_CE_Mukhalingeswara_Temples_Group%2C_Kalinga_architecture%2C_Mukhalingam%2C_Andhra_Pradesh_-_65.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Mukhalingam",
+    "desc": "https://en.wikipedia.org/wiki/Mukhalingam",
+    "method": "wiki_url"
+  },
+  "AP0352": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0353": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0354": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0355": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0356": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0357": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Tirumala_090615.jpg/800px-Tirumala_090615.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Venkateswara Temple, Tirumala",
+    "desc": "https://en.wikipedia.org/wiki/Venkateswara_Temple%2C_Tirumala",
+    "method": "wiki_url"
+  },
+  "AP0358": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0359": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Uma-Maheswaraswami_Temple.jpg/800px-Uma-Maheswaraswami_Temple.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Yaganti temple",
+    "desc": "https://en.wikipedia.org/wiki/Yaganti_temple",
+    "method": "wiki_url"
+  },
+  "AP0360": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0361": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0362": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0363": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0364": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0365": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0366": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0367": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Sri_Kala_Hasti.jpg/800px-Sri_Kala_Hasti.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Srikalahasteeswara temple",
+    "desc": "https://en.wikipedia.org/wiki/Srikalahasteeswara_temple",
+    "method": "wiki_url"
+  },
+  "AP0368": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0369": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Gopuramxx.jpg/800px-Gopuramxx.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Amararama",
+    "desc": "https://en.wikipedia.org/wiki/Amararama",
+    "method": "wiki_url"
+  },
+  "AP0370": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0371": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0372": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0373": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0374": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0375": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0376": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0377": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0378": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0379": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0380": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0381": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0382": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0383": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0384": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0385": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0386": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0387": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0388": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0389": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0390": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0391": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0392": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0393": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0394": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0395": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0396": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0397": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0398": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0399": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0400": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0401": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Totlakonda_entrance.jpg/800px-Totlakonda_entrance.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Thotlakonda",
+    "desc": "https://en.wikipedia.org/wiki/Thotlakonda",
+    "method": "wiki_url"
+  },
+  "AP0402": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0403": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0404": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0405": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0406": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0407": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0408": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Araku-valley.jpg/800px-Araku-valley.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Araku Valley",
+    "desc": "https://en.wikipedia.org/wiki/Araku_Valley",
+    "method": "wiki_url"
+  },
+  "AP0409": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0410": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0411": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0412": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0413": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0414": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0415": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0416": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0417": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0418": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Kondavid-drug._Signed_%27W.R.%27.jpg/800px-Kondavid-drug._Signed_%27W.R.%27.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Kondaveedu Fort",
+    "desc": "https://en.wikipedia.org/wiki/Kondaveedu_Fort",
+    "method": "wiki_url"
+  },
+  "AP0419": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Yarada_village_from_hill.jpg/800px-Yarada_village_from_hill.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Yarada",
+    "desc": "https://en.wikipedia.org/wiki/Yarada",
+    "method": "wiki_url"
+  },
+  "AP0420": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0421": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0422": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0423": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0424": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Totlakonda_entrance.jpg/800px-Totlakonda_entrance.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Thotlakonda",
+    "desc": "https://en.wikipedia.org/wiki/Thotlakonda",
+    "method": "wiki_url"
+  },
+  "AP0425": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0426": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0427": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0428": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0429": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0430": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0431": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0432": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0433": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0434": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0435": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0436": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0437": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0438": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Tirumala_090615.jpg/800px-Tirumala_090615.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Venkateswara Temple, Tirumala",
+    "desc": "https://en.wikipedia.org/wiki/Venkateswara_Temple%2C_Tirumala",
+    "method": "wiki_url"
+  },
+  "AP0439": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0440": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0441": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0442": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0443": {
+    "url": null,
+    "title": null,
+    "desc": null,
+    "method": "unresolved"
+  },
+  "AP0444": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Highcourt_of_AP.jpg/800px-Highcourt_of_AP.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "title": "Wikipedia: Amaravati",
+    "desc": "https://en.wikipedia.org/wiki/Amaravati",
+    "method": "wikipedia_article:Amaravati"
+  }
+}
