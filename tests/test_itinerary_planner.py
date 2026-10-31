@@ -304,6 +304,37 @@ class TestItineraryGeneration:
         day = itin.days[0]
         assert len(day.stops) <= 3, f"Relaxed pace should have max 3 stops/day, got {len(day.stops)}"
 
+    def test_pace_respected_packed(self, places_df, interactions_df):
+        recs = self._get_recs(places_df, interactions_df, top_n=40)
+        itin = build_itinerary(recs, n_days=1, pace="packed")
+        day = itin.days[0]
+        assert 1 <= len(day.stops) <= 4, f"Packed pace should have 1–4 stops, got {len(day.stops)}"
+
+    def test_rag_intelligence_and_daily_flow(self, places_df, interactions_df):
+        recs = self._get_recs(places_df, interactions_df, top_n=40)
+        itin = build_itinerary(recs, n_days=2, pace="balanced")
+        assert itin.rag_insight, "Itinerary should have an AI RAG strategic assessment"
+        for day in itin.days:
+            if day.stops:
+                assert day.theme, f"Day {day.day_number} should have a theme"
+                assert day.rag_tip, f"Day {day.day_number} should have a circadian flow tip"
+
+    def test_senior_and_kids_gentle_terrain_filtering(self, places_df, interactions_df):
+        recs = self._get_recs(places_df, interactions_df, top_n=40)
+        itin = build_itinerary(recs, n_days=2, has_seniors=True, has_kids=True)
+        strenuous_cats = {"waterfall", "caves", "fort"}
+        for day in itin.days:
+            for stop in day.stops:
+                cat = getattr(stop, "category", "").lower()
+                assert cat not in strenuous_cats, f"High-terrain category {cat} should not be assigned to seniors/kids"
+
+    def test_solo_senior_terrain_handling(self, places_df, interactions_df):
+        recs = self._get_recs(places_df, interactions_df, top_n=30)
+        itin = build_itinerary(
+            recs, n_days=2, traveler_type="solo", n_travelers=1, has_seniors=True
+        )
+        assert "gentle terrain safeguards" in itin.rag_insight.lower()
+
     def test_empty_recs_produces_empty_days(self):
         itin = build_itinerary(pd.DataFrame(), n_days=2)
         assert len(itin.days) == 2
@@ -355,6 +386,14 @@ class TestWeatherService:
         if summary is not None:
             assert "avg_temp_c" in summary
             assert "district" in summary
+
+    def test_live_cyclone_prediction_and_severe_alert(self):
+        alert = weather_service.check_trip_severe_weather("Visakhapatnam", date(2026, 10, 27), 2)
+        assert isinstance(alert, dict)
+        if alert.get("has_severe_weather"):
+            assert alert.get("is_cyclone") is True
+            assert "cyclone" in alert.get("banner_title", "").lower()
+            assert alert.get("max_rain_mm", 0) > 30.0
 
 
 # ---------------------------------------------------------------------------

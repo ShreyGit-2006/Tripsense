@@ -19,6 +19,8 @@ Design decisions
 from __future__ import annotations
 
 import logging
+import math
+import re
 import sys
 from pathlib import Path
 from typing import Optional
@@ -63,7 +65,7 @@ except ImportError:
 _PLACE_COLS = [
     "place_id", "name", "category", "district",
     "latitude", "longitude", "description", "tags_text",
-    "suitable_for", "visit_duration_hrs", "best_months",
+    "suitable_for", "visit_duration_hrs", "best_months", "best_time",
     "avg_temp_c", "annual_rain_mm",
 ]
 
@@ -192,33 +194,133 @@ def _filter_by_suitable(
         if not sub.empty:
             filtered = sub.copy()
 
-    # 2. Senior / elderly accessibility filtering
-    if has_seniors:
-        # Avoid strenuous physical categories (caves, waterfalls, forts requiring hard climbs, rugged nature)
+    # 2. Senior (60+) & Children (<10) High-Terrain / Climbing Safeguards
+    if has_seniors or has_kids:
+        # Exclude high-terrain, steep climbing, and strenuous physical categories
+        # (rocky gorge waterfalls, subterranean steep caves, hilltop forts with long ascents)
         strenuous_categories = {"waterfall", "caves", "fort"}
         if "category" in filtered.columns:
             non_strenuous = filtered[~filtered["category"].str.lower().isin(strenuous_categories)]
             if not non_strenuous.empty:
                 filtered = non_strenuous.copy()
 
-        # Filter out places explicitly requiring heavy adventure
+        # Filter out places explicitly marked for adventure or trekking
         if "suitable_for" in filtered.columns:
-            non_adventure = filtered[~filtered["suitable_for"].str.lower().str.contains("adventure", na=False)]
-            if not non_adventure.empty:
-                filtered = non_adventure.copy()
+            non_adv = filtered[~filtered["suitable_for"].str.lower().str.contains("adventure|trekking|extreme", na=False)]
+            if not non_adv.empty:
+                filtered = non_adv.copy()
 
-    # 3. Young children safety filtering
-    if has_kids:
-        unsafe_for_kids = {"caves"}
-        if "category" in filtered.columns:
-            safe_kids = filtered[~filtered["category"].str.lower().isin(unsafe_for_kids)]
-            if not safe_kids.empty:
-                filtered = safe_kids.copy()
+        # Exclude steep climbing, high terrain, or trekking in name or description
+        steep_regex = r"(?i)(trek|trekking|climb|climbing|cliff|gorge|rock climbing|steep steps)"
+        name_mask = filtered["name"].str.contains(steep_regex, regex=True, na=False)
+        desc_mask = (
+            filtered["description"].str.contains(steep_regex, regex=True, na=False)
+            if "description" in filtered.columns
+            else pd.Series(False, index=filtered.index)
+        )
+        gentle_mask = ~(name_mask | desc_mask)
+        if gentle_mask.any():
+            filtered = filtered[gentle_mask].copy()
 
     return filtered if not filtered.empty else df
 
 
 # ---------------------------------------------------------------------------
+def _filter_non_requested_temples(recs: pd.DataFrame, interests: str) -> pd.DataFrame:
+    """
+    If the traveler did not specifically request spiritual/temple themes,
+    deprioritize/remove pure temples so they do not crowd out hill stations,
+    beaches, waterfalls, forts, or nature reserves.
+    """
+    if recs.empty:
+        return recs
+
+    wants_temple = any(
+        w in str(interests).lower()
+        for w in ["temple", "spiritual", "pilgrimage", "religious", "darshan", "sacred", "mandir", "shrine", "devasthanam"]
+    )
+    if wants_temple:
+        return recs
+
+    cat_col = recs["category"].astype(str).str.lower() if "category" in recs.columns else pd.Series("", index=recs.index)
+    name_col = recs["name"].astype(str).str.lower() if "name" in recs.columns else pd.Series("", index=recs.index)
+    is_temple = (cat_col == "temple") | name_col.str.contains(r"\btemple\b|\bmandir\b|\bshrine\b|darshan|swamy vaari", regex=True)
+
+    non_temples = recs[~is_temple]
+    if not non_temples.empty:
+        return non_temples
+    return recs
+
+
+def _filter_positive_scores(recs: pd.DataFrame) -> pd.DataFrame:
+    if recs.empty:
+        return recs
+    for col in ["final_score", "content_score"]:
+        if col in recs.columns:
+            pos = recs[recs[col] > 0.0001]
+            if not pos.empty:
+                return pos
+    return recs
+
+def _deduplicate_places(recs: pd.DataFrame) -> pd.DataFrame:
+    """
+    Deduplicate by place_id, canonical normalized name + district,
+    and close geographic proximity (< 350m apart with matching category/name).
+    Prevents duplicate entries (e.g. 'Kali Temple' and 'Kali Temple, Visakhapatnam').
+    """
+    if recs.empty:
+        return recs
+
+    def _c_key(name: str, district: str) -> str:
+        n = str(name).lower()
+        d = str(district).lower()
+        n = n.replace(d, "")
+        n = re.sub(r"[,.\-_/()']", " ", n)
+        n = re.sub(r"\b(temple|swamy|devasthanam|mandir|beach|fort|falls|waterfall|museum|monument|site|archaeological|hills|hill|viewpoint|park)\b", " ", n)
+        words = [w for w in n.split() if len(w) > 2]
+        return " ".join(sorted(words)) + "__" + d
+
+    seen_ids = set()
+    seen_keys = set()
+    keep_indices = []
+    accepted_coords = []
+
+    for idx, row in recs.iterrows():
+        pid = str(row.get("place_id", ""))
+        name = str(row.get("name", ""))
+        dist = str(row.get("district", ""))
+        cat = str(row.get("category", "")).lower()
+        lat = row.get("latitude")
+        lon = row.get("longitude")
+
+        if not pid or pid in seen_ids:
+            continue
+
+        ck = _c_key(name, dist)
+        if ck and ck in seen_keys:
+            continue
+
+        is_dup = False
+        if pd.notna(lat) and pd.notna(lon):
+            f_lat, f_lon = float(lat), float(lon)
+            for a_lat, a_lon, a_cat, a_name in accepted_coords:
+                d_km = _haversine_km(f_lat, f_lon, a_lat, a_lon)
+                if d_km < 0.35:
+                    if cat == a_cat or any(token in a_name for token in name.lower().split() if len(token) > 3):
+                        is_dup = True
+                        break
+        if is_dup:
+            continue
+
+        seen_ids.add(pid)
+        if ck:
+            seen_keys.add(ck)
+        if pd.notna(lat) and pd.notna(lon):
+            accepted_coords.append((float(lat), float(lon), cat, name.lower()))
+        keep_indices.append(idx)
+
+    return recs.loc[keep_indices].reset_index(drop=True)
+
 # Public API
 # ---------------------------------------------------------------------------
 
@@ -265,7 +367,7 @@ def get_recommendations(
     # Determine how many places to retrieve initially from recommendation pipeline
     # If a district filter is applied, request all places so district-specific attractions
     # are never starved by global top_n, then filter and take top_n
-    pipeline_top_n = len(places_df) if district and district.lower() not in ("all", "all andhra pradesh", "") else max(top_n, 40)
+    pipeline_top_n = len(places_df)
 
     # ---- Use full pipeline if available ----
     if _PIPELINE_AVAILABLE:
@@ -286,10 +388,12 @@ def get_recommendations(
                 has_seniors=has_seniors,
                 has_kids=has_kids,
             )
+            recs = _filter_non_requested_temples(recs, interests)
+            recs = _filter_positive_scores(recs)
             if recs.empty:
                 log.info("Pipeline returned no results after filtering; falling back to content-based.")
             else:
-                return recs.drop_duplicates("place_id").head(top_n).reset_index(drop=True)
+                return _deduplicate_places(recs).head(top_n).reset_index(drop=True)
         except Exception as exc:
             log.warning("RecommendationPipeline failed (%s); falling back to ContentBasedRecommender.", exc)
 
@@ -310,6 +414,8 @@ def get_recommendations(
                 has_seniors=has_seniors,
                 has_kids=has_kids,
             )
+            recs = _filter_non_requested_temples(recs, interests)
+            recs = _filter_positive_scores(recs)
             if "recommendation_method" not in recs.columns:
                 recs["recommendation_method"] = "content-based"
             if "recommendation_reason" not in recs.columns:
@@ -319,7 +425,7 @@ def get_recommendations(
                     + interests[:40]
                     + "."
                 )
-            return recs.drop_duplicates("place_id").reset_index(drop=True)
+            return _deduplicate_places(recs).head(top_n).reset_index(drop=True)
         except Exception as exc:
             log.error("ContentBasedRecommender also failed: %s", exc)
 

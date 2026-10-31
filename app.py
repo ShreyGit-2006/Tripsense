@@ -37,6 +37,7 @@ import streamlit.components.v1 as components
 # Path & Module Setup
 # ---------------------------------------------------------------------------
 _APP_ROOT = Path(__file__).resolve().parent
+_REPO_ROOT = _APP_ROOT
 import sys
 if str(_APP_ROOT) not in sys.path:
     sys.path.insert(0, str(_APP_ROOT))
@@ -56,20 +57,36 @@ from itinerary.services import (
     photo_service,
     icons,
 )
+import importlib
+try:
+    importlib.reload(data_service)
+    importlib.reload(weather_service)
+except Exception:
+    pass
 from src.services import wikipedia_images
 
 # Itinerary engine
 try:
-    from itinerary import build_itinerary, Itinerary, ItineraryDay, ItineraryStop, _PACE_MAX_HOURS  # type: ignore
+    from itinerary import build_itinerary, Itinerary, ItineraryDay, ItineraryStop, _PACE_MAX_HOURS, _PACE_TARGETS  # type: ignore
     _ITINERARY_AVAILABLE = True
 except ImportError:
     try:
         from itinerary import build_itinerary, Itinerary, ItineraryDay, ItineraryStop  # type: ignore
-        _PACE_MAX_HOURS = {"relaxed": 8.0, "balanced": 10.0, "packed": 11.5}
+        _PACE_MAX_HOURS = {"relaxed": 7.5, "balanced": 9.5, "packed": 11.5}
+        _PACE_TARGETS = {
+            "relaxed": {"min_stops": 1, "max_stops": 2, "max_hrs": 7.5, "target_hrs": 5.5},
+            "balanced": {"min_stops": 2, "max_stops": 3, "max_hrs": 9.5, "target_hrs": 7.5},
+            "packed": {"min_stops": 3, "max_stops": 4, "max_hrs": 11.5, "target_hrs": 9.5},
+        }
         _ITINERARY_AVAILABLE = True
     except ImportError:
         _ITINERARY_AVAILABLE = False
-        _PACE_MAX_HOURS = {"relaxed": 8.0, "balanced": 10.0, "packed": 11.5}
+        _PACE_MAX_HOURS = {"relaxed": 7.5, "balanced": 9.5, "packed": 11.5}
+        _PACE_TARGETS = {
+            "relaxed": {"min_stops": 1, "max_stops": 2, "max_hrs": 7.5, "target_hrs": 5.5},
+            "balanced": {"min_stops": 2, "max_stops": 3, "max_hrs": 9.5, "target_hrs": 7.5},
+            "packed": {"min_stops": 3, "max_stops": 4, "max_hrs": 11.5, "target_hrs": 9.5},
+        }
 
 logging.basicConfig(level=logging.WARNING)
 
@@ -1091,7 +1108,7 @@ if not st.session_state.get("has_shown_welcome_splash", False):
 # Data Loading & Caching
 # ---------------------------------------------------------------------------
 @st.cache_data
-def _load_all_data():
+def _load_all_data_v4():
     p_df = data_service.load_places()
     h_df = data_service.load_hotels()
     w_df = data_service.load_weather()
@@ -1099,9 +1116,35 @@ def _load_all_data():
     ri_df = data_service.load_review_insights()
     i_df = data_service.load_interactions()
     hr_df = data_service.load_hotel_reviews()
-    return p_df, h_df, w_df, bm_df, ri_df, i_df, hr_df
 
-places_df, hotels_df, weather_df, best_months_df, review_insights_df, interactions_df, hotel_reviews_df = _load_all_data()
+    # Member 1 artifacts with resilient fallback
+    if hasattr(data_service, "load_demand_forecast"):
+        fc_df = data_service.load_demand_forecast()
+    else:
+        fc_p = _APP_ROOT / "member1" / "future_forecast_7d.csv"
+        fc_df = pd.read_csv(fc_p) if fc_p.exists() else pd.DataFrame()
+
+    if hasattr(data_service, "load_model_metrics"):
+        met_df = data_service.load_model_metrics()
+    else:
+        met_p = _APP_ROOT / "member1" / "model_metrics.csv"
+        met_df = pd.read_csv(met_p) if met_p.exists() else pd.DataFrame()
+
+    if hasattr(data_service, "load_hotel_pricing"):
+        pr_df = data_service.load_hotel_pricing()
+    else:
+        pr_p = _APP_ROOT / "member1" / "hotel_pricing.csv"
+        pr_df = pd.read_csv(pr_p) if pr_p.exists() else pd.DataFrame()
+
+    if hasattr(data_service, "load_places_hotel_demand"):
+        pld_df = data_service.load_places_hotel_demand()
+    else:
+        pld_p = _APP_ROOT / "member1" / "places_hotel_demand.csv"
+        pld_df = pd.read_csv(pld_p) if pld_p.exists() else pd.DataFrame()
+
+    return p_df, h_df, w_df, bm_df, ri_df, i_df, hr_df, fc_df, met_df, pr_df, pld_df
+
+places_df, hotels_df, weather_df, best_months_df, review_insights_df, interactions_df, hotel_reviews_df, demand_forecast_df, model_metrics_df, hotel_pricing_df, places_hotel_demand_df = _load_all_data_v4()
 
 # Pre-load Wikipedia Image Manifest
 wikipedia_images.load_manifest()
@@ -1124,16 +1167,16 @@ _INTEREST_OPTIONS = [
 ]
 
 _INTEREST_KEYWORD_MAP = {
-    "Temples & Spirituality": "temple spiritual religious pilgrimage sacred",
-    "Beaches & Coastlines": "beach coastal sea ocean shore waves",
-    "Hill Stations & Valleys": "hill mountain valley scenic viewpoints clouds",
-    "Waterfalls & Streams": "waterfall falls cascade plunge stream",
-    "Wildlife & Nature Reserves": "wildlife sanctuary forest nature reserve park",
-    "Heritage & Forts": "fort heritage history ancient palace architecture",
-    "Caves & Rock Formations": "cave cavern rock stalactite geology",
-    "Lakes & River Gorges": "lake dam reservoir river gorge water",
-    "Adventure & Trekking": "adventure trekking climbing hiking outdoors",
-    "Culture & Museums": "museum culture art archaeological gallery",
+    "Temples & Spirituality": "temple spiritual religious pilgrimage sacred darshan mandir shrine devasthanam",
+    "Beaches & Coastlines": "beach coastal sea ocean shore waves sands seaside coast bay",
+    "Hill Stations & Valleys": "hill_station hill mountain valley scenic viewpoints clouds ghats araku lambasingi horsley kailasagiri",
+    "Waterfalls & Streams": "waterfall falls cascade plunge stream rapids talakona katiki chaparai duduma",
+    "Wildlife & Nature Reserves": "wildlife sanctuary forest nature reserve park safari animals flora fauna",
+    "Heritage & Forts": "fort heritage history ancient palace architecture historic dynasty archaeological ruins",
+    "Caves & Rock Formations": "caves cave cavern rock stalactite geology subterranean belum borra undavalli",
+    "Lakes & River Gorges": "lake dam reservoir river gorge water boating reservoir papikondalu bhavani island",
+    "Adventure & Trekking": "adventure trekking climbing hiking outdoors trail exploration rugged camp",
+    "Culture & Museums": "museum culture art archaeological gallery tribal handicrafts heritage traditions",
 }
 
 _TRAVELER_SUITABLE_MAP = {
@@ -1191,9 +1234,9 @@ st.markdown("""
 # ---------------------------------------------------------------------------
 # Floating "Plan Your Trip" Dropdown Menu (Overlapping Hero)
 # ---------------------------------------------------------------------------
-with st.expander("Plan Your Trip", expanded=False):
+with st.expander("Plan Your Trip", expanded=True):
     st.html('<span id="plan-marker"></span>')
-    s_col1, s_col2, s_col3, s_col4 = st.columns([1.3, 1.3, 1.2, 1.2])
+    s_col1, s_col2, s_col3, s_col4, s_col5 = st.columns([1.15, 1.15, 1.05, 1.1, 1.1])
 
     with s_col1:
         default_dist_idx = 0
@@ -1207,12 +1250,17 @@ with st.expander("Plan Your Trip", expanded=False):
         )
 
     with s_col2:
+        default_interests = st.session_state.get("plan_interests", ["Hill Stations & Valleys"])
+        default_interests = [i for i in default_interests if i in _INTEREST_OPTIONS] or ["Hill Stations & Valleys"]
         interests_selected = st.multiselect(
-            "Interests",
+            "Interests (Pick Multiple)",
             _INTEREST_OPTIONS,
-            default=["Temples & Spirituality", "Nature & Forests"] if "Nature & Forests" in _INTEREST_OPTIONS else ["Temples & Spirituality"],
-            help="Choose your travel themes to guide recommendations.",
+            default=default_interests,
+            help="Choose one or more travel themes to guide recommendations.",
+            placeholder="Select themes (e.g. Hill Stations, Waterfalls)",
+            key="plan_interests_multiselect"
         )
+        st.session_state.plan_interests = interests_selected
 
     today = date.today()
     with s_col3:
@@ -1236,29 +1284,76 @@ with st.expander("Plan Your Trip", expanded=False):
             )
 
     with s_col4:
-        t_sub1, t_sub2 = st.columns(2)
-        with t_sub1:
+        curr_tt = st.session_state.get("plan_traveler_type", "Family")
+        tt_options = ["Solo", "Couple", "Family", "Friends", "Group"]
+        tt_idx = tt_options.index(curr_tt) if curr_tt in tt_options else 2
+
+        if curr_tt == "Solo":
             traveler_type = st.selectbox(
                 "Travellers",
-                ["Solo", "Couple", "Family", "Friends", "Group"],
-                index=2,
+                tt_options,
+                index=tt_idx,
+                key="plan_traveler_type",
             )
-        with t_sub2:
-            n_travelers = st.number_input(
-                "Count",
-                min_value=1,
-                max_value=30,
-                value=4 if traveler_type in ("Family", "Group") else 2,
-            )
+            n_travelers = 1
+        else:
+            t_sub1, t_sub2 = st.columns(2)
+            with t_sub1:
+                traveler_type = st.selectbox(
+                    "Travellers",
+                    tt_options,
+                    index=tt_idx,
+                    key="plan_traveler_type",
+                )
+            with t_sub2:
+                n_travelers = st.number_input(
+                    "Count",
+                    min_value=2 if traveler_type == "Couple" else 1,
+                    max_value=30,
+                    value=4 if traveler_type in ("Family", "Group") else 2,
+                )
 
-    # Demographic Constraints (Smart Filters for Seniors & Kids)
+    with s_col5:
+        current_pace = st.session_state.get("trip_pace", "balanced").capitalize()
+        if current_pace not in ["Relaxed", "Balanced", "Packed"]:
+            current_pace = "Balanced"
+        pace_label = st.select_slider(
+            "Trip Pace",
+            options=["Relaxed", "Balanced", "Packed"],
+            value=current_pace,
+            help="Dynamic AI pacing: Relaxed (1–2 stops/day), Balanced (2–3 stops/day), Packed (3–4 stops/day).",
+        )
+        pace_choice = pace_label.lower()
+        st.session_state.trip_pace = pace_choice
+
+    # Demographic Constraints (Terrain & Age Safety for Seniors & Children across all groups)
     has_seniors = False
     has_kids = False
-    if traveler_type in ("Family", "Group", "Friends"):
+
+    if traveler_type == "Solo":
+        show_age_filters = st.checkbox(
+            "Configure Traveler Age & Terrain Accessibility",
+            value=False,
+            help="Specify age: travelers under 10 or 60+ will automatically avoid high terrain, steep climbs, caves, and rugged trails."
+        )
+        if show_age_filters:
+            solo_age = st.number_input(
+                "Traveler Age",
+                min_value=1,
+                max_value=105,
+                value=28,
+                key="solo_traveler_age",
+                help="Ages under 10 or 60+ will receive gentle, accessible places without steep terrain climbing."
+            )
+            has_seniors = (solo_age >= 60)
+            has_kids = (solo_age < 10)
+            if has_seniors or has_kids:
+                st.info("Gentle Terrain Active: High climbs, steep waterfalls, caves, and rugged trails will be filtered out for safety and ease.")
+    else:
         show_age_filters = st.checkbox(
             "Configure Traveler Ages & Mobility (for Seniors / Children)",
             value=False,
-            help="Check this to enter ages so we can recommend low-walking and senior/child-friendly places."
+            help="Check this to enter member ages so we can recommend gentle terrain, low-walking, and senior/child-friendly places."
         )
         if show_age_filters:
             age_cols = st.columns(min(int(n_travelers), 4))
@@ -1266,7 +1361,7 @@ with st.expander("Plan Your Trip", expanded=False):
             for idx in range(int(n_travelers)):
                 col = age_cols[idx % len(age_cols)]
                 with col:
-                    default_age = 65 if idx == 0 and traveler_type == "Family" else (8 if idx == 1 and traveler_type == "Family" else 30)
+                    default_age = 65 if idx == 0 and traveler_type in ("Family", "Group") else (8 if idx == 1 and traveler_type == "Family" else 30)
                     age_val = st.number_input(
                         f"Age {idx+1}",
                         min_value=1,
@@ -1276,7 +1371,28 @@ with st.expander("Plan Your Trip", expanded=False):
                     )
                     member_ages.append(age_val)
             has_seniors = any(a >= 60 for a in member_ages)
-            has_kids = any(a <= 10 for a in member_ages)
+            has_kids = any(a < 10 for a in member_ages)
+            if has_seniors or has_kids:
+                st.info("Gentle Terrain Active: High climbs, steep waterfalls, caves, and rugged trails will be filtered out for seniors (60+) / kids (<10).")
+
+    # Display chosen interests chips inside Plan Your Trip box
+    if interests_selected:
+        pills_html = "".join(
+            f'<span style="background: rgba(200, 150, 62, 0.15); color: #8C5A20; border: 1px solid rgba(200, 150, 62, 0.4); padding: 3px 10px; border-radius: 12px; font-size: 0.82rem; font-weight: 600; margin-right: 6px; display: inline-block; margin-top: 4px;">{i}</span>'
+            for i in interests_selected
+        )
+        st.markdown(f'''
+        <div style="margin: 0.5rem 0 0.85rem; padding: 0.55rem 0.85rem; background: #FFFDF9; border: 1px solid #EAE0D5; border-radius: 8px;">
+          <span style="font-size: 0.84rem; font-weight: 700; color: #382613; margin-right: 8px;">Active Selected Themes ({len(interests_selected)}):</span>
+          {pills_html}
+        </div>
+        ''', unsafe_allow_html=True)
+    else:
+        st.markdown('''
+        <div style="margin: 0.5rem 0 0.85rem; padding: 0.55rem 0.85rem; background: #FFFDF9; border: 1px solid #EAE0D5; border-radius: 8px; font-size: 0.84rem; color: #8C5A20;">
+          <span style="font-weight: 700;">No theme selected:</span> Exploring balanced scenic highlights across all categories.
+        </div>
+        ''', unsafe_allow_html=True)
 
     _, btn_mid, _ = st.columns([1, 1.6, 1])
     with btn_mid:
@@ -1290,7 +1406,7 @@ st.markdown("""
   <div class="segmented-pill-box">
 """, unsafe_allow_html=True)
 
-switch_c1, switch_c2 = st.columns([1, 1])
+switch_c1, switch_c2, switch_c3 = st.columns([1, 1, 1.25])
 with switch_c1:
     trip_btn = st.button("Trip — Tourism & Discovery", key="mode_trip_btn", use_container_width=True,
                          type="primary" if st.session_state.app_mode == "Trip" else "secondary")
@@ -1305,6 +1421,13 @@ with switch_c2:
         st.session_state.app_mode = "Hotel"
         st.rerun()
 
+with switch_c3:
+    forecast_btn = st.button("Hotel Demand Forecast", key="mode_forecast_btn", use_container_width=True,
+                             type="primary" if st.session_state.app_mode == "Forecast" else "secondary")
+    if forecast_btn:
+        st.session_state.app_mode = "Forecast"
+        st.rerun()
+
 st.markdown("""
   </div>
 </div>
@@ -1314,9 +1437,12 @@ st.markdown("""
 # Pipeline Execution on Search Submit
 # ---------------------------------------------------------------------------
 if search_submitted:
-    interest_keywords = " ".join(
-        _INTEREST_KEYWORD_MAP.get(i, i.lower()) for i in (interests_selected or ["Temples & Spirituality"])
-    )
+    if interests_selected:
+        interest_keywords = " ".join(
+            _INTEREST_KEYWORD_MAP.get(i, i.lower()) for i in interests_selected
+        )
+    else:
+        interest_keywords = "scenic tourist destination hill_station beach heritage nature waterfall" 
     district_filter = None if district == "All Andhra Pradesh" else district
     suitable_filter = _TRAVELER_SUITABLE_MAP.get(traveler_type, None)
 
@@ -1335,8 +1461,29 @@ if search_submitted:
 
     if not recs.empty:
         place_ids = recs["place_id"].tolist()
-        weather_data = weather_service.get_weather_for_places(place_ids, target_month, weather_df)
+        place_coords = {
+            str(row["place_id"]): (
+                float(row["latitude"]) if pd.notna(row.get("latitude")) else None,
+                float(row["longitude"]) if pd.notna(row.get("longitude")) else None,
+            )
+            for _, row in recs.iterrows()
+        }
+        try:
+            weather_data = weather_service.get_weather_for_places(
+                place_ids, target_month, weather_df, target_date=start_date, place_coords=place_coords, district=district
+            )
+        except (TypeError, Exception):
+            weather_data = weather_service.get_weather_for_places(
+                place_ids, target_month, weather_df
+            )
         st.session_state.weather_data = weather_data
+
+        # Numerical Weather Prediction Model Cyclone & Extreme Weather Check
+        try:
+            severe_alert = weather_service.check_trip_severe_weather(district, start_date, int(n_days))
+        except Exception:
+            severe_alert = {"has_severe_weather": False, "is_cyclone": False}
+        st.session_state.severe_weather_alert = severe_alert
 
         date_scores_result = {}
         if start_date and not best_months_df.empty:
@@ -1350,11 +1497,12 @@ if search_submitted:
         st.session_state.best_months_sugg = best_months_sugg
 
         if _ITINERARY_AVAILABLE:
+            pace_to_use = st.session_state.get("trip_pace", "balanced")
             itin = build_itinerary(
                 recommendations=recs,
                 n_days=int(n_days),
                 start_date=start_date,
-                pace="balanced",
+                pace=pace_to_use,
                 traveler_name="Traveler",
                 traveler_type=traveler_type.lower(),
                 n_travelers=int(n_travelers),
@@ -1364,6 +1512,8 @@ if search_submitted:
                 date_scores=date_scores_result if date_scores_result else None,
                 best_months_suggestions=best_months_sugg,
                 month=target_month,
+                has_seniors=has_seniors,
+                has_kids=has_kids,
             )
             st.session_state.itinerary = itin
             st.session_state.scroll_to_results = True
@@ -1383,6 +1533,175 @@ if st.session_state.get("scroll_to_results", False):
     """, height=0)
     st.session_state.scroll_to_results = False
 
+
+
+# ---------------------------------------------------------------------------
+# Dedicated Renderer: Member 1 Hotel Demand Forecasting & Pricing Intelligence
+# ---------------------------------------------------------------------------
+def render_hotel_demand_forecasting():
+    st.markdown("""
+    <div style="margin: 2rem 0 1.25rem;">
+      <span class="editorial-badge-pill badge-gold">Hotel Price & Room Tracker</span>
+      <h2 style="font-size: 2.1rem; font-weight: 800; margin: 0.35rem 0 0.4rem; letter-spacing: -0.02em; color: var(--text-espresso); font-family: 'Outfit', sans-serif;">
+        When is the Best Time to Book Your Hotel?
+      </h2>
+      <p style="color: #6B5238; font-size: 0.96rem; margin: 0; line-height: 1.55;">
+        Check expected room rush, sell-out warnings, and nightly price changes for verified hotels near all 444 tourist attractions across Andhra Pradesh.
+      </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    if places_hotel_demand_df.empty:
+        st.info("Demand forecasting dataset is loading.")
+        return
+
+    # Select District Filter & Tourist Place
+    all_districts = ["All Districts"] + sorted(places_hotel_demand_df["district"].dropna().unique().tolist())
+    fc_c1, fc_c2 = st.columns([1.2, 2.0])
+    with fc_c1:
+        sel_district = st.selectbox("1. Pick District", all_districts, index=0, key="m1_fc_dist")
+
+    if sel_district == "All Districts":
+        filtered_places_sub = places_hotel_demand_df
+    else:
+        filtered_places_sub = places_hotel_demand_df[places_hotel_demand_df["district"] == sel_district]
+
+    place_list = sorted(filtered_places_sub["place_name"].unique().tolist())
+    def_place_idx = place_list.index("Talakona Waterfalls") if "Talakona Waterfalls" in place_list else 0
+    with fc_c2:
+        chosen_place = st.selectbox(
+            f"2. Pick Destination ({len(place_list)} Places in {sel_district})",
+            place_list,
+            index=def_place_idx,
+            key="m1_fc_place"
+        )
+
+    # Extract records for hotels near this selected place
+    place_hotels_sub = places_hotel_demand_df[places_hotel_demand_df["place_name"] == chosen_place].copy()
+
+    if not place_hotels_sub.empty:
+        unique_nearby_hotels = place_hotels_sub["hotel_name"].unique().tolist()
+
+        # If multiple hotels near place, let user pick
+        if len(unique_nearby_hotels) > 1:
+            chosen_nearby_hotel = st.radio(
+                "3. Verified Accommodations Near Destination",
+                unique_nearby_hotels,
+                horizontal=True,
+                key="m1_nearby_hotel_radio"
+            )
+        else:
+            chosen_nearby_hotel = unique_nearby_hotels[0]
+
+        hotel_spec_sub = place_hotels_sub[place_hotels_sub["hotel_name"] == chosen_nearby_hotel].copy()
+
+        h_tier_badge = hotel_spec_sub["tier"].iloc[0]
+        h_base_price = hotel_spec_sub["base_adr"].iloc[0]
+        h_dist_name = hotel_spec_sub["district"].iloc[0]
+
+        # Calculate user-friendly travel insights
+        peak_occ = float(hotel_spec_sub["pred_occupancy_pct"].max())
+        min_price_row = hotel_spec_sub.loc[hotel_spec_sub["recommended_price"].idxmin()]
+        max_price_row = hotel_spec_sub.loc[hotel_spec_sub["recommended_price"].idxmax()]
+
+        # Format dates nicely
+        def _fmt_date_day(d_val):
+            try:
+                return pd.to_datetime(d_val).strftime("%a, %b %d")
+            except Exception:
+                return str(d_val)
+
+        best_day_str = _fmt_date_day(min_price_row["date"])
+        peak_day_str = _fmt_date_day(max_price_row["date"])
+
+        # Availability status
+        if peak_occ >= 90.0:
+            avail_status = "Selling Out Fast"
+            avail_color = "#DC2626"
+            avail_bg = "#FEF2F2"
+            advice_text = "Heavy travel rush expected. Room rates peak on weekend dates — book in advance to lock in normal prices."
+        elif peak_occ >= 75.0:
+            avail_status = "Moderate Demand"
+            avail_color = "#D97706"
+            avail_bg = "#FFFBEB"
+            advice_text = "Good availability for weekday check-ins. Expect weekend rates to rise by 10–20%."
+        else:
+            avail_status = "Plenty of Rooms"
+            avail_color = "#16A34A"
+            avail_bg = "#F0FDF4"
+            advice_text = "Great time to visit! Low crowd levels and best rates available."
+
+        # Plain-English Summary Banner
+        st.markdown(f"""
+        <div style="background:{avail_bg}; border:1.5px solid {avail_color}40; border-left:5px solid {avail_color}; border-radius:14px; padding:1.1rem 1.35rem; margin:1rem 0 1.25rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.4rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <span style="background:{avail_color}; color:#FFFFFF; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:12px; text-transform:uppercase; letter-spacing:0.04em;">
+                {avail_status}
+              </span>
+              <strong style="color:#2E1B0A; font-size:1.15rem;">{html.escape(str(chosen_nearby_hotel))}</strong>
+            </div>
+            <div style="font-size:0.9rem; color:#6B5238;">
+              Near <strong>{html.escape(str(chosen_place))}</strong> ({html.escape(str(h_dist_name))})
+            </div>
+          </div>
+          <p style="color:#2E1B0A; font-size:0.95rem; margin:0 0 0.5rem; line-height:1.5;">
+            {advice_text}
+          </p>
+          <div style="display:flex; gap:1.5rem; flex-wrap:wrap; font-size:0.88rem; color:#4B3621; border-top:1px solid {avail_color}25; padding-top:0.5rem; margin-top:0.35rem;">
+            <div>Lowest Nightly Rate: <strong style="color:#16A34A;">₹{min_price_row['recommended_price']:,.0f}</strong> on {best_day_str}</div>
+            <div>Peak Nightly Rate: <strong style="color:#DC2626;">₹{max_price_row['recommended_price']:,.0f}</strong> on {peak_day_str}</div>
+            <div>Standard Base Rate: <strong>₹{h_base_price:,.0f}</strong>/night</div>
+          </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # 7-Day Visual Availability & Price Cards
+        st.markdown("<p style='font-weight:700; color:#2E1B0A; font-size:1.05rem; margin:1.25rem 0 0.5rem;'>Upcoming 7-Day Availability & Price Forecast</p>", unsafe_allow_html=True)
+
+        day_cols = st.columns(len(hotel_spec_sub))
+        for idx, (_, r) in enumerate(hotel_spec_sub.iterrows()):
+            if idx < len(day_cols):
+                with day_cols[idx]:
+                    card_dt = _fmt_date_day(r["date"])
+                    c_occ = float(r["pred_occupancy_pct"])
+                    c_price = float(r["recommended_price"])
+
+                    if c_occ >= 90.0:
+                        c_badge_bg = "#FEE2E2"
+                        c_badge_fg = "#991B1B"
+                        c_status_label = "Selling Fast"
+                    elif c_occ >= 75.0:
+                        c_badge_bg = "#FEF3C7"
+                        c_badge_fg = "#92400E"
+                        c_status_label = "Moderate"
+                    else:
+                        c_badge_bg = "#DCFCE7"
+                        c_badge_fg = "#166534"
+                        c_status_label = "Quiet / Deal"
+
+                    st.markdown(f"""
+                    <div style="background:#FFFDF9; border:1.5px solid #E6DBCF; border-radius:12px; padding:0.75rem 0.4rem; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+                      <div style="font-weight:700; color:#2E1B0A; font-size:0.84rem; margin-bottom:0.25rem;">{card_dt}</div>
+                      <div style="margin:0.25rem 0;">
+                        <span style="background:{c_badge_bg}; color:{c_badge_fg}; font-size:0.68rem; font-weight:700; padding:2px 6px; border-radius:10px;">
+                          {c_status_label} ({c_occ:.0f}%)
+                        </span>
+                      </div>
+                      <div style="font-size:1.1rem; font-weight:800; color:#C8963E; margin-top:0.35rem;">₹{c_price:,.0f}</div>
+                      <div style="font-size:0.7rem; color:#8C5A20; margin-top:0.1rem;">per night</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+        # Simple Price Trend Chart
+        st.markdown("<div style='margin-top:1.25rem;'></div>", unsafe_allow_html=True)
+        chart_data = hotel_spec_sub.copy()
+        chart_data["Formatted Date"] = chart_data["date"].apply(_fmt_date_day)
+        chart_df = chart_data.set_index("Formatted Date")[["recommended_price"]]
+        chart_df.columns = ["Expected Nightly Rate (₹)"]
+        st.bar_chart(chart_df, height=220)
+
+
 # ===========================================================================
 # VIEW MODE: TRIP (Tourism Discovery, AI Itinerary, Dates, Map, RAG)
 # ===========================================================================
@@ -1390,11 +1709,23 @@ if st.session_state.app_mode == "Trip":
     itin = st.session_state.get("itinerary")
 
     if itin is not None:
+        pace_key = getattr(itin, "pace", "balanced").lower()
+        pace_title = pace_key.title()
+        if "relax" in pace_key:
+            pace_stops_text = "1–2 stops/day"
+        elif "pack" in pace_key:
+            pace_stops_text = "3–4 stops/day"
+        else:
+            pace_stops_text = "2–3 stops/day"
+
         st.markdown(f"""
         <div style="margin: 1.5rem 0 1rem;">
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
             <div>
-              <span class="editorial-badge-pill badge-gold">Curated Itinerary Ready</span>
+              <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="editorial-badge-pill badge-gold">Curated Itinerary Ready</span>
+                <span class="editorial-badge-pill badge-soft">Pace: {pace_title} ({pace_stops_text})</span>
+              </div>
               <h2 style="font-size:2.2rem; margin:0.3rem 0; font-weight:800; letter-spacing:-0.02em; color:var(--text-espresso);">{itin.trip_name}</h2>
               <p style="color:#6B5238; margin:0; font-size:0.95rem;">
                 {itin.n_days} Days &bull; {sum(len(d.stops) for d in itin.days)} Scheduled Stops &bull; Region: {itin.district}
@@ -1403,6 +1734,69 @@ if st.session_state.app_mode == "Trip":
           </div>
         </div>
         """, unsafe_allow_html=True)
+
+        rag_insight_text = getattr(itin, "rag_insight", "")
+        if rag_insight_text:
+            st.markdown(f"""
+            <div style="background:linear-gradient(135deg, #FFFDF8 0%, #FAF2E4 100%); border:1.5px solid #D4B37C; border-left:4px solid #C8963E; border-radius:12px; padding:1rem 1.25rem; margin:0.75rem 0 0.75rem; box-shadow:0 3px 12px rgba(140, 90, 32, 0.05);">
+              <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.35rem;">
+                {icons.get_icon("sparkles", size=18, color="#C8963E")}
+                <span style="font-weight:700; color:#8C5A20; font-size:0.92rem; text-transform:uppercase; letter-spacing:0.04em;">TripSense RAG Planner Intelligence</span>
+              </div>
+              <p style="color:#382613; font-size:0.92rem; margin:0; line-height:1.55;">{rag_insight_text}</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+        # Numerical Weather Prediction Model Cyclone & Severe Weather Warning Banner
+        severe_alert = st.session_state.get("severe_weather_alert", {})
+        if severe_alert and severe_alert.get("has_severe_weather"):
+            is_cyc = severe_alert.get("is_cyclone", False)
+            b_bg = "#FFF2F0" if is_cyc else "#FFFBE6"
+            b_border = "#FF4D4F" if is_cyc else "#FAAD14"
+            b_accent = "#D32F2F" if is_cyc else "#D48806"
+            b_text = "#B71C1C" if is_cyc else "#874D00"
+            b_icon = "alert-triangle" if is_cyc else "alert-circle"
+
+            st.markdown(f"""
+            <div style="background:{b_bg}; border:2px solid {b_border}; border-left:6px solid {b_accent}; border-radius:14px; padding:1.1rem 1.35rem; margin:0.75rem 0 1.25rem; box-shadow:0 4px 16px rgba(211, 47, 47, 0.12);">
+              <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.35rem;">
+                {icons.get_icon(b_icon, size=22, color=b_accent)}
+                <span style="font-weight:800; color:{b_text}; font-size:1.05rem; text-transform:uppercase; letter-spacing:0.02em;">
+                  {html.escape(severe_alert.get('banner_title', 'Severe Weather Warning'))}
+                </span>
+              </div>
+              <p style="color:#381515; font-size:0.95rem; font-weight:600; margin:0 0 0.4rem; line-height:1.5;">
+                {html.escape(severe_alert.get('banner_body', ''))}
+              </p>
+              <div style="font-size:0.88rem; color:{b_text}; font-weight:700;">
+                Safety Advisory: {html.escape(severe_alert.get('safety_advisory', ''))}
+              </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        # Best Travel Dates & Climate Advisory Card
+        date_notes_text = getattr(itin, "date_notes", "")
+        best_months_list = getattr(itin, "best_months", [])
+        if not best_months_list:
+            itin_pids = [getattr(s, "place_id", "") for d in itin.days for s in d.stops if getattr(s, "place_id", "")]
+            if itin_pids and not best_months_df.empty:
+                best_months_list = date_service.suggest_best_months_for_places(itin_pids, best_months_df, top_n=3)
+        if date_notes_text or best_months_list:
+            opt_months_markup = ""
+            if best_months_list:
+                month_pills = " ".join([f'<span class="editorial-badge-pill badge-gold" style="font-size:0.8rem; padding:3px 10px;">{m}</span>' for m in best_months_list])
+                opt_months_markup = f'<div style="margin-top:0.45rem; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;"><strong style="font-size:0.86rem; color:#8C5A20;">Top Recommended Months:</strong> {month_pills}</div>'
+
+            st.markdown(f"""
+            <div style="background:#FFFDF8; border:1.5px solid #D4B37C; border-left:4px solid #C8963E; border-radius:12px; padding:0.9rem 1.25rem; margin:0.5rem 0 1.25rem; box-shadow:0 2px 10px rgba(140, 90, 32, 0.05);">
+              <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+                {icons.get_icon("calendar", size=18, color="#C8963E")}
+                <span style="font-weight:700; color:#8C5A20; font-size:0.92rem; text-transform:uppercase; letter-spacing:0.04em;">Best Dates & Climate Advisory</span>
+              </div>
+              <p style="color:#382613; font-size:0.92rem; margin:0; line-height:1.5;">{date_notes_text or 'Seasonality and climate comfort scores evaluated from historical weather and holiday crowd datasets.'}</p>
+              {opt_months_markup}
+            </div>
+            """, unsafe_allow_html=True)
 
         # Haversine distance calculator
         def _calc_haversine_distance(lat1, lon1, lat2, lon2) -> float:
@@ -1437,8 +1831,30 @@ if st.session_state.app_mode == "Trip":
                 )
 
             dist_header_tag = f" &bull; {day_total_km:.1f} km Total Travel" if day_total_km > 0 and len(day.stops) > 1 else ""
+            day_theme = getattr(day, "theme", "")
+            day_rag_tip = getattr(day, "rag_tip", "")
+            theme_header_tag = f" &bull; {day_theme}" if day_theme else ""
 
-            with st.expander(f"{day_str} ({len(day.stops)} Stops{dist_header_tag})", expanded=(day.day_number == 1)):
+            day_crowd = getattr(day, "crowd_note", "").strip()
+            if not day_crowd:
+                if day.date:
+                    day_crowd = "Moderate to High Crowd (Weekend)" if day.date.weekday() in (5, 6) else "Lower Crowd (Weekday)"
+                else:
+                    day_crowd = "Lower Crowd"
+
+            with st.expander(f"{day_str} ({len(day.stops)} Stops{dist_header_tag}{theme_header_tag})", expanded=(day.day_number == 1)):
+                # Prominent Daily Status Bar (Crowd Level & Theme)
+                st.markdown(f"""
+                <div style="background: rgba(250, 242, 228, 0.75); border: 1.5px solid #D4B37C; border-radius: 10px; padding: 0.65rem 1rem; margin-bottom: 1.15rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+                  <div style="display:flex; align-items:center; gap:0.5rem;">
+                    {icons.get_icon("users", size=18, color="#8C5A20")}
+                    <span style="font-weight:700; color:#6B420C; font-size:0.88rem;">Expected Crowd Level:</span>
+                    <span class="editorial-badge-pill badge-gold" style="font-size:0.8rem; padding:3px 10px;">{html.escape(day_crowd.title())}</span>
+                  </div>
+                  {f'<div style="font-size:0.86rem; color:#8C5A20; font-weight:600;">Theme: {html.escape(day_theme)}</div>' if day_theme else ''}
+                </div>
+                """, unsafe_allow_html=True)
+
                 for idx, stop in enumerate(day.stops):
                     p_name = getattr(stop, "name", "Destination")
                     p_cat = getattr(stop, "category", "")
@@ -1484,7 +1900,46 @@ if st.session_state.app_mode == "Trip":
                         place_id=p_id,
                     )
 
-                    dist_badge_markup = f'<span class="editorial-badge-pill badge-gold">{dist_from_prev:.1f} km from {html.escape(prev_stop_name)}</span>' if dist_from_prev > 0 else ""
+                    # Destination Weather Condition & Meteorological Model Output
+                    w_map = st.session_state.get("weather_data", {})
+                    w_info = w_map.get(p_id) if isinstance(w_map, dict) else None
+                    is_severe_dest = False
+                    stop_weather = getattr(stop, "weather_note", "").strip()
+
+                    if w_info and w_info.get("is_severe"):
+                        is_severe_dest = True
+                        stop_weather = w_info.get("weather_note", "Cyclone Warning: Travel Not Advised")
+                    elif not stop_weather:
+                        if w_info:
+                            stop_weather = f"{w_info.get('temp_label', '').capitalize()} ({w_info.get('avg_temp_c', '')}°C), {w_info.get('rain_label', '')}"
+                        else:
+                            stop_weather = "Pleasant (26°C), Moderate Climate"
+
+                    if is_severe_dest:
+                        weather_badge_markup = f'<div style="display:inline-flex; align-items:center; gap:0.35rem; background:#FFF1F0; border:1.5px solid #FF4D4F; border-radius:999px; padding:3px 12px; font-size:0.82rem; font-weight:700; color:#CF1322;">{icons.get_icon("alert-triangle", size=14, color="#CF1322")}<span>{html.escape(stop_weather)}</span></div>'
+                    else:
+                        weather_badge_markup = f'<div style="display:inline-flex; align-items:center; gap:0.35rem; background:#FFFDF8; border:1px solid #D4B37C; border-radius:999px; padding:3px 12px; font-size:0.82rem; font-weight:600; color:#8C5A20;">{icons.get_icon("sun", size=14, color="#C8963E")}<span>{html.escape(stop_weather)}</span></div>'
+
+                    # Look up place-specific authentic best_months, best_time, and duration
+                    p_match = places_df[places_df["place_id"].astype(str) == str(p_id)]
+                    if not p_match.empty:
+                        p_row_data = p_match.iloc[0]
+                        p_best_months = str(p_row_data.get("best_months") or getattr(stop, "best_months", "Oct, Nov, Dec, Jan, Feb"))
+                        p_best_time = str(p_row_data.get("best_time") or getattr(stop, "best_time", "8:30 AM – 11:30 AM & 3:30 PM – 5:30 PM"))
+                        p_dur = float(p_row_data.get("visit_duration_hrs", p_dur))
+                    else:
+                        p_best_months = str(getattr(stop, "best_months", "Oct, Nov, Dec, Jan, Feb") or "Oct, Nov, Dec, Jan, Feb")
+                        p_best_time = str(getattr(stop, "best_time", "8:30 AM – 11:30 AM & 3:30 PM – 5:30 PM") or "8:30 AM – 11:30 AM & 3:30 PM – 5:30 PM")
+
+                    # Clean up redundant boilerplate in p_reas
+                    clean_reas = p_reas
+                    import re as _re_clean
+                    clean_reas = _re_clean.sub(r"about \d+(\.\d+)? hours to visit\.?\s*", "", clean_reas, flags=_re_clean.IGNORECASE)
+                    clean_reas = _re_clean.sub(r"Best months:.*$", "", clean_reas, flags=_re_clean.IGNORECASE).strip()
+                    if clean_reas.endswith(","):
+                        clean_reas = clean_reas[:-1].strip() + "."
+                    if not clean_reas:
+                        clean_reas = f"Selected because it offers a premier {str(p_cat).replace('_', ' ')} experience in {p_dist}."
 
                     c_img, c_info = st.columns([1.2, 2.2])
                     with c_img:
@@ -1492,19 +1947,25 @@ if st.session_state.app_mode == "Trip":
                             st.image(photos[0]["url"], caption=photos[0].get("title", p_name), use_container_width=True)
 
                     with c_info:
-                        st.html(f"""<div style="padding:0.25rem 0;">
-<div style="display:flex; gap:0.5rem; margin-bottom:0.45rem; flex-wrap:wrap;">
+                        st.markdown(f"""<div style="padding:0.25rem 0;">
+<div style="display:flex; gap:0.4rem; margin-bottom:0.45rem; flex-wrap:wrap; align-items:center;">
 <span class="editorial-badge-pill badge-gold">{html.escape(str(p_cat).replace('_',' ').title())}</span>
 <span class="editorial-badge-pill badge-soft">{p_dur:g}h Duration</span>
-{dist_badge_markup}
+<span class="editorial-badge-pill badge-soft" style="color:#6B420C; background:#FAF2E4; border:1px solid #D4B37C; font-size:0.8rem;">
+  {icons.get_icon("clock", size=13, color="#8C5A20")} Best Time: {html.escape(p_best_time)}
+</span>
+<span class="editorial-badge-pill badge-gold" style="color:#8C5A20; background:rgba(200,150,62,0.12); font-size:0.8rem;">
+  {icons.get_icon("calendar", size=13, color="#C8963E")} Best Season: {html.escape(p_best_months)}
+</span>
+{weather_badge_markup}
 </div>
 <h3 style="font-family:'Outfit', sans-serif !important; font-size:1.4rem; margin:0 0 0.35rem; font-weight:800; color:#2E1B0A;">{idx+1}. {html.escape(p_name)}</h3>
 <p style="color:#8C5A20; font-weight:600; font-size:0.88rem; margin-bottom:0.5rem;">District: {html.escape(p_dist)}</p>
 <p style="color:#382613; font-size:0.92rem; line-height:1.5; margin-bottom:0.6rem;">{html.escape(p_desc or 'Authentic landmark and scenic attraction in Andhra Pradesh.')}</p>
 <div style="background:#FAF2E4; border:1.5px solid #D4B37C; border-left:4px solid #C8963E; padding:0.75rem 1rem; border-radius:0 12px 12px 0; font-size:0.88rem; color:#2E1B0A;">
-<strong style="color:#8C5A20;">Why this place:</strong> {html.escape(p_reas)}
+<strong style="color:#8C5A20;">Why this place:</strong> {html.escape(clean_reas)}
 </div>
-</div>""")
+</div>""", unsafe_allow_html=True)
                     st.markdown("<hr style='margin:1rem 0; border:none; border-top:1.5px solid #EADBCC;'>", unsafe_allow_html=True)
 
                 # Recommended overnight accommodation for this day's destinations
@@ -1781,12 +2242,75 @@ if st.session_state.app_mode == "Trip":
         except Exception:
             pass
 
+    # ---------------------------------------------------------------------------
+    # Historical Weather & Climate Exploration Section
+    # ---------------------------------------------------------------------------
+    st.markdown('<div style="margin-top: 2rem;"></div>', unsafe_allow_html=True)
+    with st.expander("Historical Weather & Climate Exploration", expanded=False):
+        st.markdown("""
+        <div style="margin-bottom: 0.75rem;">
+          <span class="editorial-badge-pill badge-gold">Historical Weather Dataset</span>
+          <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0.35rem 0 0.25rem; color: #2E1B0A; font-family: 'Outfit', sans-serif;">
+            12-Month Climate Exploration Across Andhra Pradesh
+          </h3>
+          <p style="color: #6B5238; font-size: 0.9rem; margin: 0;">
+            Comprehensive empirical climate data (2023 dataset) across all 26 Andhra Pradesh districts, highlighting temperature ranges, monthly monsoon deluges, and outdoor suitability.
+          </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        w_dist_list = sorted([d for d in places_df["district"].dropna().unique() if d])
+        curr_dist = district if (district and district in w_dist_list) else w_dist_list[0]
+        chosen_w_dist = st.selectbox("Select District for Climate Profile", w_dist_list, index=w_dist_list.index(curr_dist), key="hist_weather_dist")
+
+        # Filter places in that district to get representative weather
+        dist_pids = places_df[places_df["district"] == chosen_w_dist]["place_id"].tolist()
+        dist_weather = weather_df[weather_df["place_id"].isin(dist_pids)].copy()
+
+        if not dist_weather.empty:
+            month_names_map = {
+                1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun",
+                7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"
+            }
+            monthly_agg = dist_weather.groupby("month").agg(
+                avg_temp=("avg_temp_c", "mean"),
+                avg_rain=("total_rainfall_mm", "mean")
+            ).reset_index()
+            monthly_agg["month_label"] = monthly_agg["month"].map(month_names_map)
+            monthly_agg["avg_temp"] = monthly_agg["avg_temp"].round(1)
+            monthly_agg["avg_rain"] = monthly_agg["avg_rain"].round(1)
+
+            # Display 4 climate metric summary cards
+            col_m1, col_m2, col_m3, col_m4 = st.columns(4)
+            hottest_month = monthly_agg.loc[monthly_agg["avg_temp"].idxmax()]
+            coolest_month = monthly_agg.loc[monthly_agg["avg_temp"].idxmin()]
+            wettest_month = monthly_agg.loc[monthly_agg["avg_rain"].idxmax()]
+            annual_rain = monthly_agg["avg_rain"].sum()
+
+            with col_m1:
+                st.metric("Warmest Month", f"{hottest_month['month_label']} ({hottest_month['avg_temp']}°C)")
+            with col_m2:
+                st.metric("Coolest Month", f"{coolest_month['month_label']} ({coolest_month['avg_temp']}°C)")
+            with col_m3:
+                st.metric("Peak Rainfall", f"{wettest_month['month_label']} ({wettest_month['avg_rain']} mm)")
+            with col_m4:
+                st.metric("Annual Rainfall", f"{annual_rain:.0f} mm")
+
+            # 12-Month Table & Chart
+            st.markdown(f"<p style='font-weight:700; color:#2E1B0A; font-size:0.95rem; margin:1rem 0 0.5rem;'>12-Month Temperature (°C) & Rainfall (mm) Pattern — {html.escape(chosen_w_dist)}</p>", unsafe_allow_html=True)
+            chart_df = monthly_agg.set_index("month_label")[["avg_temp", "avg_rain"]]
+            chart_df.columns = ["Avg Temp (°C)", "Total Rain (mm)"]
+            st.bar_chart(chart_df, height=220)
+        else:
+            st.info(f"No specific historical climate records found for {chosen_w_dist}.")
+
+
 
 
 # ===========================================================================
 # VIEW MODE: HOTEL (Stays & Accommodations Matched to Itinerary Places)
 # ===========================================================================
-else:
+elif st.session_state.app_mode == "Hotel":
     itin = st.session_state.get("itinerary")
     recs = st.session_state.get("recs")
 
@@ -2011,6 +2535,16 @@ else:
               </div>
             </div>
             """, unsafe_allow_html=True)
+
+
+    # Also display Member 1 Demand Forecasting at the bottom of Hotel Mode
+    render_hotel_demand_forecasting()
+
+# ===========================================================================
+# VIEW MODE: FORECAST (Dedicated Member 1 Hotel Demand & ML Engine)
+# ===========================================================================
+elif st.session_state.app_mode == "Forecast":
+    render_hotel_demand_forecasting()
 
 # ---------------------------------------------------------------------------
 # Footer
